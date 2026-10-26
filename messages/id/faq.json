@@ -1,1 +1,27 @@
-{}
+{
+  "_PLACEHOLDER": "Semua jawaban FAQ masih draf. Pemilik harus memastikan setiap jawaban (waktu, pembayaran, kebijakan) sebelum peluncuran.",
+  "general": [
+    { "q": "Yuanfen itu apa?", "a": "Kami menghubungkan Anda dengan pemandu dan mitra lokal di Tiongkok untuk tour guiding, jasa titip, penghubung medical, dan admission kampus atau sekolah." },
+    { "q": "Berapa biayanya?", "a": "Harga tergantung permintaan Anda, jadi kami tidak mencantumkan harga tetap. Isi formulir dan kami kirimkan penawaran. Meminta penawaran gratis dan tanpa kewajiban." },
+    { "q": "Bahasa apa yang dipakai?", "a": "Bahasa Indonesia dan Inggris. Pemandu atau mitra Anda akan memakai bahasa yang cocok untuk Anda." },
+    { "q": "Berapa cepat kalian membalas?", "a": "PLACEHOLDER: waktu respons tim akan dituliskan di sini." },
+    { "q": "Apakah aman membayar ke Yuanfen?", "a": "PLACEHOLDER: metode pembayaran dan perlindungannya akan dijelaskan di sini sebelum peluncuran." }
+  ],
+  "tour": [
+    { "q": "Bisa minta trip ramah Muslim?", "a": "Bisa. Sampaikan di formulir dan kami atur makanan halal serta tempat dan waktu salat dalam jadwal Anda." },
+    { "q": "Bisa merencanakan trip ke tempat yang tidak ada di daftar?", "a": "Mungkin. Gunakan halaman Minta Destinasi dan kami cek apakah bisa dicarikan pemandu." },
+    { "q": "Apakah bisa hanya jemput bandara?", "a": "Bisa. Jemput bandara dapat dipesan sendiri atau sebagai bagian dari trip." }
+  ],
+  "jastip": [
+    { "q": "Bagaimana saya tahu berapa yang harus dibayar?", "a": "Anda menerima penawaran tertulis sebelum apa pun dibeli. PLACEHOLDER: kebijakan biaya lengkap akan ditambahkan." },
+    { "q": "Apakah saya mendapat nota?", "a": "Ya. Kami mengirim bukti pembelian untuk barang Anda. PLACEHOLDER: pastikan prosesnya." }
+  ],
+  "medical": [
+    { "q": "Apakah kalian memberi nasihat medis?", "a": "Tidak. Kami menghubungkan Anda dengan rumah sakit, penerjemah, dan layanan konsultasi. Dokter Andalah yang menentukan perawatan." },
+    { "q": "Boleh kirim rekam medis lewat situs?", "a": "Tidak. Mohon jangan mengunggah atau mengirim rekam medis lewat situs ini." }
+  ],
+  "admission": [
+    { "q": "Sekolah mana saja yang bisa dibantu?", "a": "PLACEHOLDER: daftar sekolah dan program mitra akan ditambahkan." },
+    { "q": "Perlu menyiapkan dokumen dulu?", "a": "Tidak perlu. Mulai dari formulir dan kami beri tahu apa yang dibutuhkan." }
+  ]
+}

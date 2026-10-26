@@ -2,5 +2,66 @@
   "meta": {
     "title": "Yuanfen | Your bridge to China",
     "description": "Tour guiding, jasa titip, pendampingan medical, dan admission kampus di Tiongkok bersama pemandu dan mitra lokal. Your bridge to China, guided by fate."
+  },
+  "hero": {
+    "pitch": "Pemandu lokal dan mitra tepercaya di Tiongkok untuk liburan, belanja, berobat, atau kuliah Anda. Kami berbahasa Indonesia dan mendampingi Anda.",
+    "ctaServices": "Pilih layanan",
+    "trust": ["Minta penawaran gratis, tanpa kewajiban", "Dukungan berbahasa Indonesia", "Pemandu dan mitra lokal"],
+    "logoAlt": "Logo Yuanfen: pita merah membentuk huruf Y dengan tulisan 缘分"
+  },
+  "services": {
+    "eyebrow": "Layanan kami",
+    "title": "Anda butuh bantuan apa?",
+    "text": "Pilih satu. Sisanya kami yang urus.",
+    "items": {
+      "tour": { "title": "Tour Guiding", "line": "Pemandu lokal untuk city tour, perjalanan bisnis, wisata ramah Muslim, dan jemput bandara." },
+      "jastip": { "title": "Jasa Titip", "line": "Kami belikan barang dari pasar dan toko di Tiongkok, atas nama Anda." },
+      "medical": { "title": "Medical", "line": "Kami hubungkan Anda dengan rumah sakit, penerjemah, dan konsultasi. Bukan nasihat medis." },
+      "admission": { "title": "Admission Kampus & Sekolah", "line": "Bantuan mencari dan mendaftar ke sekolah atau universitas di Tiongkok." }
+    }
+  },
+  "how": {
+    "eyebrow": "Cara kerja",
+    "title": "Empat langkah mudah",
+    "steps": [
+      { "title": "Ceritakan kebutuhan Anda", "text": "Isi formulir singkat atau chat kami lewat WhatsApp." },
+      { "title": "Kami cocokkan", "text": "Kami carikan pemandu atau mitra lokal yang pas dengan rencana Anda." },
+      { "title": "Kami bantu", "text": "Kami siapkan detailnya dan tetap berkomunikasi sebelum dan selama perjalanan." },
+      { "title": "Anda tenang", "text": "Nikmati prosesnya, ada yang mendampingi Anda." }
+    ],
+    "cta": "Lihat proses lengkap"
+  },
+  "why": {
+    "eyebrow": "Kenapa Yuanfen",
+    "title": "Lebih mudah, karena kami ada di dua sisi",
+    "items": [
+      { "icon": "users", "title": "Pemandu lokal", "text": "Orang yang tinggal di Tiongkok dan paham betul kotanya." },
+      { "icon": "message", "title": "Dukungan berbahasa Indonesia", "text": "Bertanya dalam Bahasa Indonesia atau Inggris." },
+      { "icon": "shield", "title": "Harga wajar", "text": "Penawaran jelas sebelum Anda memutuskan." },
+      { "icon": "compass", "title": "Dukungan sebelum dan selama perjalanan", "text": "Hubungi kami lewat WhatsApp kalau rencana berubah." }
+    ]
+  },
+  "trips": {
+    "eyebrow": "Trip",
+    "title": "Rute siap pakai untuk memulai",
+    "text": "Pilih rute, atau minta yang lain. Perubahan diurus bersama tim kami lewat WhatsApp.",
+    "cta": "Lihat semua trip"
+  },
+  "guides": {
+    "eyebrow": "Pemandu kami",
+    "title": "Kenalan dengan yang akan mendampingi Anda"
+  },
+  "testimonials": {
+    "eyebrow": "Testimoni",
+    "title": "Kata mereka yang sudah pergi"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Jawaban singkat",
+    "cta": "Pertanyaan lainnya"
+  },
+  "finalCta": {
+    "title": "Siap kapan pun Anda siap",
+    "text": "Ceritakan rencana Anda. Penawaran gratis dan tanpa kewajiban."
   }
 }

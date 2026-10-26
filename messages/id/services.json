@@ -1,1 +1,117 @@
-{}
+{
+  "common": {
+    "requestEyebrow": "Minta penawaran",
+    "faqTitle": "Pertanyaan umum",
+    "whatsappNote": "Lebih suka ngobrol? Chat kami lewat WhatsApp."
+  },
+  "tour": {
+    "meta": {
+      "title": "Tour Guiding di Tiongkok",
+      "description": "Pemandu lokal untuk city tour, perjalanan bisnis, wisata ramah Muslim, jemput bandara, dan fotografi di Tiongkok. Minta penawaran gratis."
+    },
+    "eyebrow": "Tour Guiding",
+    "h1": "Pemandu lokal untuk perjalanan Anda ke Tiongkok",
+    "intro": "Ceritakan ke mana Anda ingin pergi. Kami carikan pemandu lokal yang berbahasa Indonesia atau Inggris dan paham tempatnya.",
+    "typesTitle": "Bantuan seperti apa yang Anda perlukan?",
+    "types": {
+      "city": { "title": "City Tour", "text": "Tempat wisata, kuliner, dan kawasan kota, sesuai ritme Anda." },
+      "business": { "title": "Perjalanan Bisnis", "text": "Pemandu atau penerjemah, kunjungan pabrik dan pameran dagang." },
+      "muslim": { "title": "Wisata Ramah Muslim", "text": "Makanan halal, tempat salat, dan waktu salat sudah diatur." },
+      "airport": { "title": "Jemput Bandara", "text": "Ada yang menjemput saat tiba dan mengantar ke hotel." },
+      "photo": { "title": "Fotografi", "text": "Fotografer untuk perjalanan Anda, tambahan atau layanan terpisah." }
+    },
+    "destTitle": "Anda ingin ke mana?",
+    "destIntro": "Ketuk satu tempat untuk memulai permintaan. \"Atas permintaan\" artinya kami pastikan pemandunya dulu.",
+    "statusAvailable": "Tersedia",
+    "statusOnRequest": "Atas permintaan",
+    "photoPlaceholder": "Foto menyusul",
+    "choose": "Pilih tempat ini",
+    "chosen": "Dipilih",
+    "hkmoTitle": "Hong Kong dan Macau",
+    "hkmoText": "Aturan masuk Hong Kong dan Macau berbeda dari Tiongkok daratan. Cek aturan untuk paspor Anda sebelum memesan. Kami bisa tunjukkan sumber resminya.",
+    "requestTitle": "Minta penawaran Anda",
+    "requestIntro": "Beberapa pertanyaan singkat. Kami balas dengan penawaran yang disesuaikan untuk Anda.",
+    "tripPicked": "Trip dipilih"
+  },
+  "jastip": {
+    "meta": {
+      "title": "Jasa Titip Belanja di Tiongkok",
+      "description": "Kami belikan barang dari pasar dan toko di Tiongkok atas nama Anda. Proses, nota, dan biaya jelas. Minta penawaran gratis."
+    },
+    "eyebrow": "Jasa Titip",
+    "h1": "Titip belanja langsung dari Tiongkok",
+    "intro": "Ceritakan barang yang Anda cari. Mitra lokal kami mencarinya, membelinya, dan mengabari Anda.",
+    "howTitle": "Cara kerjanya",
+    "steps": [
+      { "title": "Kirim permintaan", "text": "Sebutkan barang yang diinginkan, lengkap dengan foto atau tautan kalau ada." },
+      { "title": "Kami pastikan detailnya", "text": "Kami cek ketersediaan dan sepakati detail bersama Anda." },
+      { "title": "Kami belikan", "text": "Mitra kami membeli barangnya dan mengirim bukti ke Anda." },
+      { "title": "Pesanan sampai ke Anda", "text": "Kami atur pengirimannya sesuai kesepakatan." }
+    ],
+    "paymentTitle": "Pembayaran dan nota",
+    "paymentText": "Proses pembayaran dan nota kami dijelaskan di sini.",
+    "feesTitle": "Biaya, dijelaskan terbuka",
+    "feesText": "Biaya jasa kami dan cara menampilkannya di penawaran dijelaskan di sini.",
+    "trustTitle": "Kenapa Anda bisa tenang",
+    "trust": [
+      "Anda menerima penawaran tertulis sebelum apa pun dibeli.",
+      "Anda menerima nota dan foto untuk setiap pembelian.",
+      "Anda bisa bertanya kapan saja lewat WhatsApp."
+    ],
+    "requestTitle": "Beri tahu kami barang yang ingin dibeli",
+    "requestIntro": "Minta penawaran gratis. Tanpa kewajiban.",
+    "_PLACEHOLDER": "Teks pembayaran, nota, biaya, dan daftar kepercayaan masih draf. Ganti dengan kebijakan sebenarnya sebelum peluncuran."
+  },
+  "medical": {
+    "meta": {
+      "title": "Penghubung Medical di Tiongkok",
+      "description": "Kami menghubungkan Anda dengan rumah sakit, penerjemah, dan konsultasi di Tiongkok. Kami tidak memberi nasihat medis."
+    },
+    "eyebrow": "Medical",
+    "h1": "Temukan rumah sakit dan penerjemah yang tepat di Tiongkok",
+    "intro": "Kami membantu Anda menjangkau rumah sakit, penerjemah, dan jadwal konsultasi di Tiongkok, supaya bahasa tidak jadi hambatan.",
+    "disclaimerTitle": "Penting",
+    "disclaimerText": "Yuanfen tidak memberikan nasihat medis, diagnosis, atau pengobatan. Kami menghubungkan Anda dengan rumah sakit, penerjemah, dan layanan konsultasi. Mohon jangan mengunggah atau mengirim rekam medis lewat situs ini. Dokter Andalah yang menentukan perawatan.",
+    "whatTitle": "Bantuan yang bisa kami berikan",
+    "what": [
+      "Mencari rumah sakit atau klinik yang sesuai",
+      "Mengatur jadwal konsultasi",
+      "Penerjemah yang menemani Anda",
+      "Bantuan transportasi dan logistik di hari konsultasi"
+    ],
+    "requestTitle": "Ceritakan kebutuhan Anda",
+    "requestIntro": "Cukup informasi dasar. Jangan sertakan rekam medis atau nomor identitas di sini.",
+    "_PLACEHOLDER": "Teks medical adalah draf yang hati-hati. Minta pemilik (dan penasihat hukum bila perlu) meninjaunya sebelum peluncuran."
+  },
+  "admission": {
+    "meta": {
+      "title": "Admission Kampus & Sekolah di Tiongkok",
+      "description": "Bantuan mencari dan mendaftar ke universitas dan sekolah di Tiongkok. Minta penawaran gratis."
+    },
+    "eyebrow": "Admission Kampus & Sekolah",
+    "h1": "Kuliah di Tiongkok, didampingi di setiap langkah",
+    "intro": "Kami membantu pelajar dan orang tua menemukan sekolah atau universitas di Tiongkok dan menyiapkan pendaftarannya.",
+    "whoTitle": "Untuk siapa?",
+    "who": [
+      "Pelajar yang berencana kuliah atau kursus bahasa di Tiongkok",
+      "Orang tua yang mencarikan sekolah atau kampus untuk anaknya",
+      "Siapa pun yang bingung harus mulai dari mana"
+    ],
+    "howTitle": "Cara kerjanya",
+    "steps": [
+      { "title": "Ceritakan tujuan Anda", "text": "Jurusan, jenjang, kota, dan kapan ingin mulai." },
+      { "title": "Kami usulkan pilihan", "text": "Daftar singkat sekolah atau program yang cocok." },
+      { "title": "Kami dampingi pendaftaran", "text": "Bantuan dengan proses dan berkas." }
+    ],
+    "needTitle": "Yang akan kami tanyakan",
+    "need": [
+      "Tujuan studi dan kota yang diinginkan",
+      "Jenjang pendidikan Anda",
+      "Kapan ingin mulai",
+      "Cara menghubungi Anda"
+    ],
+    "requestTitle": "Mulai permintaan Anda",
+    "requestIntro": "Bertanya gratis. Kami balas dengan langkah berikutnya.",
+    "_PLACEHOLDER": "Teks admission masih draf; tambahkan program, mitra, dan persyaratan yang sebenarnya."
+  }
+}

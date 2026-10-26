@@ -1,1 +1,20 @@
-{}
+{
+  "meta": {
+    "title": "Curated Trips in China",
+    "description": "Ready-made routes in China with local guides: Guangzhou, Shenzhen, Guilin, Yangshuo, Yunnan, Chengdu, Chongqing and the Greater Bay Area."
+  },
+  "eyebrow": "Trips",
+  "h1": "Ready-made routes in China",
+  "intro": "Pick a route and request a quote. Want to change something? We handle changes with you on WhatsApp.",
+  "days": "{count, plural, one {# day} other {# days}}",
+  "routeLabel": "Route",
+  "highlightsLabel": "Highlights",
+  "forWhoLabel": "Who it's for",
+  "requestQuote": "Request a quote",
+  "badgeAvailable": "Available",
+  "badgeOnRequest": "On request",
+  "customTitle": "Don't see your route?",
+  "customText": "Tell us the place you have in mind and we will check if we can find a guide.",
+  "customCta": "Request a destination",
+  "_PLACEHOLDER": "All trip details (days, highlights, who it is for) live in src/data/trips.ts and are drafts."
+}

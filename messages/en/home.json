@@ -2,5 +2,66 @@
   "meta": {
     "title": "Yuanfen | Your bridge to China",
     "description": "Tour guiding, shopping (jasa titip), medical connections and university admission help in China, with local guides and partners. Your bridge to China, guided by fate."
+  },
+  "hero": {
+    "pitch": "Local guides and trusted partners in China for your trip, your shopping, your hospital visit or your studies. We speak your language and stay with you.",
+    "ctaServices": "Choose a service",
+    "trust": ["Free quote, no obligation", "Indonesian-speaking support", "Local guides and partners"],
+    "logoAlt": "Yuanfen logo: a red ribbon forming a Y above the characters 缘分"
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "title": "What do you need help with?",
+    "text": "Pick one. We'll take it from there.",
+    "items": {
+      "tour": { "title": "Tour Guiding", "line": "A local guide for city tours, business trips, halal-friendly travel and airport pickup." },
+      "jastip": { "title": "Shopping (Jasa Titip)", "line": "We buy what you need from China's markets and shops, on your behalf." },
+      "medical": { "title": "Medical", "line": "We connect you with hospitals, interpreters and consultations. No medical advice." },
+      "admission": { "title": "University & School Admission", "line": "Help finding and applying to a school or university in China." }
+    }
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Four simple steps",
+    "steps": [
+      { "title": "Tell us what you need", "text": "Fill in a short form or message us on WhatsApp." },
+      { "title": "We match you", "text": "We find a local guide or partner that fits your plan." },
+      { "title": "We assist you", "text": "We prepare the details and stay in touch before and during your trip." },
+      { "title": "You're taken care of", "text": "Enjoy it, knowing someone has your back." }
+    ],
+    "cta": "See the full process"
+  },
+  "why": {
+    "eyebrow": "Why Yuanfen",
+    "title": "Easier, because we're on both sides",
+    "items": [
+      { "icon": "users", "title": "Local guides", "text": "People who live in China and know it well." },
+      { "icon": "message", "title": "Indonesian-speaking support", "text": "Ask in Bahasa Indonesia or English." },
+      { "icon": "shield", "title": "Fair pricing", "text": "A clear quote before you commit." },
+      { "icon": "compass", "title": "Support before and during your trip", "text": "Reach us on WhatsApp when plans change." }
+    ]
+  },
+  "trips": {
+    "eyebrow": "Trips",
+    "title": "Ready-made routes to start from",
+    "text": "Pick a route, or ask for something different. Changes are handled with our team on WhatsApp.",
+    "cta": "See all trips"
+  },
+  "guides": {
+    "eyebrow": "Our guides",
+    "title": "Meet the people who will look after you"
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What travelers say"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Quick answers",
+    "cta": "More questions"
+  },
+  "finalCta": {
+    "title": "Ready when you are",
+    "text": "Tell us your plan. A quote is free and there is no obligation."
   }
 }

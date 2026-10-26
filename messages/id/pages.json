@@ -1,1 +1,137 @@
-{}
+{
+  "howItWorks": {
+    "meta": {
+      "title": "Cara Kerja",
+      "description": "Cara kerja Yuanfen: ceritakan kebutuhan Anda, kami cocokkan dengan pemandu atau mitra lokal, kami bantu, dan Anda tenang."
+    },
+    "eyebrow": "Cara kerja",
+    "h1": "Dari pesan pertama sampai perjalanan yang terurus",
+    "intro": "Empat langkah. Anda pilih layanannya, sisanya kami yang urus.",
+    "steps": [
+      { "title": "Ceritakan kebutuhan Anda", "text": "Isi formulir singkat untuk layanan yang Anda pilih atau chat kami lewat WhatsApp. Sampaikan apa yang Anda mau dan kapan." },
+      { "title": "Kami cocokkan dengan pemandu atau mitra lokal", "text": "Kami cari orang yang tepat di Tiongkok untuk rencana Anda dan memastikan detailnya bersama Anda." },
+      { "title": "Kami bantu Anda", "text": "Anda menerima penawaran yang jelas. Setelah Anda setuju, kami siapkan semuanya dan tetap berkomunikasi sebelum dan selama perjalanan." },
+      { "title": "Anda tenang", "text": "Nikmati perjalanan atau prosesnya. Kalau rencana berubah, kami hanya sepesan jauhnya." }
+    ],
+    "noPricesTitle": "Soal harga",
+    "noPricesText": "Kami tidak mencantumkan harga tetap karena setiap permintaan berbeda. Isi formulir dan kami kirimkan penawaran. Meminta penawaran gratis dan tanpa kewajiban.",
+    "cta": "Pilih layanan"
+  },
+  "requestDestination": {
+    "meta": {
+      "title": "Minta Destinasi",
+      "description": "Destinasi belum ada di daftar? Beri tahu kami ke mana Anda ingin pergi, kami cek apakah bisa dicarikan pemandu."
+    },
+    "eyebrow": "Minta destinasi",
+    "h1": "Destinasi belum ada di daftar? Beri tahu kami.",
+    "intro": "Sebutkan tempat yang ingin Anda kunjungi. Kami cek apakah bisa dicarikan pemandu, atau kami adakan survei singkat dulu.",
+    "formTitle": "Anda ingin ke mana?"
+  },
+  "partnership": {
+    "meta": {
+      "title": "Kemitraan untuk Perusahaan",
+      "description": "Bermitra dengan Yuanfen: biro perjalanan, rumah sakit dan klinik, universitas dan agen pendidikan, pemasok dan pedagang."
+    },
+    "eyebrow": "Kemitraan",
+    "h1": "Bekerja sama dengan kami",
+    "intro": "Kami membangun jaringan mitra tepercaya di Tiongkok dan luar negeri. Jika perusahaan Anda ingin bekerja sama, ceritakan kepada kami.",
+    "groups": {
+      "agency": { "title": "Biro perjalanan", "text": "Arahkan klien Anda ke pemandu lokal tepercaya, atau tambahkan layanan darat di Tiongkok ke paket Anda." },
+      "hospital": { "title": "Rumah sakit & klinik", "text": "Jangkau pasien internasional dengan jadwal yang didampingi penerjemah." },
+      "university": { "title": "Universitas & agen pendidikan", "text": "Terhubung dengan pelajar yang mencari tempat belajar di Tiongkok." },
+      "supplier": { "title": "Pemasok & pedagang", "text": "Pasok barang dan jasa untuk klien belanja dan perjalanan kami." }
+    },
+    "formTitle": "Pertanyaan kemitraan",
+    "formIntro": "Bagikan beberapa detail dan tim kami akan menghubungi Anda."
+  },
+  "becomeGuide": {
+    "meta": {
+      "title": "Jadi Pemandu",
+      "description": "Daftar menjadi pemandu wisata bersama Yuanfen di Tiongkok. Mahasiswa dipersilakan."
+    },
+    "eyebrow": "Jadi pemandu",
+    "h1": "Pandu wisatawan di kota Anda",
+    "intro": "Tinggal di Tiongkok dan senang mengajak orang berkeliling? Ceritakan tentang Anda. Mahasiswa dipersilakan.",
+    "whyTitle": "Siapa yang kami cari",
+    "why": [
+      "Tinggal di kota di Tiongkok dan mengenalnya dengan baik",
+      "Bisa berbahasa Inggris, Indonesia, atau bahasa lain yang dipakai wisatawan",
+      "Ramah, bisa diandalkan, dan pandai menjelaskan",
+      "Pengalaman membantu, tetapi tidak wajib"
+    ],
+    "formTitle": "Pendaftaran pemandu",
+    "formIntro": "Beberapa pertanyaan singkat tentang Anda."
+  },
+  "about": {
+    "meta": {
+      "title": "Tentang & FAQ",
+      "description": "Tentang Yuanfen, arti 缘分, dan jawaban atas pertanyaan umum tentang layanan kami."
+    },
+    "eyebrow": "Tentang kami",
+    "h1": "Tentang Yuanfen",
+    "lead": "Yuanfen adalah jembatan Anda menuju Tiongkok, dibimbing oleh takdir.",
+    "meaningTitle": "Apa arti 缘分?",
+    "meaningPinyin": "yuánfèn",
+    "meaningText": "缘分 adalah gagasan Tionghoa tentang takdir yang mempertemukan orang, atau hal-hal. Itulah semangat kami: mempertemukan Anda dengan Tiongkok, orang-orangnya, dan peluangnya.",
+    "ribbonTitle": "Pita merah",
+    "ribbonText": "Pita merah pada logo kami mengingatkan pada benang merah takdir dalam budaya Tionghoa, yang diyakini mengikat orang-orang yang ditakdirkan bertemu.",
+    "storyTitle": "Cerita kami",
+    "storyText": "Yuanfen dibuat di Guangzhou. Di sinilah nanti cerita lengkap tentang tim dan awal mula Yuanfen.",
+    "baseTitle": "Made in Guangzhou",
+    "baseText": "Kami bekerja dengan pemandu dan mitra lokal di Tiongkok, dan berbicara dengan Anda dalam Bahasa Indonesia dan Inggris.",
+    "faqTitle": "Pertanyaan yang sering diajukan",
+    "_PLACEHOLDER": "Teks cerita kami masih draf; pemilik harus menulis cerita yang sebenarnya."
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontak",
+      "description": "Hubungi Yuanfen lewat WhatsApp, email, atau formulir kontak."
+    },
+    "eyebrow": "Kontak",
+    "h1": "Bicara dengan kami",
+    "intro": "Cara tercepat menghubungi kami adalah WhatsApp. Anda juga bisa mengirim email atau memakai formulir.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Balasan tercepat",
+    "emailTitle": "Email",
+    "wechatTitle": "WeChat",
+    "telegramTitle": "Telegram",
+    "instagramTitle": "Instagram",
+    "formTitle": "Kirim pesan",
+    "formIntro": "Lebih suka formulir? Tinggalkan data Anda dan kami balas."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Kebijakan Privasi",
+      "description": "Bagaimana Yuanfen mengumpulkan, memakai, dan melindungi informasi pribadi Anda."
+    },
+    "eyebrow": "Hukum",
+    "h1": "Kebijakan Privasi",
+    "draftNote": "Ini draf untuk ditinjau pemilik dan penasihat hukum. Bukan nasihat hukum final.",
+    "updatedLabel": "Terakhir diperbarui",
+    "updated": "PLACEHOLDER tanggal",
+    "sections": [
+      { "title": "Siapa kami", "text": "Yuanfen (\"kami\") menjalankan situs ini dan menghubungkan klien dengan pemandu dan mitra lokal di Tiongkok." },
+      { "title": "Data yang kami kumpulkan", "text": "Saat Anda mengirim formulir, kami mengumpulkan data yang Anda ketik: nama, cara menghubungi Anda, dan kebutuhan Anda. Kami tidak meminta nomor paspor, data pembayaran, atau rekam medis lewat situs ini, dan Anda sebaiknya tidak mengirimkannya." },
+      { "title": "Untuk apa kami memakainya", "text": "Kami memakai data Anda untuk membalas permintaan, menyiapkan penawaran, mencocokkan Anda dengan pemandu atau mitra, dan meningkatkan layanan kami." },
+      { "title": "Siapa yang melihatnya", "text": "Tim kami, serta pemandu atau mitra yang perlu dilibatkan untuk memenuhi permintaan Anda. Penyedia situs dan basis data kami memproses data atas nama kami. Kami tidak menjual data Anda." },
+      { "title": "Berapa lama kami menyimpannya", "text": "PLACEHOLDER: jangka waktu penyimpanan akan dikonfirmasi pemilik." },
+      { "title": "Hak Anda", "text": "Anda dapat meminta untuk melihat, memperbaiki, atau menghapus data Anda dengan menghubungi kami." },
+      { "title": "Cookie", "text": "Kami memakai cookie untuk mengingat pilihan bahasa Anda. Kami tidak memakai cookie iklan." },
+      { "title": "Kontak", "text": "Ada pertanyaan tentang kebijakan ini? Gunakan halaman kontak." }
+    ]
+  },
+  "confirmation": {
+    "meta": {
+      "title": "Permintaan diterima",
+      "description": "Permintaan Anda sudah kami terima."
+    },
+    "h1": "Terima kasih, permintaan Anda sudah kami terima",
+    "text": "Tim kami akan menghubungi Anda dalam {time}.",
+    "refLabel": "Kode referensi Anda",
+    "refHelp": "Simpan kode ini. Sebutkan saat menghubungi kami.",
+    "whatsappCta": "Kirim kode ini lewat WhatsApp",
+    "whatsappMessage": "Halo Yuanfen, kode referensi saya {ref}.",
+    "noRef": "Kami tidak menemukan kode referensi. Jika Anda baru saja mengirim permintaan, silakan hubungi kami lewat WhatsApp.",
+    "home": "Kembali ke beranda"
+  }
+}

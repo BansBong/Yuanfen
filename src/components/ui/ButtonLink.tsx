@@ -40,6 +40,13 @@ export function ButtonLink({
       <span>{children}</span>
     </>
   );
+  if (href.startsWith("#")) {
+    return (
+      <a href={href} className={cls}>
+        {content}
+      </a>
+    );
+  }
   if (external) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>

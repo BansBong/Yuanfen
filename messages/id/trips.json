@@ -1,1 +1,20 @@
-{}
+{
+  "meta": {
+    "title": "Trip Pilihan di Tiongkok",
+    "description": "Rute siap pakai di Tiongkok bersama pemandu lokal: Guangzhou, Shenzhen, Guilin, Yangshuo, Yunnan, Chengdu, Chongqing, dan Greater Bay Area."
+  },
+  "eyebrow": "Trip",
+  "h1": "Rute siap pakai di Tiongkok",
+  "intro": "Pilih rute lalu minta penawaran. Ingin mengubah sesuatu? Kami atur perubahannya bersama Anda lewat WhatsApp.",
+  "days": "{count} hari",
+  "routeLabel": "Rute",
+  "highlightsLabel": "Yang seru",
+  "forWhoLabel": "Cocok untuk",
+  "requestQuote": "Minta penawaran",
+  "badgeAvailable": "Tersedia",
+  "badgeOnRequest": "Atas permintaan",
+  "customTitle": "Tidak menemukan rute Anda?",
+  "customText": "Sebutkan tempat yang Anda inginkan, kami cek apakah bisa dicarikan pemandu.",
+  "customCta": "Minta destinasi",
+  "_PLACEHOLDER": "Semua detail trip (jumlah hari, sorotan, cocok untuk siapa) ada di src/data/trips.ts dan masih draf."
+}

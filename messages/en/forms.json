@@ -1,1 +1,25 @@
-{}
+{
+  "progress": "Step {current} of {total}",
+  "next": "Next",
+  "back": "Back",
+  "submit": "Send my request",
+  "sending": "Sending…",
+  "optional": "optional",
+  "required": "required",
+  "choose": "Choose…",
+  "consent": "I agree to the <privacy>Privacy Policy</privacy> and to be contacted about my request.",
+  "reassurance": "Free to request a quote, no obligation.",
+  "copy": "Copy code",
+  "copied": "Copied",
+  "errorsTitle": "Please check the highlighted answers.",
+  "errors": {
+    "required": "Please fill this in.",
+    "invalid": "Please choose a valid option.",
+    "invalidContact": "Enter a valid email or phone number (with country code).",
+    "tooLong": "This is too long.",
+    "consent": "Please agree to continue.",
+    "submitFailed": "Something went wrong. Please try again, or message us on WhatsApp.",
+    "rateLimited": "Too many requests. Please wait a few minutes and try again.",
+    "notConfigured": "The form is not available right now. Please message us on WhatsApp."
+  }
+}

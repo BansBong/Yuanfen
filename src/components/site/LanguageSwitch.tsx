@@ -13,7 +13,7 @@ export function LanguageSwitch({ className = "" }: { className?: string }) {
     <div
       role="group"
       aria-label={t("language")}
-      className={`inline-flex overflow-hidden rounded-full border-2 border-ink-red/60 bg-cream text-base font-semibold tracking-widest ${className}`}
+      className={`inline-flex overflow-hidden rounded-full border-2 border-ink-red/60 bg-cream text-sm font-semibold tracking-widest sm:text-base ${className}`}
     >
       {routing.locales.map((l) => (
         <Link
@@ -23,7 +23,7 @@ export function LanguageSwitch({ className = "" }: { className?: string }) {
           lang={l}
           hrefLang={l}
           aria-current={locale === l ? "true" : undefined}
-          className={`grid min-h-11 min-w-12 place-items-center px-3 uppercase transition-colors ${
+          className={`grid min-h-11 min-w-10 place-items-center px-2.5 uppercase sm:min-w-12 sm:px-3 transition-colors ${
             locale === l ? "bg-ink-red text-cream" : "text-ink-red hover:bg-ink-red/10"
           }`}
         >

@@ -1,1 +1,117 @@
-{}
+{
+  "common": {
+    "requestEyebrow": "Request a quote",
+    "faqTitle": "Common questions",
+    "whatsappNote": "Prefer to talk? Message us on WhatsApp."
+  },
+  "tour": {
+    "meta": {
+      "title": "Tour Guiding in China",
+      "description": "Local guides for city tours, business trips, Muslim-friendly travel, airport pickup and photography in China. Request a free quote."
+    },
+    "eyebrow": "Tour Guiding",
+    "h1": "A local guide for your trip to China",
+    "intro": "Tell us where you want to go. We match you with a local guide who speaks your language and knows the place.",
+    "typesTitle": "What kind of help do you need?",
+    "types": {
+      "city": { "title": "City Tour", "text": "Sights, food and neighborhoods, at your pace." },
+      "business": { "title": "Business Trip", "text": "A guide or interpreter, factory visits and trade-fair visits." },
+      "muslim": { "title": "Muslim-Friendly Travel", "text": "Halal food, prayer places and prayer times planned in." },
+      "airport": { "title": "Airport Pickup", "text": "Someone to meet you on arrival and get you to your hotel." },
+      "photo": { "title": "Photography", "text": "A photographer for your trip, as an add-on or on its own." }
+    },
+    "destTitle": "Where do you want to go?",
+    "destIntro": "Tap a place to start your request. \"On request\" means we confirm a guide for you first.",
+    "statusAvailable": "Available",
+    "statusOnRequest": "On request",
+    "photoPlaceholder": "Photo placeholder",
+    "choose": "Choose this place",
+    "chosen": "Selected",
+    "hkmoTitle": "Hong Kong and Macau",
+    "hkmoText": "Entry rules for Hong Kong and Macau are different from mainland China. Check what applies to your passport before you book. We can point you to the official sources.",
+    "requestTitle": "Request your quote",
+    "requestIntro": "A few quick questions. We will reply with a quote tailored to you.",
+    "tripPicked": "Trip chosen"
+  },
+  "jastip": {
+    "meta": {
+      "title": "Shopping & Jasa Titip in China",
+      "description": "We buy what you need from markets and shops in China, on your behalf. Clear process, receipts and fees. Request a free quote."
+    },
+    "eyebrow": "Shopping (Jasa Titip)",
+    "h1": "We shop in China for you",
+    "intro": "Tell us what you are looking for. Our local partner finds it, buys it and keeps you updated.",
+    "howTitle": "How it works",
+    "steps": [
+      { "title": "Send your request", "text": "Tell us what you want, with photos or links if you have them." },
+      { "title": "We confirm the details", "text": "We check availability and agree the details with you." },
+      { "title": "We buy for you", "text": "Our partner purchases the items and sends you proof." },
+      { "title": "You receive your order", "text": "We arrange delivery as agreed." }
+    ],
+    "paymentTitle": "Payment and receipts",
+    "paymentText": "Our payment and receipt process is explained here.",
+    "feesTitle": "Fees, clearly stated",
+    "feesText": "Our service fee and how it is shown on your quote is explained here.",
+    "trustTitle": "Why you can feel safe",
+    "trust": [
+      "You get a written quote before anything is bought.",
+      "You get receipts and photos for every purchase.",
+      "You can ask questions at any time on WhatsApp."
+    ],
+    "requestTitle": "Tell us what you want to buy",
+    "requestIntro": "Free to request a quote. No obligation.",
+    "_PLACEHOLDER": "Payment, receipt and fee text, and the trust list, are drafts. Replace with the real policy before launch."
+  },
+  "medical": {
+    "meta": {
+      "title": "Medical Connections in China",
+      "description": "We connect you with hospitals, interpreters and consultations in China. We do not give medical advice."
+    },
+    "eyebrow": "Medical",
+    "h1": "Find the right hospital and an interpreter in China",
+    "intro": "We help you reach hospitals, interpreters and consultation appointments in China, so language is not a barrier.",
+    "disclaimerTitle": "Important",
+    "disclaimerText": "Yuanfen does not give medical advice, diagnosis or treatment. We connect you with hospitals, interpreters and consultation services. Please do not upload medical records or send them through this website. Your doctor decides your care.",
+    "whatTitle": "How we can help",
+    "what": [
+      "Finding a suitable hospital or clinic",
+      "Booking a consultation appointment",
+      "An interpreter to accompany you",
+      "Help with getting around and logistics on the day"
+    ],
+    "requestTitle": "Tell us what you need",
+    "requestIntro": "Share only the basics. Never include medical records or ID numbers here.",
+    "_PLACEHOLDER": "Medical copy is a careful draft. Have it reviewed by the owner (and legal advisor if needed) before launch."
+  },
+  "admission": {
+    "meta": {
+      "title": "University & School Admission in China",
+      "description": "Help finding and applying to universities and schools in China. Request a free quote."
+    },
+    "eyebrow": "University & School Admission",
+    "h1": "Study in China, with help every step of the way",
+    "intro": "We help students and parents find a school or university in China and prepare their application.",
+    "whoTitle": "Who is it for?",
+    "who": [
+      "Students planning a degree or language course in China",
+      "Parents looking for a school or university for their child",
+      "Anyone unsure where to start"
+    ],
+    "howTitle": "How it works",
+    "steps": [
+      { "title": "Tell us your goal", "text": "Subject, level, city and when you want to start." },
+      { "title": "We suggest options", "text": "A short list of schools or programs that fit." },
+      { "title": "We support the application", "text": "Help with the process and paperwork." }
+    ],
+    "needTitle": "What we will ask you",
+    "need": [
+      "Your study goal and preferred city",
+      "Your education level",
+      "When you want to start",
+      "How we can contact you"
+    ],
+    "requestTitle": "Start your request",
+    "requestIntro": "Free to ask. We reply with the next steps.",
+    "_PLACEHOLDER": "Admission copy is a draft; add real programs, partners and requirements."
+  }
+}

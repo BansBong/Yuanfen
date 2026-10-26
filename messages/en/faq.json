@@ -1,1 +1,27 @@
-{}
+{
+  "_PLACEHOLDER": "All FAQ answers are drafts. The owner must confirm every answer (timings, payment, policies) before launch.",
+  "general": [
+    { "q": "What does Yuanfen do?", "a": "We connect you with local guides and partners in China for tour guiding, shopping (jasa titip), medical connections and university or school admission." },
+    { "q": "How much does it cost?", "a": "Prices depend on your request, so we do not list fixed prices. Fill in the form and we will send you a quote. Requesting a quote is free and carries no obligation." },
+    { "q": "What languages do you speak?", "a": "English and Bahasa Indonesia. Your guide or partner will speak a language that works for you." },
+    { "q": "How fast will you reply?", "a": "PLACEHOLDER: the team's usual response time will be stated here." },
+    { "q": "Is it safe to pay you?", "a": "PLACEHOLDER: payment methods and protections will be explained here before launch." }
+  ],
+  "tour": [
+    { "q": "Can I ask for a halal-friendly trip?", "a": "Yes. Tell us in the form and we will plan halal food and prayer places and times into your day." },
+    { "q": "Can you plan a trip to a place that is not on the list?", "a": "Possibly. Use the Request a Destination page and we will check if we can find a guide." },
+    { "q": "Do you offer airport pickup only?", "a": "Yes, you can book airport pickup on its own or as part of a trip." }
+  ],
+  "jastip": [
+    { "q": "How do I know what I will pay?", "a": "You receive a written quote before anything is bought. PLACEHOLDER: full fee policy to be added." },
+    { "q": "Do I get receipts?", "a": "Yes. We send proof of purchase for your items. PLACEHOLDER: confirm exact process." }
+  ],
+  "medical": [
+    { "q": "Do you give medical advice?", "a": "No. We connect you with hospitals, interpreters and consultation services. Your doctor decides your care." },
+    { "q": "Should I send my medical records through the website?", "a": "No. Please do not upload or send medical records through this website." }
+  ],
+  "admission": [
+    { "q": "Which schools can you help with?", "a": "PLACEHOLDER: list of partner schools and programs to be added." },
+    { "q": "Do I need to prepare documents first?", "a": "No. Start with the form and we will tell you what is needed." }
+  ]
+}

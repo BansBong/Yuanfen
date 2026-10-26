@@ -1,1 +1,25 @@
-{}
+{
+  "progress": "Langkah {current} dari {total}",
+  "next": "Lanjut",
+  "back": "Kembali",
+  "submit": "Kirim permintaan",
+  "sending": "Mengirim…",
+  "optional": "opsional",
+  "required": "wajib",
+  "choose": "Pilih…",
+  "consent": "Saya setuju dengan <privacy>Kebijakan Privasi</privacy> dan bersedia dihubungi terkait permintaan saya.",
+  "reassurance": "Minta penawaran gratis, tanpa kewajiban.",
+  "copy": "Salin kode",
+  "copied": "Tersalin",
+  "errorsTitle": "Mohon periksa jawaban yang ditandai.",
+  "errors": {
+    "required": "Mohon diisi.",
+    "invalid": "Mohon pilih opsi yang valid.",
+    "invalidContact": "Masukkan email atau nomor telepon yang valid (dengan kode negara).",
+    "tooLong": "Terlalu panjang.",
+    "consent": "Mohon setujui untuk melanjutkan.",
+    "submitFailed": "Terjadi kesalahan. Coba lagi, atau chat kami lewat WhatsApp.",
+    "rateLimited": "Terlalu banyak permintaan. Tunggu beberapa menit lalu coba lagi.",
+    "notConfigured": "Formulir sedang tidak tersedia. Silakan chat kami lewat WhatsApp."
+  }
+}

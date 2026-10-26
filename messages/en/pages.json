@@ -1,1 +1,137 @@
-{}
+{
+  "howItWorks": {
+    "meta": {
+      "title": "How It Works",
+      "description": "How Yuanfen works: tell us what you need, we match you with a local guide or partner, we assist you, and you are taken care of."
+    },
+    "eyebrow": "How it works",
+    "h1": "From your first message to a trip well taken care of",
+    "intro": "Four steps. You choose the service, we handle the rest.",
+    "steps": [
+      { "title": "Tell us what you need", "text": "Fill in the short form for your service or message us on WhatsApp. Tell us what you want and when." },
+      { "title": "We match you with a local guide or partner", "text": "We look for the right person in China for your plan and check the details with you." },
+      { "title": "We assist you", "text": "You get a clear quote. Once you are happy, we prepare everything and stay in touch before and during your trip." },
+      { "title": "You're taken care of", "text": "Enjoy your trip or process. If plans change, we are a message away." }
+    ],
+    "noPricesTitle": "About prices",
+    "noPricesText": "We do not list fixed prices because every request is different. Fill in the form and we will send you a quote. Requesting a quote is free and carries no obligation.",
+    "cta": "Choose a service"
+  },
+  "requestDestination": {
+    "meta": {
+      "title": "Request a Destination",
+      "description": "Destination not listed? Tell us where you want to go and we will check if we can find a guide."
+    },
+    "eyebrow": "Request a destination",
+    "h1": "Destination not listed? Tell us.",
+    "intro": "Tell us the place you want to visit. We'll check if we can find a guide, or run a quick survey first.",
+    "formTitle": "Where would you like to go?"
+  },
+  "partnership": {
+    "meta": {
+      "title": "Partnership for Companies",
+      "description": "Partner with Yuanfen: travel agencies, hospitals and clinics, universities and education agents, suppliers and merchants."
+    },
+    "eyebrow": "Partnership",
+    "h1": "Work with us",
+    "intro": "We build a network of trusted partners in China and abroad. If your company would like to work with us, tell us about it.",
+    "groups": {
+      "agency": { "title": "Travel agencies", "text": "Send your clients to trusted local guides, or add China ground support to your packages." },
+      "hospital": { "title": "Hospitals & clinics", "text": "Reach international patients with interpreter-supported appointments." },
+      "university": { "title": "Universities & education agents", "text": "Connect with students who are looking for a place to study in China." },
+      "supplier": { "title": "Suppliers & merchants", "text": "Supply goods and services to our shopping and travel clients." }
+    },
+    "formTitle": "Partnership inquiry",
+    "formIntro": "Share a few details and our team will get back to you."
+  },
+  "becomeGuide": {
+    "meta": {
+      "title": "Become a Guide",
+      "description": "Apply to guide travelers with Yuanfen in China. Students are welcome."
+    },
+    "eyebrow": "Become a guide",
+    "h1": "Guide travelers in your city",
+    "intro": "Do you live in China and enjoy showing people around? Tell us about yourself. Students are welcome.",
+    "whyTitle": "Who we are looking for",
+    "why": [
+      "Lives in a Chinese city and knows it well",
+      "Speaks English, Indonesian, or another language travelers use",
+      "Friendly, reliable and good at explaining",
+      "Experience is helpful, but not required"
+    ],
+    "formTitle": "Guide application",
+    "formIntro": "A few quick questions about you."
+  },
+  "about": {
+    "meta": {
+      "title": "About & FAQ",
+      "description": "About Yuanfen, the meaning of 缘分, and answers to common questions about our services."
+    },
+    "eyebrow": "About us",
+    "h1": "About Yuanfen",
+    "lead": "Yuanfen is your bridge to China, guided by fate.",
+    "meaningTitle": "What does 缘分 mean?",
+    "meaningPinyin": "yuánfèn",
+    "meaningText": "缘分 is the Chinese idea of fate bringing people, or things, together. It is our spirit: connecting you with China, its people and its opportunities.",
+    "ribbonTitle": "The red ribbon",
+    "ribbonText": "The red ribbon in our logo recalls the red thread of fate in Chinese culture, said to bind people who are destined to meet.",
+    "storyTitle": "Our story",
+    "storyText": "Yuanfen is made in Guangzhou. This is where the full story of the team and how Yuanfen started will go.",
+    "baseTitle": "Made in Guangzhou",
+    "baseText": "We work with local guides and partners in China, and we speak with you in English and Bahasa Indonesia.",
+    "faqTitle": "Frequently asked questions",
+    "_PLACEHOLDER": "About story text is a draft placeholder; the owner must write the real story."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Contact Yuanfen on WhatsApp, by email or with the contact form."
+    },
+    "eyebrow": "Contact",
+    "h1": "Talk to us",
+    "intro": "The fastest way to reach us is WhatsApp. You can also email us or use the form.",
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Fastest reply",
+    "emailTitle": "Email",
+    "wechatTitle": "WeChat",
+    "telegramTitle": "Telegram",
+    "instagramTitle": "Instagram",
+    "formTitle": "Send us a message",
+    "formIntro": "Prefer a form? Leave your details and we will reply."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "How Yuanfen collects, uses and protects your personal information."
+    },
+    "eyebrow": "Legal",
+    "h1": "Privacy Policy",
+    "draftNote": "This is a draft for owner and legal review. It is not final legal advice.",
+    "updatedLabel": "Last updated",
+    "updated": "PLACEHOLDER date",
+    "sections": [
+      { "title": "Who we are", "text": "Yuanfen (\"we\") runs this website and connects clients with local guides and partners in China." },
+      { "title": "What we collect", "text": "When you send a form, we collect the details you type in: your name, how to contact you, and what you need. We do not ask for passport numbers, payment details or medical records through this website, and you should not send them." },
+      { "title": "Why we use it", "text": "We use your details to reply to your request, prepare a quote, match you with a guide or partner, and improve our service." },
+      { "title": "Who sees it", "text": "Our team, and the guides or partners we need to involve to fulfil your request. Our website and database providers process data on our behalf. We do not sell your data." },
+      { "title": "How long we keep it", "text": "PLACEHOLDER: retention period to be confirmed by the owner." },
+      { "title": "Your rights", "text": "You can ask to see, correct or delete your information by contacting us." },
+      { "title": "Cookies", "text": "We use a cookie to remember your language choice. We do not use advertising cookies." },
+      { "title": "Contact", "text": "Questions about this policy? Use the contact page." }
+    ]
+  },
+  "confirmation": {
+    "meta": {
+      "title": "Request received",
+      "description": "Your request has been received."
+    },
+    "h1": "Thank you, we have your request",
+    "text": "Our team will contact you within {time}.",
+    "refLabel": "Your reference code",
+    "refHelp": "Keep this code. Mention it if you contact us.",
+    "whatsappCta": "Send this code on WhatsApp",
+    "whatsappMessage": "Hello Yuanfen, my reference code is {ref}.",
+    "noRef": "We could not find a reference code. If you just sent a request, please contact us on WhatsApp.",
+    "home": "Back to home"
+  }
+}

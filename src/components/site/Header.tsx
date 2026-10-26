@@ -48,7 +48,7 @@ export function Header() {
         <Link
           href="/"
           aria-label={`${BRAND.name}, ${t("home")}`}
-          className="font-display text-lg tracking-[0.3em] text-ink-red uppercase sm:text-xl"
+          className="font-display text-base tracking-[0.2em] text-ink-red uppercase sm:text-xl sm:tracking-[0.3em]"
         >
           {BRAND.name}
         </Link>
@@ -61,10 +61,12 @@ export function Header() {
           <DropdownMenu label={t("about")} items={items(ABOUT_LINKS)} />
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
-          <Link href="/contact" className={buttonClass("primary", "hidden !min-h-11 !px-5 !py-2 lg:inline-flex")}>
-            {t("contactButton")}
-          </Link>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <span className="hidden lg:block">
+            <Link href="/contact" className={buttonClass("primary", "!min-h-11 !px-5 !py-2")}>
+              {t("contactButton")}
+            </Link>
+          </span>
           <LanguageSwitch />
           <NextLink
             href="/login"
@@ -78,7 +80,7 @@ export function Header() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen(true)}
-            className="inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-ink-red/60 px-4 text-base font-semibold text-ink-red lg:hidden"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-full border-2 border-ink-red/60 px-3 text-base font-semibold text-ink-red sm:gap-2 sm:px-4 lg:hidden"
           >
             <Menu aria-hidden="true" className="size-5" />
             {t("menu")}
