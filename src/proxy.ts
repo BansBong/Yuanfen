@@ -2,11 +2,14 @@ import { NextResponse, type NextRequest } from "next/server";
 import { LOCALE_COOKIE, detectLocale } from "@/i18n/detect";
 import { isLocale } from "@/i18n/routing";
 import { INDEXABLE, SERVE_FULL_SITE } from "@/lib/site-mode";
+import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { updateSession } from "@/lib/supabase/proxy";
 
 /**
- * Launch switch + locale routing.
+ * Launch switch + locale routing + admin session refresh.
  *
- * - /admin and /login: always served (team access), never indexed.
+ * - /admin and /login: always served (team access), never indexed. The Supabase
+ *   session is refreshed here and anonymous visitors are sent to /login.
  * - coming-soon mode (production): every other URL is rewritten to the Coming
  *   Soon page in the visitor's language. The URL in the address bar is kept.
  * - live mode or a Vercel preview: the full site under /en and /id.
@@ -20,11 +23,19 @@ function withHeaders(res: NextResponse, noindex: boolean) {
   return res;
 }
 
-export default function proxy(req: NextRequest) {
+export default async function proxy(req: NextRequest) {
   const { pathname, search } = req.nextUrl;
 
   if (INTERNAL.test(pathname)) {
-    return withHeaders(NextResponse.next(), true);
+    if (!isSupabaseConfigured()) return withHeaders(NextResponse.next(), true);
+    const { response, user } = await updateSession(req);
+    if (!user && pathname.startsWith("/admin")) {
+      const url = req.nextUrl.clone();
+      url.pathname = "/login";
+      url.search = `?next=${encodeURIComponent(pathname + search)}`;
+      return withHeaders(NextResponse.redirect(url), true);
+    }
+    return withHeaders(response, true);
   }
 
   const segments = pathname.split("/").filter(Boolean);
@@ -55,8 +66,7 @@ export default function proxy(req: NextRequest) {
     const url = req.nextUrl.clone();
     url.pathname = `/${detectLocale(req)}${pathname === "/" ? "" : pathname}`;
     url.search = search;
-    const res = NextResponse.redirect(url);
-    return withHeaders(res, !INDEXABLE);
+    return withHeaders(NextResponse.redirect(url), !INDEXABLE);
   }
 
   const res = NextResponse.next();

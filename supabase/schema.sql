@@ -57,6 +57,8 @@ create table if not exists public.requests (
   status         public.request_status not null default 'new',
   assigned_to    uuid references public.profiles (id) on delete set null,
   internal_notes text,
+  -- which admin last changed the workflow fields (traceability)
+  last_updated_by uuid references public.profiles (id) on delete set null,
   -- salted hash of the sender's IP, used only for rate limiting
   ip_hash        text,
   created_at     timestamptz not null default now(),
@@ -147,7 +149,7 @@ revoke all on public.requests from anon, authenticated;
 grant insert on public.requests to anon, authenticated;
 grant select on public.requests to authenticated;
 -- admins may change only the workflow columns, never the submitted answers
-grant update (status, assigned_to, internal_notes) on public.requests to authenticated;
+grant update (status, assigned_to, internal_notes, last_updated_by) on public.requests to authenticated;
 
 drop policy if exists requests_insert_public on public.requests;
 create policy requests_insert_public on public.requests
