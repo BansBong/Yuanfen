@@ -1,0 +1,30 @@
+{
+  "skip": "Skip to content",
+  "whatsapp": "Chat on WhatsApp",
+  "whatsappMessage": "Hello Yuanfen, I'd like to ask about your services.",
+  "chooseService": "Choose a service",
+  "requestQuote": "Request a quote",
+  "contactUs": "Contact us",
+  "learnMore": "Learn more",
+  "seeAll": "See all",
+  "back": "Back to home",
+  "freeQuote": "Free to request a quote, no obligation.",
+  "noPrices": "Prices are tailored to your needs. Fill in the form and we'll send you a quote.",
+  "footer": {
+    "tagline": "Your bridge to China, guided by fate.",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "contactTitle": "Contact",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved.",
+    "madeIn": "Made in Guangzhou",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "We could not find that page. Let's get you back on track.",
+    "home": "Go to the home page"
+  }
+}

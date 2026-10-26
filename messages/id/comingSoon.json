@@ -1,0 +1,73 @@
+{
+  "left": "COMING",
+  "right": "SOON",
+  "launching": "Meluncur 10 November 2026",
+  "logoAlt": "Logo Yuanfen: pita merah membentuk huruf Y dengan tulisan 缘分",
+  "scroll": "Lihat layanan",
+  "services": {
+    "eyebrow": "Layanan kami",
+    "title": "Satu jembatan, empat cara menuju Tiongkok",
+    "items": {
+      "tour": {
+        "name": "Tour Guiding",
+        "description": "Dipandu langsung di kota air, pegunungan, dan tempat wisata favorit.",
+        "alt": "Ilustrasi pemandu wisata membawa bendera di kota air Tiongkok, bersama turis yang memotret."
+      },
+      "shop": {
+        "name": "Jasa Titip",
+        "description": "Belanja langsung dari pasar grosir dan toko di Tiongkok, kami yang urus.",
+        "alt": "Ilustrasi dua perempuan di konter toko dengan tas kain."
+      },
+      "admission": {
+        "name": "Admission Kampus/Sekolah",
+        "description": "Bantu daftar kuliah dan sekolah di Tiongkok, dari berkas sampai tiba di kampus.",
+        "alt": "Ilustrasi mahasiswa berjubah wisuda di kampus, salah satunya berhijab."
+      },
+      "medical": {
+        "name": "Medical",
+        "description": "Pendampingan berobat dan konsultasi di rumah sakit internasional.",
+        "alt": "Ilustrasi ruang konsultasi rumah sakit: dokter berbicara dengan pasien."
+      }
+    }
+  },
+  "hint": {
+    "eyebrow": "Sekilas tentang kami",
+    "title": "Jembatan antara Anda dan Tiongkok",
+    "body": "Yuanfen membantu Anda menjelajah, berbelanja, berobat, dan berkuliah di Tiongkok, dengan pendampingan langsung dari tim kami.",
+    "steps": {
+      "s1": {
+        "title": "Ceritakan kebutuhan Anda",
+        "text": "Hubungi kami lewat WhatsApp dan sampaikan rencana Anda."
+      },
+      "s2": {
+        "title": "Kami yang mengatur",
+        "text": "Kami bantu menyiapkan rencana, berkas, dan janji yang diperlukan."
+      },
+      "s3": {
+        "title": "Kami mendampingi",
+        "text": "Selama di Tiongkok, ada yang membantu Anda langkah demi langkah."
+      }
+    }
+  },
+  "intro": "Layanan kami segera hadir. Hubungi kami sekarang atau daftar untuk kabar peluncuran.",
+  "ctaWhatsApp": "Hubungi kami via WhatsApp",
+  "ctaInstagram": "Ikuti di Instagram",
+  "whatsappMessage": "Halo Yuanfen, saya ingin bertanya tentang layanan Anda.",
+  "waitlist": {
+    "title": "Daftar waitlist",
+    "label": "Alamat email",
+    "placeholder": "nama@email.com",
+    "button": "Daftar",
+    "sending": "Mengirim…",
+    "invalid": "Masukkan alamat email yang valid.",
+    "failed": "Terjadi kesalahan. Coba lagi.",
+    "success": "Terima kasih! Kami akan mengabari Anda saat Yuanfen diluncurkan."
+  },
+  "footer": {
+    "social": "Media sosial",
+    "email": "Email"
+  },
+  "langToggle": "Bahasa",
+  "home": "Beranda",
+  "metaDescription": "Yuanfen: tour guiding, jasa titip, medical, dan admission kampus/sekolah di Tiongkok. Your bridge to China, guided by fate. Meluncur 10 November 2026."
+}

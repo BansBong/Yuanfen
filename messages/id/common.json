@@ -1,0 +1,30 @@
+{
+  "skip": "Langsung ke konten",
+  "whatsapp": "Chat via WhatsApp",
+  "whatsappMessage": "Halo Yuanfen, saya ingin bertanya tentang layanan Anda.",
+  "chooseService": "Pilih layanan",
+  "requestQuote": "Minta penawaran",
+  "contactUs": "Hubungi kami",
+  "learnMore": "Selengkapnya",
+  "seeAll": "Lihat semua",
+  "back": "Kembali ke beranda",
+  "freeQuote": "Minta penawaran gratis, tanpa kewajiban.",
+  "noPrices": "Harga disesuaikan dengan kebutuhan Anda. Isi formulir dan kami kirimkan penawarannya.",
+  "footer": {
+    "tagline": "Your bridge to China, guided by fate.",
+    "servicesTitle": "Layanan",
+    "companyTitle": "Perusahaan",
+    "contactTitle": "Kontak",
+    "privacy": "Kebijakan Privasi",
+    "rights": "Hak cipta dilindungi.",
+    "madeIn": "Made in Guangzhou",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "notFound": {
+    "title": "Halaman tidak ditemukan",
+    "text": "Halaman itu tidak ketemu. Yuk kembali ke jalur yang benar.",
+    "home": "Ke beranda"
+  }
+}

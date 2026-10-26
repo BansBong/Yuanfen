@@ -1,0 +1,26 @@
+{
+  "home": "Home",
+  "services": "Services",
+  "trips": "Trips",
+  "partnership": "Partnership",
+  "about": "About",
+  "menu": "Menu",
+  "close": "Close menu",
+  "login": "Login",
+  "contactButton": "Contact",
+  "language": "Language",
+  "mainNav": "Main navigation",
+  "items": {
+    "tour": "Tour Guiding",
+    "jastip": "Shopping (Jasa Titip)",
+    "medical": "Medical",
+    "admission": "University & School Admission",
+    "trips": "Curated Trips",
+    "requestDestination": "Request a Destination",
+    "partnership": "For Companies",
+    "becomeGuide": "Become a Guide",
+    "howItWorks": "How It Works",
+    "about": "About & FAQ",
+    "contact": "Contact"
+  }
+}

@@ -1,0 +1,4 @@
+// Replaced by the real login form in the admin step.
+export default function LoginPage() {
+  return <main className="p-8">Login</main>;
+}

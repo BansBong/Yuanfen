@@ -1,0 +1,73 @@
+{
+  "left": "COMING",
+  "right": "SOON",
+  "launching": "Launching 10 November 2026",
+  "logoAlt": "Yuanfen logo: a red ribbon forming a Y above the characters 缘分",
+  "scroll": "See our services",
+  "services": {
+    "eyebrow": "What we do",
+    "title": "One bridge, four ways into China",
+    "items": {
+      "tour": {
+        "name": "Tour Guiding",
+        "description": "Guided in person through water towns, mountains and favourite sights.",
+        "alt": "Illustration of a tour guide with a flag in a Chinese water town, with a tourist taking photos."
+      },
+      "shop": {
+        "name": "Personal Shopping",
+        "description": "We shop for you at China's wholesale markets and stores.",
+        "alt": "Illustration of two women at a shop counter with a tote bag."
+      },
+      "admission": {
+        "name": "University & School Admission",
+        "description": "Help applying to universities and schools in China, from paperwork to campus arrival.",
+        "alt": "Illustration of graduates in gowns on a campus, one wearing a hijab."
+      },
+      "medical": {
+        "name": "Medical",
+        "description": "Support for treatment and consultations at international hospitals.",
+        "alt": "Illustration of a hospital consultation room with a doctor talking to patients."
+      }
+    }
+  },
+  "hint": {
+    "eyebrow": "A glimpse of what we do",
+    "title": "A bridge between you and China",
+    "body": "Yuanfen helps you explore, shop, seek medical care and study in China, with hands-on support from our team.",
+    "steps": {
+      "s1": {
+        "title": "Tell us what you need",
+        "text": "Message us on WhatsApp and share your plans."
+      },
+      "s2": {
+        "title": "We arrange it",
+        "text": "We help prepare the plan, paperwork and appointments."
+      },
+      "s3": {
+        "title": "We go with you",
+        "text": "While you are in China, someone helps you every step of the way."
+      }
+    }
+  },
+  "intro": "Our services are coming soon. Message us now or join the waitlist for launch news.",
+  "ctaWhatsApp": "Contact us on WhatsApp",
+  "ctaInstagram": "Follow on Instagram",
+  "whatsappMessage": "Hello Yuanfen, I would like to ask about your services.",
+  "waitlist": {
+    "title": "Join the waitlist",
+    "label": "Email address",
+    "placeholder": "name@email.com",
+    "button": "Join",
+    "sending": "Sending…",
+    "invalid": "Please enter a valid email address.",
+    "failed": "Something went wrong. Please try again.",
+    "success": "Thank you! We'll let you know when Yuanfen launches."
+  },
+  "footer": {
+    "social": "Social links",
+    "email": "Email"
+  },
+  "langToggle": "Language",
+  "home": "Home",
+  "metaDescription": "Yuanfen: tour guiding, personal shopping, medical support and university & school admission in China. Your bridge to China, guided by fate. Launching 10 November 2026."
+}

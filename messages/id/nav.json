@@ -1,0 +1,26 @@
+{
+  "home": "Beranda",
+  "services": "Layanan",
+  "trips": "Trip",
+  "partnership": "Kemitraan",
+  "about": "Tentang",
+  "menu": "Menu",
+  "close": "Tutup menu",
+  "login": "Masuk",
+  "contactButton": "Hubungi kami",
+  "language": "Bahasa",
+  "mainNav": "Navigasi utama",
+  "items": {
+    "tour": "Tour Guiding",
+    "jastip": "Jasa Titip",
+    "medical": "Medical",
+    "admission": "Admission Kampus & Sekolah",
+    "trips": "Trip Pilihan",
+    "requestDestination": "Minta Destinasi",
+    "partnership": "Untuk Perusahaan",
+    "becomeGuide": "Jadi Pemandu",
+    "howItWorks": "Cara Kerja",
+    "about": "Tentang & FAQ",
+    "contact": "Kontak"
+  }
+}
