@@ -53,7 +53,7 @@ All copy in both languages is **draft** and needs a human review (Indonesian by 
 
 | Item | Where | Note |
 | --- | --- | --- |
-| Poster / Instagram artwork with **YUANFENN** (double n) baked into the pixels | `design/poster/coming soon poster.png` (source only, not deployed) | I did not edit it. Please supply a corrected poster if you still want to use it |
+| Poster / Instagram artwork with the OLD double-n spelling baked into the pixels | `design/poster/coming soon poster.png` (source only, not deployed) | I did not edit it. Please supply a corrected poster if you still want to use it |
 | Old Open Graph / Twitter images made from that poster | were `src/app/opengraph-image.png`, `twitter-image.png` | **Removed.** Social previews now come from `/og` (live text + logo), so the spelling is always right. Drop in new poster-based artwork later if you prefer |
 | Destination photos | `public/destinations/` (not created yet) | The picker shows "Photo placeholder" tiles until you set `image` in `destinations.ts` |
 | Service card illustrations | `public/brand/card-*.jpg` | Reused from the poster scenes (they contain no text) |

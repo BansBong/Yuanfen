@@ -4,7 +4,7 @@
 
 Next.js 16 (App Router) · TypeScript · Tailwind CSS 4 · next-intl (EN / ID) · Supabase.
 
-> Spelling rules: the company is **Yuanfen** (one n). The domain is **yuanfenbridge.com**. Never "Yuanfenn".
+> Spelling rules: the company is **Yuanfen** (one n). The domain is **yuanfenbridge.com**. Never add a second "n".
 
 ---
 
