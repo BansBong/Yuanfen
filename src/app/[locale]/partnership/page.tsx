@@ -38,8 +38,8 @@ export default async function PartnershipPage({ params }: LocaleParams) {
                 <Icon name={g.icon} className="size-8" />
               </span>
               <div>
-                <h2 className="font-display text-2xl text-ink-red">{t(`groups.${g.key}.title`)}</h2>
-                <p className="mt-2 text-lg leading-relaxed text-maroon">{t(`groups.${g.key}.text`)}</p>
+                <h2 className="font-display text-xl text-ink-red">{t(`groups.${g.key}.title`)}</h2>
+                <p className="mt-2 text-base leading-relaxed text-maroon">{t(`groups.${g.key}.text`)}</p>
               </div>
             </li>
           ))}

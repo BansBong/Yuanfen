@@ -7,7 +7,7 @@ import type { Locale } from "@/i18n/routing";
 type Value = string | string[] | boolean;
 
 const INPUT =
-  "min-h-14 w-full rounded-2xl border-2 bg-white px-4 py-3 text-lg text-maroon placeholder:text-ink-red/50 focus:border-crimson focus:outline-none focus-visible:ring-4 focus-visible:ring-crimson/20";
+  "min-h-14 w-full rounded-2xl border-2 bg-white px-4 py-3 text-base text-maroon placeholder:text-ink-red/50 focus:border-crimson focus:outline-none focus-visible:ring-4 focus-visible:ring-crimson/20";
 
 /** One question. Labels, help and errors are wired up with aria-* so screen readers announce them. */
 export function FieldControl({
@@ -74,7 +74,7 @@ export function FieldControl({
         aria-invalid={error ? true : undefined}
         className="outline-none"
       >
-        <legend className="mb-3 text-lg font-semibold text-ink-red">{labelNode}</legend>
+        <legend className="mb-3 text-base font-semibold text-ink-red">{labelNode}</legend>
         <div className="flex flex-wrap gap-3">
           {(field.options ?? []).map((o) => {
             const checked = selected.includes(o.value);
@@ -96,7 +96,7 @@ export function FieldControl({
                   className="peer sr-only"
                 />
                 <span
-                  className={`inline-flex min-h-14 items-center rounded-full border-2 px-5 text-lg transition-colors peer-checked:border-ink-red peer-checked:bg-ink-red peer-checked:text-cream peer-focus-visible:ring-4 peer-focus-visible:ring-crimson/30 ${
+                  className={`inline-flex min-h-14 items-center rounded-full border-2 px-5 text-base transition-colors peer-checked:border-ink-red peer-checked:bg-ink-red peer-checked:text-cream peer-focus-visible:ring-4 peer-focus-visible:ring-crimson/30 ${
                     error ? "border-crimson" : "border-ink-red/30"
                   } bg-white text-ink-red hover:border-ink-red/60`}
                 >
@@ -125,7 +125,7 @@ export function FieldControl({
             aria-invalid={error ? true : undefined}
             className="mt-1 size-7 shrink-0 accent-[#8b1a1a]"
           />
-          <span className="text-lg leading-snug text-maroon">{labelNode}</span>
+          <span className="text-base leading-snug text-maroon">{labelNode}</span>
         </label>
         {meta}
       </div>
@@ -192,7 +192,7 @@ export function FieldControl({
 
   return (
     <div>
-      <label htmlFor={id} className="mb-2 block text-lg font-semibold text-ink-red">
+      <label htmlFor={id} className="mb-2 block text-base font-semibold text-ink-red">
         {labelNode}
       </label>
       {control}

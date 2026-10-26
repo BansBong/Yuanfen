@@ -47,8 +47,8 @@ export default async function JasaTitipPage({ params }: LocaleParams) {
             <li key={st.title} className="reveal flex items-start gap-4 lg:flex-col lg:items-center lg:text-center">
               <StarMarker n={i + 1} />
               <div>
-                <h3 className="font-display text-xl text-ink-red">{st.title}</h3>
-                <p className="mt-2 text-lg leading-relaxed text-maroon">{st.text}</p>
+                <h3 className="font-display text-lg text-ink-red">{st.title}</h3>
+                <p className="mt-2 text-base leading-relaxed text-maroon">{st.text}</p>
               </div>
             </li>
           ))}
@@ -56,29 +56,29 @@ export default async function JasaTitipPage({ params }: LocaleParams) {
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           <div className="rounded-3xl border-2 border-ink-red/20 bg-white/70 p-6">
-            <h3 className="flex flex-wrap items-center gap-3 font-display text-2xl text-ink-red">
+            <h3 className="flex flex-wrap items-center gap-3 font-display text-xl text-ink-red">
               <Icon name="file" className="size-7 text-crimson" />
               {t("paymentTitle")}
               <PlaceholderBadge what="payment policy" />
             </h3>
-            <p className="mt-3 text-lg leading-relaxed text-maroon">{t("paymentText")}</p>
+            <p className="mt-3 text-base leading-relaxed text-maroon">{t("paymentText")}</p>
           </div>
           <div className="rounded-3xl border-2 border-ink-red/20 bg-white/70 p-6">
-            <h3 className="flex flex-wrap items-center gap-3 font-display text-2xl text-ink-red">
+            <h3 className="flex flex-wrap items-center gap-3 font-display text-xl text-ink-red">
               <Icon name="shield" className="size-7 text-crimson" />
               {t("feesTitle")}
               <PlaceholderBadge what="fee policy" />
             </h3>
-            <p className="mt-3 text-lg leading-relaxed text-maroon">{t("feesText")}</p>
+            <p className="mt-3 text-base leading-relaxed text-maroon">{t("feesText")}</p>
           </div>
         </div>
 
         <div className="mt-6 rounded-3xl bg-cream-center p-6 ring-1 ring-ink-red/15">
-          <h3 className="flex flex-wrap items-center gap-3 font-display text-2xl text-ink-red">
+          <h3 className="flex flex-wrap items-center gap-3 font-display text-xl text-ink-red">
             {t("trustTitle")}
             <PlaceholderBadge what="trust list" />
           </h3>
-          <ul className="mt-3 space-y-2 text-lg text-maroon">
+          <ul className="mt-3 space-y-2 text-base text-maroon">
             {trust.map((item) => (
               <li key={item} className="flex gap-3">
                 <span aria-hidden="true" className="mt-2.5 size-2.5 shrink-0 rotate-45 bg-crimson" />

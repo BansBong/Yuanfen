@@ -19,13 +19,13 @@ export async function TripCard({ trip, locale, compact = false }: { trip: Trip; 
         />
         <PlaceholderBadge what="trip details" />
       </div>
-      <h3 className="mt-4 font-display text-2xl leading-snug text-ink-red">{trip.name[locale]}</h3>
+      <h3 className="mt-4 font-display text-xl leading-snug text-ink-red">{trip.name[locale]}</h3>
 
-      <p className="mt-3 flex items-center gap-2 text-lg font-medium text-maroon">
+      <p className="mt-3 flex items-center gap-2 text-base font-medium text-maroon">
         <CalendarDays aria-hidden="true" className="size-5 shrink-0 text-crimson" />
         {t("days", { count: trip.days })}
       </p>
-      <p className="mt-2 text-lg text-maroon">
+      <p className="mt-2 text-base text-maroon">
         <span className="font-semibold text-ink-red">{t("routeLabel")}: </span>
         {trip.route.join(" → ")}
       </p>
@@ -33,12 +33,12 @@ export async function TripCard({ trip, locale, compact = false }: { trip: Trip; 
       {!compact && (
         <>
           <p className="mt-4 text-sm font-semibold tracking-[0.2em] text-crimson uppercase">{t("highlightsLabel")}</p>
-          <ul className="mt-1 list-disc space-y-1 pl-5 text-lg text-maroon marker:text-crimson">
+          <ul className="mt-1 list-disc space-y-1 pl-5 text-base text-maroon marker:text-crimson">
             {trip.highlights.map((h) => (
               <li key={h.en}>{h[locale]}</li>
             ))}
           </ul>
-          <p className="mt-4 flex items-start gap-2 text-lg text-maroon">
+          <p className="mt-4 flex items-start gap-2 text-base text-maroon">
             <Users aria-hidden="true" className="mt-1 size-5 shrink-0 text-crimson" />
             <span>
               <span className="font-semibold text-ink-red">{t("forWhoLabel")}: </span>

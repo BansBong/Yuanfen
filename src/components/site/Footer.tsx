@@ -7,7 +7,7 @@ import { BRAND } from "@/data/site";
 import { Link } from "@/i18n/navigation";
 import { instagramUrl, mailtoUrl, whatsappUrl } from "@/lib/contact";
 
-const linkCls = "inline-flex min-h-11 items-center text-lg text-ink-red underline-offset-4 hover:underline";
+const linkCls = "inline-flex min-h-11 items-center text-base text-ink-red underline-offset-4 hover:underline";
 
 export async function Footer() {
   const t = await getTranslations("common");
@@ -19,8 +19,8 @@ export async function Footer() {
     <footer className="border-t border-ink-red/10 bg-cream-center px-5 pt-12 pb-28 lg:pb-10">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
-          <p className="font-display text-2xl tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</p>
-          <p className="mt-3 text-lg text-maroon">{t("footer.tagline")}</p>
+          <p className="font-display text-xl tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</p>
+          <p className="mt-3 text-base text-maroon">{t("footer.tagline")}</p>
           <RibbonDivider className="mt-5 w-40" />
         </div>
         <div>

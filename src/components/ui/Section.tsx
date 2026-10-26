@@ -55,12 +55,12 @@ export function SectionHeading({
       <Tag
         id={id}
         className={`mt-3 font-display leading-snug text-ink-red ${
-          Tag === "h1" ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl"
+          Tag === "h1" ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"
         }`}
       >
         {title}
       </Tag>
-      {text && <p className="mt-4 text-lg leading-relaxed text-maroon sm:text-xl">{text}</p>}
+      {text && <p className="mt-4 text-base leading-relaxed text-maroon sm:text-lg">{text}</p>}
     </header>
   );
 }

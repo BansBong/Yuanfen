@@ -6,7 +6,7 @@ import { Icon } from "./icons";
 type Variant = "primary" | "secondary" | "dark";
 
 const BASE =
-  "inline-flex min-h-14 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-lg font-medium tracking-wide transition-colors";
+  "inline-flex min-h-14 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-base font-medium tracking-wide transition-colors";
 const VARIANTS: Record<Variant, string> = {
   primary: "bg-crimson text-white shadow-[0_8px_22px_-8px_rgba(122,15,18,0.6)] hover:bg-maroon",
   secondary: "border-2 border-ink-red/70 bg-cream/80 text-ink-red hover:bg-ink-red hover:text-cream",

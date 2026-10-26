@@ -48,7 +48,7 @@ export function Header() {
         <Link
           href="/"
           aria-label={`${BRAND.name}, ${t("home")}`}
-          className="font-display text-base tracking-[0.2em] text-ink-red uppercase sm:text-xl sm:tracking-[0.3em]"
+          className="font-display text-base tracking-[0.2em] text-ink-red uppercase sm:text-lg sm:tracking-[0.3em]"
         >
           {BRAND.name}
         </Link>
@@ -98,7 +98,7 @@ export function Header() {
           className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-cream lg:hidden"
         >
           <div className="flex h-16 shrink-0 items-center justify-between border-b border-ink-red/10 px-4">
-            <span className="font-display text-lg tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</span>
+            <span className="font-display text-base tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</span>
             <button
               ref={closeRef}
               type="button"
@@ -118,7 +118,7 @@ export function Header() {
                   <li key={i.href}>
                     <Link
                       href={i.href}
-                      className="flex min-h-16 items-center gap-4 rounded-2xl border border-ink-red/20 bg-white/60 px-4 text-xl font-medium text-ink-red"
+                      className="flex min-h-16 items-center gap-4 rounded-2xl border border-ink-red/20 bg-white/60 px-4 text-lg font-medium text-ink-red"
                     >
                       <Icon name={i.icon} className="size-8 shrink-0 text-crimson" />
                       {i.label}
@@ -130,7 +130,7 @@ export function Header() {
             <ul className="grid gap-1">
               {items(mobileSecondary).map((i) => (
                 <li key={i.href}>
-                  <Link href={i.href} className="flex min-h-12 items-center gap-3 rounded-xl px-2 text-lg text-ink-red">
+                  <Link href={i.href} className="flex min-h-12 items-center gap-3 rounded-xl px-2 text-base text-ink-red">
                     <Icon name={i.icon} className="size-6 shrink-0 text-crimson" />
                     {i.label}
                   </Link>

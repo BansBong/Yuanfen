@@ -23,7 +23,7 @@ export default async function PrivacyPage({ params }: LocaleParams) {
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} />
       <Section innerClassName="max-w-3xl">
-        <p className="rounded-2xl border-2 border-dashed border-ink-red/30 bg-cream-center p-4 text-lg">
+        <p className="rounded-2xl border-2 border-dashed border-ink-red/30 bg-cream-center p-4 text-base">
           {t("draftNote")} <PlaceholderBadge what="privacy policy" />
         </p>
         <p className="mt-4 text-base text-maroon">
@@ -32,8 +32,8 @@ export default async function PrivacyPage({ params }: LocaleParams) {
         <div className="mt-8 space-y-8">
           {sections.map((s) => (
             <section key={s.title}>
-              <h2 className="font-display text-2xl text-ink-red">{s.title}</h2>
-              <p className="mt-2 text-lg leading-relaxed">{s.text}</p>
+              <h2 className="font-display text-xl text-ink-red">{s.title}</h2>
+              <p className="mt-2 text-base leading-relaxed">{s.text}</p>
             </section>
           ))}
         </div>

@@ -25,9 +25,9 @@ export function ServiceCard({
       <span className="grid size-16 place-items-center rounded-2xl bg-crimson/10 text-crimson">
         <Icon name={icon} className="size-9" />
       </span>
-      <h3 className="mt-5 font-display text-2xl leading-tight text-ink-red">{title}</h3>
-      <p className="mt-2 flex-1 text-lg leading-relaxed text-maroon">{line}</p>
-      <span className="mt-5 inline-flex items-center gap-2 text-lg font-semibold text-crimson group-hover:text-maroon">
+      <h3 className="mt-5 font-display text-xl leading-tight text-ink-red">{title}</h3>
+      <p className="mt-2 flex-1 text-base leading-relaxed text-maroon">{line}</p>
+      <span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-crimson group-hover:text-maroon">
         {cta}
         <ArrowRight aria-hidden="true" className="size-5 transition-transform group-hover:translate-x-1" />
       </span>

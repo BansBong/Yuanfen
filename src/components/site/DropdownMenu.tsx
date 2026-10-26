@@ -46,7 +46,7 @@ export function DropdownMenu({ label, items }: { label: string; items: MenuItem[
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen((v) => !v)}
-        className="flex min-h-11 items-center gap-1 rounded-full px-3 text-lg font-medium text-ink-red hover:bg-ink-red/10"
+        className="flex min-h-11 items-center gap-1 rounded-full px-3 text-base font-medium text-ink-red hover:bg-ink-red/10"
       >
         {label}
         <ChevronDown aria-hidden="true" className={`size-5 transition-transform ${open ? "rotate-180" : ""}`} />
@@ -60,7 +60,7 @@ export function DropdownMenu({ label, items }: { label: string; items: MenuItem[
           <li key={item.href}>
             <Link
               href={item.href}
-              className="flex min-h-12 items-center gap-3 rounded-xl px-3 py-2 text-lg text-ink-red hover:bg-ink-red/10"
+              className="flex min-h-12 items-center gap-3 rounded-xl px-3 py-2 text-base text-ink-red hover:bg-ink-red/10"
             >
               <Icon name={item.icon} className="size-6 shrink-0 text-crimson" />
               {item.label}

@@ -34,7 +34,7 @@ export function DestinationPicker({
     <div className="space-y-12">
       {groups.map((g) => (
         <div key={g.id}>
-          <h3 className="font-display text-2xl text-ink-red sm:text-3xl">{g.name}</h3>
+          <h3 className="font-display text-xl text-ink-red sm:text-2xl">{g.name}</h3>
           <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {g.cities.map((c) => {
               const selected = value === c.id;
@@ -59,8 +59,8 @@ export function DestinationPicker({
                       </span>
                     </span>
                     <span className="flex flex-1 flex-col gap-2 p-4">
-                      <span className="font-display text-2xl text-ink-red">{c.name}</span>
-                      <span className="text-lg leading-snug text-maroon">{c.hook}</span>
+                      <span className="font-display text-xl text-ink-red">{c.name}</span>
+                      <span className="text-base leading-snug text-maroon">{c.hook}</span>
                       <span className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
                         <StatusBadge
                           status={c.status}

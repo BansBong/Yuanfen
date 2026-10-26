@@ -61,7 +61,7 @@ export default async function HomePage({ params }: LocaleParams) {
       <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden bg-cream-center lg:min-h-[calc(100dvh-5rem)]">
         <PaperSpeckles className="-z-10 opacity-80" />
         <RibbonCorner corner="top-left" priority className="-z-10 w-[42vw] max-w-[460px] lg:w-[26vw] lg:max-w-none" />
-        <RibbonCorner corner="bottom-right" priority className="-z-10 w-[42vw] max-w-[460px] lg:w-[26vw] lg:max-w-none" />
+        <RibbonCorner corner="bottom-right" priority className="-z-10 w-[30vw] max-w-[460px] sm:w-[42vw] lg:w-[26vw] lg:max-w-none" />
         <div className="anim-fade-up mx-auto flex max-w-2xl flex-col items-center px-5 py-16 text-center text-ink-red">
           <Image
             src="/brand/logo.png"
@@ -72,8 +72,8 @@ export default async function HomePage({ params }: LocaleParams) {
             sizes="(min-width: 640px) 380px, 70vw"
             className="h-auto w-[min(70vw,380px)] select-none"
           />
-          <h1 className="mt-3 font-display text-3xl leading-snug sm:text-5xl">{BRAND.tagline}</h1>
-          <p className="mt-5 text-xl leading-relaxed text-maroon">{t("hero.pitch")}</p>
+          <h1 className="mt-3 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
+          <p className="mt-5 text-lg leading-relaxed text-maroon">{t("hero.pitch")}</p>
           <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <ButtonLink href="#services" variant="primary" icon="compass">
               {t("hero.ctaServices")}
@@ -82,7 +82,7 @@ export default async function HomePage({ params }: LocaleParams) {
               {c("whatsapp")}
             </ButtonLink>
           </div>
-          <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg text-maroon">
+          <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-base text-maroon">
             {trust.map((item) => (
               <li key={item} className="inline-flex items-center gap-2">
                 <Check aria-hidden="true" className="size-5 text-crimson" />
@@ -119,8 +119,8 @@ export default async function HomePage({ params }: LocaleParams) {
             <li key={s.title} className="reveal flex items-start gap-4 lg:flex-col lg:items-center lg:text-center">
               <StarMarker n={i + 1} />
               <div>
-                <h3 className="font-display text-xl text-ink-red">{s.title}</h3>
-                <p className="mt-2 text-lg leading-relaxed text-maroon">{s.text}</p>
+                <h3 className="font-display text-lg text-ink-red">{s.title}</h3>
+                <p className="mt-2 text-base leading-relaxed text-maroon">{s.text}</p>
               </div>
             </li>
           ))}
@@ -142,8 +142,8 @@ export default async function HomePage({ params }: LocaleParams) {
               <span className="grid size-14 place-items-center rounded-2xl bg-crimson/10 text-crimson">
                 <Icon name={w.icon} className="size-8" />
               </span>
-              <h3 className="mt-4 font-display text-xl text-ink-red">{w.title}</h3>
-              <p className="mt-2 text-lg leading-relaxed text-maroon">{w.text}</p>
+              <h3 className="mt-4 font-display text-lg text-ink-red">{w.title}</h3>
+              <p className="mt-2 text-base leading-relaxed text-maroon">{w.text}</p>
             </li>
           ))}
         </ul>
@@ -173,11 +173,11 @@ export default async function HomePage({ params }: LocaleParams) {
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {GUIDES.map((g) => (
               <li key={g.name} className="rounded-3xl border border-ink-red/15 bg-white/70 p-6">
-                <h3 className="font-display text-xl text-ink-red">{g.name}</h3>
+                <h3 className="font-display text-lg text-ink-red">{g.name}</h3>
                 <p className="mt-1 text-maroon">
                   {g.city} · {g.languages.join(", ")}
                 </p>
-                <p className="mt-3 text-lg">{g.bio[locale]}</p>
+                <p className="mt-3 text-base">{g.bio[locale]}</p>
               </li>
             ))}
           </ul>
@@ -191,7 +191,7 @@ export default async function HomePage({ params }: LocaleParams) {
           <ul className="mt-12 grid gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((q) => (
               <li key={q.name} className="rounded-3xl border border-ink-red/15 bg-white/70 p-6">
-                <blockquote className="text-lg">“{q.quote[locale]}”</blockquote>
+                <blockquote className="text-base">“{q.quote[locale]}”</blockquote>
                 <p className="mt-3 font-semibold text-ink-red">
                   {q.name}, {q.origin}
                 </p>
@@ -222,9 +222,9 @@ export default async function HomePage({ params }: LocaleParams) {
         <RibbonCorner corner="top-left" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
         <RibbonCorner corner="bottom-right" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
         <div className="mx-auto max-w-2xl">
-          <h2 className="font-display text-3xl sm:text-4xl">{t("finalCta.title")}</h2>
+          <h2 className="font-display text-2xl sm:text-3xl">{t("finalCta.title")}</h2>
           <RibbonDivider className="mx-auto mt-5 w-48 brightness-150" />
-          <p className="mt-5 text-xl leading-relaxed">{t("finalCta.text")}</p>
+          <p className="mt-5 text-lg leading-relaxed">{t("finalCta.text")}</p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <ButtonLink href="#services" variant="primary" icon="compass" className="!bg-cream !text-ink-red hover:!bg-white">
               {c("chooseService")}

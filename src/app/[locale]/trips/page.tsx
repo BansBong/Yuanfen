@@ -32,8 +32,8 @@ export default async function TripsPage({ params }: LocaleParams) {
           ))}
         </ul>
         <div className="mt-14 rounded-3xl border-2 border-ink-red/20 bg-cream-center p-8 text-center">
-          <h2 className="font-display text-2xl text-ink-red sm:text-3xl">{t("customTitle")}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-lg text-maroon">{t("customText")}</p>
+          <h2 className="font-display text-xl text-ink-red sm:text-2xl">{t("customTitle")}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-base text-maroon">{t("customText")}</p>
           <div className="mt-6 flex justify-center">
             <ButtonLink href="/request-destination" icon="map-pin">
               {t("customCta")}

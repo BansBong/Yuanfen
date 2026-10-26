@@ -25,12 +25,12 @@ export async function RequestSection({
     <Section id="request" tone="paper" innerClassName="max-w-3xl">
       <header className="reveal mb-8 text-center">
         {eyebrow && <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{eyebrow}</p>}
-        <h2 className="mt-3 font-display text-3xl text-ink-red sm:text-4xl">{title}</h2>
-        {intro && <p className="mt-4 text-lg text-maroon sm:text-xl">{intro}</p>}
+        <h2 className="mt-3 font-display text-2xl text-ink-red sm:text-3xl">{title}</h2>
+        {intro && <p className="mt-4 text-base text-maroon sm:text-lg">{intro}</p>}
         {showPriceNote && (
           <>
-            <p className="mt-4 rounded-2xl bg-cream px-4 py-3 text-lg font-medium text-ink-red">{c("noPrices")}</p>
-            <p className="mt-2 text-lg font-medium text-crimson">{c("freeQuote")}</p>
+            <p className="mt-4 rounded-2xl bg-cream px-4 py-3 text-base font-medium text-ink-red">{c("noPrices")}</p>
+            <p className="mt-2 text-base font-medium text-crimson">{c("freeQuote")}</p>
           </>
         )}
       </header>

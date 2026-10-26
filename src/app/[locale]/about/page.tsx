@@ -33,31 +33,31 @@ export default async function AboutPage({ params }: LocaleParams) {
             <p lang="zh" aria-hidden="true" className="text-[min(34vw,10rem)] leading-none text-ink-red" style={{ fontFamily: CJK }}>
               缘分
             </p>
-            <p className="mt-2 font-display text-xl tracking-[0.4em] text-crimson">{t("meaningPinyin")}</p>
+            <p className="mt-2 font-display text-lg tracking-[0.4em] text-crimson">{t("meaningPinyin")}</p>
           </div>
           <div className="reveal">
             <h2 id="meaning-title" className="font-display text-3xl text-ink-red">
               {t("meaningTitle")}
             </h2>
-            <p className="mt-4 text-lg leading-relaxed sm:text-xl">{t("meaningText")}</p>
-            <h3 className="mt-8 font-display text-2xl text-ink-red">{t("ribbonTitle")}</h3>
-            <p className="mt-3 text-lg leading-relaxed">{t("ribbonText")}</p>
+            <p className="mt-4 text-base leading-relaxed sm:text-lg">{t("meaningText")}</p>
+            <h3 className="mt-8 font-display text-xl text-ink-red">{t("ribbonTitle")}</h3>
+            <p className="mt-3 text-base leading-relaxed">{t("ribbonText")}</p>
           </div>
         </div>
       </Section>
 
       <Section tone="paper" labelledBy="story-title" innerClassName="max-w-3xl">
         <div className="text-center">
-          <h2 id="story-title" className="font-display text-3xl text-ink-red sm:text-4xl">
+          <h2 id="story-title" className="font-display text-2xl text-ink-red sm:text-3xl">
             {t("storyTitle")}
           </h2>
           <RibbonDivider className="mx-auto mt-5 w-48" />
-          <p className="mt-6 text-lg leading-relaxed sm:text-xl">{t("storyText")}</p>
+          <p className="mt-6 text-base leading-relaxed sm:text-lg">{t("storyText")}</p>
           <p className="mt-3">
             <PlaceholderBadge what="our story" />
           </p>
-          <h3 className="mt-12 font-display text-2xl text-ink-red">{t("baseTitle")}</h3>
-          <p className="mt-3 text-lg leading-relaxed sm:text-xl">{t("baseText")}</p>
+          <h3 className="mt-12 font-display text-xl text-ink-red">{t("baseTitle")}</h3>
+          <p className="mt-3 text-base leading-relaxed sm:text-lg">{t("baseText")}</p>
         </div>
       </Section>
 

@@ -44,7 +44,7 @@ export default async function AdmissionPage({ params }: LocaleParams) {
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading id="adm-who" align="left" title={t("whoTitle")} />
-            <ul className="mt-6 space-y-3 text-lg text-maroon sm:text-xl">
+            <ul className="mt-6 space-y-3 text-base text-maroon sm:text-lg">
               {who.map((item) => (
                 <li key={item} className="flex gap-3">
                   <span aria-hidden="true" className="mt-3 size-2.5 shrink-0 rotate-45 bg-crimson" />
@@ -52,8 +52,8 @@ export default async function AdmissionPage({ params }: LocaleParams) {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-10 font-display text-2xl text-ink-red">{t("needTitle")}</h3>
-            <ul className="mt-4 space-y-2 text-lg text-maroon">
+            <h3 className="mt-10 font-display text-xl text-ink-red">{t("needTitle")}</h3>
+            <ul className="mt-4 space-y-2 text-base text-maroon">
               {need.map((item) => (
                 <li key={item} className="flex gap-3">
                   <span aria-hidden="true" className="mt-2.5 size-2 shrink-0 rotate-45 bg-crimson" />
@@ -66,14 +66,14 @@ export default async function AdmissionPage({ params }: LocaleParams) {
             </p>
           </div>
           <div>
-            <h2 className="font-display text-3xl text-ink-red sm:text-4xl">{t("howTitle")}</h2>
+            <h2 className="font-display text-2xl text-ink-red sm:text-3xl">{t("howTitle")}</h2>
             <ol className="mt-6 space-y-6">
               {steps.map((st, i) => (
                 <li key={st.title} className="flex items-start gap-4">
                   <StarMarker n={i + 1} />
                   <div>
-                    <h3 className="font-display text-xl text-ink-red">{st.title}</h3>
-                    <p className="mt-1 text-lg leading-relaxed text-maroon">{st.text}</p>
+                    <h3 className="font-display text-lg text-ink-red">{st.title}</h3>
+                    <p className="mt-1 text-base leading-relaxed text-maroon">{st.text}</p>
                   </div>
                 </li>
               ))}

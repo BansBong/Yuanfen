@@ -45,12 +45,12 @@ export default async function MedicalPage({ params }: LocaleParams) {
           aria-labelledby="medical-disclaimer"
           className="rounded-3xl border-2 border-crimson bg-white p-6 shadow-[0_18px_40px_-28px_rgba(122,15,18,0.6)] sm:p-8"
         >
-          <h2 id="medical-disclaimer" className="flex flex-wrap items-center gap-3 font-display text-2xl text-ink-red sm:text-3xl">
+          <h2 id="medical-disclaimer" className="flex flex-wrap items-center gap-3 font-display text-xl text-ink-red sm:text-2xl">
             <TriangleAlert aria-hidden="true" className="size-8 text-crimson" />
             {t("disclaimerTitle")}
             <PlaceholderBadge what="medical copy" />
           </h2>
-          <p className="mt-3 text-lg leading-relaxed text-maroon sm:text-xl">{t("disclaimerText")}</p>
+          <p className="mt-3 text-base leading-relaxed text-maroon sm:text-lg">{t("disclaimerText")}</p>
         </aside>
       </Section>
 
@@ -64,7 +64,7 @@ export default async function MedicalPage({ params }: LocaleParams) {
 
       <Section labelledBy="medical-what" innerClassName="max-w-3xl">
         <SectionHeading id="medical-what" title={t("whatTitle")} />
-        <ul className="mt-8 space-y-3 text-lg text-maroon sm:text-xl">
+        <ul className="mt-8 space-y-3 text-base text-maroon sm:text-lg">
           {what.map((item) => (
             <li key={item} className="flex gap-3 rounded-2xl border border-ink-red/15 bg-white/70 p-4">
               <span aria-hidden="true" className="mt-3 size-2.5 shrink-0 rotate-45 bg-crimson" />

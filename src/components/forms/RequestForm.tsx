@@ -184,7 +184,7 @@ function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
         </div>
       </div>
 
-      <h3 ref={heading} tabIndex={-1} className="mb-6 font-display text-2xl text-ink-red outline-none sm:text-3xl">
+      <h3 ref={heading} tabIndex={-1} className="mb-6 font-display text-xl text-ink-red outline-none sm:text-2xl">
         {current.title[locale]}
       </h3>
 
@@ -219,7 +219,7 @@ function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
                 aria-describedby={errors.consent ? `${formId}-consent-error` : undefined}
                 className="mt-1 size-7 shrink-0 accent-[#8b1a1a]"
               />
-              <span className="text-lg leading-snug text-maroon">
+              <span className="text-base leading-snug text-maroon">
                 {t.rich("consent", {
                   privacy: (chunks) => (
                     <Link href="/privacy" target="_blank" className="font-semibold text-crimson underline underline-offset-4">
@@ -247,7 +247,7 @@ function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
       </div>
 
       {formError && (
-        <p role="alert" className="mt-6 rounded-2xl border-2 border-crimson bg-crimson/5 p-4 text-lg font-medium text-crimson">
+        <p role="alert" className="mt-6 rounded-2xl border-2 border-crimson bg-crimson/5 p-4 text-base font-medium text-crimson">
           {formError}
         </p>
       )}

@@ -56,8 +56,8 @@ export default async function ContactPage({ params }: LocaleParams) {
                   <Icon name={ch.icon} className="size-8" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block font-display text-xl text-ink-red">{ch.title}</span>
-                  <span className="block break-words text-lg text-maroon">{ch.real ? ch.value : <PlaceholderBadge what={ch.key} />}</span>
+                  <span className="block font-display text-lg text-ink-red">{ch.title}</span>
+                  <span className="block break-words text-base text-maroon">{ch.real ? ch.value : <PlaceholderBadge what={ch.key} />}</span>
                   {ch.note && <span className="block text-base text-crimson">{ch.note}</span>}
                 </span>
               </>

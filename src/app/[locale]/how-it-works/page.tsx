@@ -29,15 +29,15 @@ export default async function HowItWorksPage({ params }: LocaleParams) {
             <li key={s.title} className="reveal flex items-start gap-5 rounded-3xl border border-ink-red/15 bg-white/70 p-6">
               <StarMarker n={i + 1} />
               <div>
-                <h2 className="font-display text-2xl text-ink-red">{s.title}</h2>
-                <p className="mt-2 text-lg leading-relaxed text-maroon sm:text-xl">{s.text}</p>
+                <h2 className="font-display text-xl text-ink-red">{s.title}</h2>
+                <p className="mt-2 text-base leading-relaxed text-maroon sm:text-lg">{s.text}</p>
               </div>
             </li>
           ))}
         </ol>
         <div className="mt-10 rounded-3xl bg-cream-center p-6 ring-1 ring-ink-red/15">
-          <h2 className="font-display text-2xl text-ink-red">{t("noPricesTitle")}</h2>
-          <p className="mt-2 text-lg leading-relaxed text-maroon">{t("noPricesText")}</p>
+          <h2 className="font-display text-xl text-ink-red">{t("noPricesTitle")}</h2>
+          <p className="mt-2 text-base leading-relaxed text-maroon">{t("noPricesText")}</p>
         </div>
         <div className="mt-10 flex justify-center">
           <ButtonLink href="/#services" icon="compass">

@@ -26,8 +26,8 @@ export default async function ConfirmationPage({ params }: LocaleParams) {
     <main>
       <Section tone="paper" className="!pt-20" innerClassName="max-w-xl">
         <div className="text-center">
-          <h1 className="font-display text-3xl text-ink-red sm:text-4xl">{t("h1")}</h1>
-          <p className="mt-4 text-xl leading-relaxed text-maroon">{t("text", { time: RESPONSE_TIME[locale] })}</p>
+          <h1 className="font-display text-2xl text-ink-red sm:text-3xl">{t("h1")}</h1>
+          <p className="mt-4 text-lg leading-relaxed text-maroon">{t("text", { time: RESPONSE_TIME[locale] })}</p>
           <p className="mt-2">
             <PlaceholderBadge what="response time" />
           </p>

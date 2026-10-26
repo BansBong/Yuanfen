@@ -21,8 +21,8 @@ export function PageHero({
       <RibbonCorner corner="bottom-left" className="-z-10 hidden w-[16vw] opacity-90 lg:block" />
       <div className="anim-fade-up mx-auto max-w-3xl text-center">
         {eyebrow && <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{eyebrow}</p>}
-        <h1 className="mt-3 font-display text-4xl leading-tight text-ink-red sm:text-5xl">{title}</h1>
-        {intro && <p className="mt-5 text-xl leading-relaxed text-maroon">{intro}</p>}
+        <h1 className="mt-3 font-display text-3xl leading-tight text-ink-red sm:text-4xl">{title}</h1>
+        {intro && <p className="mt-5 text-lg leading-relaxed text-maroon">{intro}</p>}
         {children && <div className="mt-8 flex flex-wrap justify-center gap-3">{children}</div>}
       </div>
     </section>

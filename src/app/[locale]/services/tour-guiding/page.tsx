@@ -66,8 +66,8 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
                 <Icon name={ty.icon} className="size-8" />
               </span>
               <div>
-                <h3 className="font-display text-xl text-ink-red">{t(`types.${ty.key}.title`)}</h3>
-                <p className="mt-1 text-lg leading-relaxed text-maroon">{t(`types.${ty.key}.text`)}</p>
+                <h3 className="font-display text-lg text-ink-red">{t(`types.${ty.key}.title`)}</h3>
+                <p className="mt-1 text-base leading-relaxed text-maroon">{t(`types.${ty.key}.text`)}</p>
               </div>
             </li>
           ))}
@@ -88,17 +88,17 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
             }}
             between={
               <aside className="mt-12 rounded-3xl border-2 border-ink-red/25 bg-cream p-6">
-                <h3 className="font-display text-2xl text-ink-red">{t("hkmoTitle")}</h3>
-                <p className="mt-2 text-lg leading-relaxed text-maroon">{t("hkmoText")}</p>
+                <h3 className="font-display text-xl text-ink-red">{t("hkmoTitle")}</h3>
+                <p className="mt-2 text-base leading-relaxed text-maroon">{t("hkmoText")}</p>
               </aside>
             }
             formHeading={
               <header className="mx-auto mb-8 max-w-2xl text-center">
                 <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{s("requestEyebrow")}</p>
-                <h2 className="mt-3 font-display text-3xl text-ink-red sm:text-4xl">{t("requestTitle")}</h2>
-                <p className="mt-4 text-lg text-maroon">{t("requestIntro")}</p>
-                <p className="mt-4 rounded-2xl bg-cream px-4 py-3 text-lg font-medium text-ink-red">{c("noPrices")}</p>
-                <p className="mt-2 text-lg font-medium text-crimson">{c("freeQuote")}</p>
+                <h2 className="mt-3 font-display text-2xl text-ink-red sm:text-3xl">{t("requestTitle")}</h2>
+                <p className="mt-4 text-base text-maroon">{t("requestIntro")}</p>
+                <p className="mt-4 rounded-2xl bg-cream px-4 py-3 text-base font-medium text-ink-red">{c("noPrices")}</p>
+                <p className="mt-2 text-base font-medium text-crimson">{c("freeQuote")}</p>
               </header>
             }
           />
