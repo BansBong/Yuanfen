@@ -4,9 +4,9 @@
     "description": "Tour guiding, shopping (jasa titip), medical connections and university admission help in China, with local guides and partners. Your bridge to China, guided by fate."
   },
   "hero": {
-    "pitch": "Local guides and trusted partners in China for your trip, your shopping, your hospital visit or your studies. We speak your language and stay with you.",
+    "pitch": "Local guides and trusted partners in China for your trip, your shopping, your hospital visit or your studies. We speak Indonesian and English, and stay with you.",
     "ctaServices": "Choose a service",
-    "trust": ["Free quote, no obligation", "Indonesian-speaking support", "Local guides and partners"],
+    "trust": ["Free quote, no obligation", "Support in Indonesian and English", "Local guides and partners"],
     "logoAlt": "Yuanfen logo: a red ribbon forming a Y above the characters 缘分"
   },
   "services": {
@@ -36,7 +36,7 @@
     "title": "Easier, because we're on both sides",
     "items": [
       { "icon": "users", "title": "Local guides", "text": "People who live in China and know it well." },
-      { "icon": "message", "title": "Indonesian-speaking support", "text": "Ask in Bahasa Indonesia or English." },
+      { "icon": "message", "title": "Support in Indonesian and English", "text": "Ask in Bahasa Indonesia or English, whichever feels easier." },
       { "icon": "shield", "title": "Fair pricing", "text": "A clear quote before you commit." },
       { "icon": "compass", "title": "Support before and during your trip", "text": "Reach us on WhatsApp when plans change." }
     ]

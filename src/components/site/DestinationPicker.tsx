@@ -27,7 +27,7 @@ export function DestinationPicker({
 }: {
   groups: PickerGroup[];
   labels: PickerLabels;
-  value: string | null;
+  value: string[];
   onChange: (id: string) => void;
 }) {
   return (
@@ -37,7 +37,7 @@ export function DestinationPicker({
           <h3 className="font-display text-xl text-ink-red sm:text-2xl">{g.name}</h3>
           <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {g.cities.map((c) => {
-              const selected = value === c.id;
+              const selected = value.includes(c.id);
               return (
                 <li key={c.id}>
                   <button

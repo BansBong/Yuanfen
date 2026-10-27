@@ -204,12 +204,18 @@ as $$
   where type = 'destination_request' and coalesce(details ->> 'place', '') <> ''
   group by 2
   union all
+  -- Tour requests list several places in one text field: count each place separately.
+  -- (Older rows used a single "destination" value; those are included too.)
   select 'tour'::text,
-         lower(trim(details ->> 'destination')),
+         trim(p),
          count(*),
-         max(created_at)
-  from public.requests
-  where type = 'tour' and coalesce(details ->> 'destination', '') <> ''
+         max(r.created_at)
+  from public.requests r,
+       lateral regexp_split_to_table(
+         lower(coalesce(r.details ->> 'destinations', r.details ->> 'destination', '')),
+         '\s*[,;\n]\s*'
+       ) as p
+  where r.type = 'tour' and trim(p) <> ''
   group by 2
   order by 3 desc;
 $$;

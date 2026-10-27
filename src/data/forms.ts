@@ -11,7 +11,6 @@
  *  - `name` and `contact` are stored in dedicated columns; everything else goes
  *    into the `details` JSON column of the request.
  */
-import { DESTINATIONS } from "./destinations";
 import { TRIPS } from "./trips";
 import type { Localized } from "./types";
 
@@ -47,6 +46,8 @@ export type Field = {
   options?: Option[];
   /** Max characters for text fields. */
   max?: number;
+  /** Visible rows for a textarea. */
+  rows?: number;
   /** Min/max for number fields. */
   min?: number;
   maxValue?: number;
@@ -69,11 +70,6 @@ const LANGUAGE_OPTIONS: Option[] = [
   opt("en", "English"),
   opt("id", "Bahasa Indonesia", "Bahasa Indonesia"),
   opt("other", "Other", "Lainnya"),
-];
-
-const DESTINATION_OPTIONS: Option[] = [
-  ...DESTINATIONS.map((d) => opt(d.id, d.name)),
-  opt("other", "Somewhere else", "Tempat lain"),
 ];
 
 const TRIP_OPTIONS: Option[] = TRIPS.map((t) => ({ value: t.slug, label: t.name }));
@@ -135,11 +131,17 @@ export const FORMS: Record<FormId, FormDef> = {
         title: { en: "Your trip", id: "Perjalanan Anda" },
         fields: [
           {
-            name: "destination",
-            type: "select",
+            name: "destinations",
+            type: "textarea",
             required: true,
+            max: 400,
+            rows: 3,
             label: { en: "Where do you want to go?", id: "Anda ingin ke mana?" },
-            options: DESTINATION_OPTIONS,
+            placeholder: { en: "e.g. Guangzhou, Lijiang, Harbin", id: "mis. Guangzhou, Lijiang, Harbin" },
+            help: {
+              en: "Write one place or several, in any order. Any place in China is welcome, not only the ones on our list.",
+              id: "Tulis satu tempat atau beberapa, urutan bebas. Tempat mana pun di Tiongkok boleh, tidak hanya yang ada di daftar kami.",
+            },
           },
           {
             name: "trip",
@@ -266,9 +268,9 @@ export const FORMS: Record<FormId, FormDef> = {
           },
           {
             name: "city",
-            type: "select",
-            label: { en: "Which city? (optional)", id: "Kota mana? (opsional)" },
-            options: DESTINATION_OPTIONS,
+            type: "text",
+            max: 150,
+            label: { en: "Which city or cities? (optional)", id: "Kota mana saja? (opsional)" },
           },
           {
             name: "when",

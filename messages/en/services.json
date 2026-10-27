@@ -21,7 +21,9 @@
       "photo": { "title": "Photography", "text": "A photographer for your trip, as an add-on or on its own." }
     },
     "destTitle": "Where do you want to go?",
-    "destIntro": "Tap a place to start your request. \"On request\" means we confirm a guide for you first.",
+    "destIntro": "Tap one or more places, or write your own in the form below. Any place in China is welcome. \"On request\" means we confirm a guide for you first.",
+    "selectedPlaces": "Your places",
+    "continueToForm": "Continue to the request form",
     "statusAvailable": "Available",
     "statusOnRequest": "On request",
     "photoPlaceholder": "Photo placeholder",

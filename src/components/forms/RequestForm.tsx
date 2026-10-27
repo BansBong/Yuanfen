@@ -20,21 +20,42 @@ const without = (obj: Record<string, string>, key: string) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => k !== key));
 
 /** Reusable multi-step request form. Questions come from src/data/forms.ts. */
-export function RequestForm({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
+export function RequestForm({
+  formId,
+  prefill,
+  pickedPlaces,
+}: {
+  formId: FormId;
+  prefill?: Prefill;
+  /** Names ticked in the destination picker (tour form). */
+  pickedPlaces?: string[];
+}) {
   return (
     <Suspense fallback={<div className="min-h-64" aria-hidden="true" />}>
-      <FormInner formId={formId} prefill={prefill} />
+      <FormInner formId={formId} prefill={prefill} pickedPlaces={pickedPlaces} />
     </Suspense>
   );
 }
 
-/** A trip pre-selects its first city as the destination too. */
-function destinationForTrip(slug: string): string | undefined {
-  const first = tripBySlug(slug)?.route[0]?.toLowerCase();
-  return DESTINATIONS.find((d) => d.name.toLowerCase() === first)?.id;
+const splitPlaces = (text: string) =>
+  text
+    .split(/[,;\n]/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+/**
+ * Apply the picker selection to the free-text field. Places the visitor typed
+ * themselves are always kept; only places that were ticked and are now
+ * unticked are removed.
+ */
+function mergePlaces(current: string, picked: string[], previouslyPicked: string[]): string {
+  const removed = new Set(previouslyPicked.filter((p) => !picked.includes(p)).map((p) => p.toLowerCase()));
+  const kept = splitPlaces(current).filter((p) => !removed.has(p.toLowerCase()));
+  const have = new Set(kept.map((p) => p.toLowerCase()));
+  return [...kept, ...picked.filter((p) => !have.has(p.toLowerCase()))].join(", ");
 }
 
-function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
+function FormInner({ formId, prefill, pickedPlaces }: { formId: FormId; prefill?: Prefill; pickedPlaces?: string[] }) {
   const locale = useLocale() as Locale;
   const t = useTranslations("forms");
   const router = useRouter();
@@ -45,13 +66,18 @@ function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
   const [values, setValues] = useState<FormValues>(() => {
     const base = initialValues(formId);
     const trip = search.get("trip");
-    if (trip && tripBySlug(trip) && "trip" in base) {
-      base.trip = trip;
-      const dest = destinationForTrip(trip);
-      if (dest && "destination" in base) base.destination = dest;
+    const tripData = trip ? tripBySlug(trip) : undefined;
+    if (tripData && "trip" in base) {
+      base.trip = tripData.slug;
+      if ("destinations" in base) base.destinations = tripData.route.join(", ");
     }
     const destination = search.get("destination");
-    if (destination && "destination" in base && !base.destination) base.destination = destination;
+    if (destination && "destinations" in base && !base.destinations) {
+      base.destinations = DESTINATIONS.find((d) => d.id === destination)?.name ?? destination.slice(0, 100);
+    }
+    if (pickedPlaces?.length && "destinations" in base) {
+      base.destinations = mergePlaces(String(base.destinations), pickedPlaces, []);
+    }
     return { ...base, ...(prefill as FormValues | undefined) };
   });
   const [step, setStep] = useState(0);
@@ -61,12 +87,13 @@ function FormInner({ formId, prefill }: { formId: FormId; prefill?: Prefill }) {
   const [status, setStatus] = useState<"idle" | "sending">("idle");
   const [formError, setFormError] = useState<string | null>(null);
 
-  // A destination tapped in the picker above arrives as a prop; apply it when it changes.
-  const [appliedDestination, setAppliedDestination] = useState(prefill?.destination);
-  if (prefill?.destination !== appliedDestination) {
-    setAppliedDestination(prefill?.destination);
-    if (prefill?.destination && "destination" in values) {
-      setValues({ ...values, destination: prefill.destination });
+  // Places ticked in the picker above arrive as a prop; merge them in whenever the selection changes.
+  const pickedKey = (pickedPlaces ?? []).join("|");
+  const [applied, setApplied] = useState<string[]>(pickedPlaces ?? []);
+  if (pickedKey !== applied.join("|")) {
+    setApplied(pickedPlaces ?? []);
+    if ("destinations" in values) {
+      setValues({ ...values, destinations: mergePlaces(String(values.destinations ?? ""), pickedPlaces ?? [], applied) });
     }
   }
 

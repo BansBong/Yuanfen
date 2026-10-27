@@ -72,7 +72,10 @@ export default async function HomePage({ params }: LocaleParams) {
             sizes="(min-width: 640px) 380px, 70vw"
             className="h-auto w-[min(70vw,380px)] select-none"
           />
-          <h1 className="mt-3 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
+          <p aria-hidden="true" className="-mt-1 pl-[0.5em] text-xl font-light tracking-[0.5em] sm:text-2xl">
+            {BRAND.name.toUpperCase()}
+          </p>
+          <h1 className="mt-4 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
           <p className="mt-5 text-lg leading-relaxed text-maroon">{t("hero.pitch")}</p>
           <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <ButtonLink href="#services" variant="primary" icon="compass">

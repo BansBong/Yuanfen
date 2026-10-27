@@ -86,6 +86,7 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
               choose: t("choose"),
               chosen: t("chosen"),
             }}
+            summary={{ selected: t("selectedPlaces"), continue: t("continueToForm") }}
             between={
               <aside className="mt-12 rounded-3xl border-2 border-ink-red/25 bg-cream p-6">
                 <h3 className="font-display text-xl text-ink-red">{t("hkmoTitle")}</h3>

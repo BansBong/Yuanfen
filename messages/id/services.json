@@ -21,7 +21,9 @@
       "photo": { "title": "Fotografi", "text": "Fotografer untuk perjalanan Anda, tambahan atau layanan terpisah." }
     },
     "destTitle": "Anda ingin ke mana?",
-    "destIntro": "Ketuk satu tempat untuk memulai permintaan. \"Atas permintaan\" artinya kami pastikan pemandunya dulu.",
+    "destIntro": "Ketuk satu atau beberapa tempat, atau tulis sendiri di formulir di bawah. Tempat mana pun di Tiongkok boleh. \"Atas permintaan\" artinya kami pastikan pemandunya dulu.",
+    "selectedPlaces": "Tempat pilihan Anda",
+    "continueToForm": "Lanjut ke formulir permintaan",
     "statusAvailable": "Tersedia",
     "statusOnRequest": "Atas permintaan",
     "photoPlaceholder": "Foto menyusul",

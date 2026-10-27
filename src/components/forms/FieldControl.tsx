@@ -161,7 +161,7 @@ export function FieldControl({
         id={id}
         value={value as string}
         onChange={(e) => onChange(e.target.value)}
-        rows={4}
+        rows={field.rows ?? 4}
         maxLength={field.max}
         placeholder={field.placeholder?.[locale]}
         aria-describedby={describedBy}
