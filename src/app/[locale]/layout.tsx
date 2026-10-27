@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { fontVariables } from "@/app/fonts";
+import { fullSiteFontVariables } from "@/app/fonts";
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
 import { StickyWhatsApp } from "@/components/site/StickyWhatsApp";
@@ -44,7 +44,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   const common = await getTranslations({ locale, namespace: "common" });
 
   return (
-    <html lang={locale} className={fontVariables}>
+    <html lang={locale} className={fullSiteFontVariables}>
       <body className="min-h-dvh bg-cream text-base leading-relaxed text-maroon">
         <NextIntlClientProvider locale={locale} messages={pickMessages(messages, ["common", "nav", "forms"])}>
           <a

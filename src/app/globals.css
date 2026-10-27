@@ -19,6 +19,7 @@
   --color-ink-red: var(--ink-red);
   --font-display: var(--font-marcellus), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
+  --font-wordmark: var(--font-belleza), var(--font-marcellus), Georgia, serif;
 }
 
 html {

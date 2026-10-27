@@ -72,7 +72,7 @@ export default async function HomePage({ params }: LocaleParams) {
             sizes="(min-width: 640px) 380px, 70vw"
             className="h-auto w-[min(70vw,380px)] select-none"
           />
-          <p aria-hidden="true" className="-mt-1 pl-[0.5em] text-xl font-light tracking-[0.5em] sm:text-2xl">
+          <p aria-hidden="true" className="-mt-1 pl-[0.45em] font-wordmark text-2xl tracking-[0.45em] sm:text-3xl">
             {BRAND.name.toUpperCase()}
           </p>
           <h1 className="mt-4 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
