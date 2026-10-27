@@ -16,7 +16,7 @@ export async function Footer() {
   const company = [...ABOUT_LINKS, ...TRIP_LINKS, ...PARTNER_LINKS];
 
   return (
-    <footer className="bg-wash-footer border-t border-ink-red/10 px-5 pt-12 pb-28 lg:pb-10">
+    <footer className="px-5 pt-12 pb-28 lg:pb-10">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
           <p className="font-display text-xl tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</p>

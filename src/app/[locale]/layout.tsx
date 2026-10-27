@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
 
   return (
     <html lang={locale} className={fullSiteFontVariables}>
-      <body className="min-h-dvh bg-cream text-base leading-relaxed text-maroon">
+      <body className="bg-site-flow min-h-dvh text-base leading-relaxed text-maroon">
         <NextIntlClientProvider locale={locale} messages={pickMessages(messages, ["common", "nav", "forms"])}>
           <a
             href="#main"

@@ -11,7 +11,6 @@
   /* Soft watercolour washes taken from the poster illustrations */
   --blush: #f7dcd6;
   --peach: #fbe6d2;
-  --jade: #e2eedf;
   --sky: #dfeaf2;
 }
 
@@ -24,7 +23,6 @@
   --color-ink-red: var(--ink-red);
   --color-blush: var(--blush);
   --color-peach: var(--peach);
-  --color-jade: var(--jade);
   --color-sky: var(--sky);
   --font-display: var(--font-marcellus), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
@@ -81,34 +79,51 @@ body {
 /* ===========================================================================
    Full-site colour: warm watercolour gradients (not used on Coming Soon)
    ======================================================================== */
-.bg-hero-wash {
-  background:
-    radial-gradient(60% 55% at 88% 8%, rgba(246, 196, 190, 0.75), transparent 62%),
-    radial-gradient(55% 55% at 6% 92%, rgba(251, 216, 186, 0.85), transparent 62%),
-    radial-gradient(45% 40% at 52% 38%, rgba(255, 255, 255, 0.95), transparent 72%),
-    linear-gradient(180deg, #fdfaf4 0%, #f9ebe4 100%);
+/* One continuous page-wide gradient. Sections sit on top of it, so there are no seams between them. */
+.bg-site-flow {
+  background: linear-gradient(
+    180deg,
+    #fdfaf4 0%,
+    #faeee8 14%,
+    #fbf4ec 30%,
+    #f8e6de 48%,
+    #fbf6ef 64%,
+    #f9e9e0 80%,
+    #f5dfd7 100%
+  );
 }
-.bg-wash-peach {
-  background:
-    radial-gradient(70% 60% at 100% 0%, rgba(246, 196, 190, 0.45), transparent 60%),
-    linear-gradient(160deg, #fcebdc 0%, #fbf9f3 55%, #f8e2da 100%);
+
+/* Section glows. Every glow fades to nothing before the section edge, and .edge-fade
+   also masks the top/bottom, so a section can never show a hard line against the next. */
+.edge-fade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 22%, #000 78%, transparent 100%);
 }
-.bg-wash-blush {
+.wash-hero {
   background:
-    radial-gradient(60% 60% at 0% 100%, rgba(251, 216, 186, 0.6), transparent 60%),
-    linear-gradient(180deg, #fbf9f3 0%, #f7dcd6 55%, #fbf1ea 100%);
+    radial-gradient(52% 40% at 86% 38%, rgba(246, 196, 190, 0.6), transparent 70%),
+    radial-gradient(46% 38% at 10% 62%, rgba(251, 216, 186, 0.6), transparent 70%),
+    radial-gradient(34% 30% at 50% 42%, rgba(255, 255, 255, 0.85), transparent 72%);
 }
-.bg-wash-jade {
+.wash-peach {
   background:
-    radial-gradient(55% 55% at 0% 0%, rgba(214, 232, 220, 0.9), transparent 62%),
-    radial-gradient(50% 50% at 100% 100%, rgba(246, 205, 198, 0.5), transparent 62%),
-    linear-gradient(180deg, #fbf9f3 0%, #e8f1e4 50%, #fbf9f3 100%);
+    radial-gradient(52% 42% at 92% 50%, rgba(251, 214, 180, 0.55), transparent 72%),
+    radial-gradient(44% 38% at 6% 52%, rgba(246, 196, 190, 0.32), transparent 72%);
 }
-.bg-wash-sky {
+.wash-blush {
   background:
-    radial-gradient(60% 55% at 100% 0%, rgba(207, 225, 238, 0.95), transparent 62%),
-    radial-gradient(45% 45% at 0% 100%, rgba(251, 216, 186, 0.55), transparent 62%),
-    linear-gradient(180deg, #fbf9f3 0%, #e6eef4 55%, #fbf9f3 100%);
+    radial-gradient(50% 42% at 8% 50%, rgba(246, 190, 184, 0.5), transparent 72%),
+    radial-gradient(46% 38% at 94% 48%, rgba(251, 222, 196, 0.5), transparent 72%);
+}
+.wash-rose {
+  background:
+    radial-gradient(50% 42% at 90% 50%, rgba(240, 184, 196, 0.38), transparent 72%),
+    radial-gradient(44% 38% at 8% 50%, rgba(251, 222, 196, 0.45), transparent 72%);
+}
+.wash-sky {
+  background:
+    radial-gradient(52% 42% at 92% 50%, rgba(206, 224, 238, 0.5), transparent 72%),
+    radial-gradient(44% 38% at 6% 52%, rgba(251, 216, 186, 0.4), transparent 72%);
 }
 .bg-wash-dusk {
   background:
@@ -116,8 +131,10 @@ body {
     radial-gradient(60% 60% at 5% 100%, rgba(214, 40, 40, 0.4), transparent 62%),
     linear-gradient(135deg, #5d0b0e 0%, #7a0f12 45%, #a3181d 100%);
 }
-.bg-wash-footer {
-  background: linear-gradient(180deg, #fdfcf7 0%, #f6dfd8 100%);
+/* A gently wavy top edge instead of a straight cut (mask, so the gradient continues with no seam). */
+.wave-top {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1440 80%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M0 80V40C200 4 430 72 720 38S1230 2 1440 42V80Z%27 fill=%27black%27/%3E%3C/svg%3E") top / 100% 64px no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - 63px) no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 1440 80%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M0 80V40C200 4 430 72 720 38S1230 2 1440 42V80Z%27 fill=%27black%27/%3E%3C/svg%3E") top / 100% 64px no-repeat, linear-gradient(#000 0 0) bottom / 100% calc(100% - 63px) no-repeat;
 }
 
 /* Heading text with a satin-ribbon gradient */

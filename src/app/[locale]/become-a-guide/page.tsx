@@ -22,7 +22,7 @@ export default async function BecomeGuidePage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")} />
-      <Section tone="jade" labelledBy="guide-who" innerClassName="max-w-3xl">
+      <Section tone="rose" labelledBy="guide-who" innerClassName="max-w-3xl">
         <SectionHeading id="guide-who" title={t("whyTitle")} />
         <ul className="mt-8 space-y-3 text-base text-maroon sm:text-lg">
           {why.map((item) => (

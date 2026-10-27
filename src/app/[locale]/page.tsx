@@ -58,9 +58,11 @@ export default async function HomePage({ params }: LocaleParams) {
       <JsonLd data={organization} />
 
       {/* hero */}
-      <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden bg-hero-wash lg:min-h-[calc(100dvh-5rem)]">
-        <span aria-hidden="true" className="orb orb-a -z-10 top-[8%] right-[6%] size-72 bg-[#f4b8b0]/40 sm:size-[28rem]" />
-        <span aria-hidden="true" className="orb orb-b -z-10 bottom-[4%] left-[4%] size-64 bg-[#fbcf9f]/35 sm:size-[26rem]" />
+      <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-5rem)]">
+        <div aria-hidden="true" className="edge-fade wash-hero absolute inset-0 -z-10">
+          <span className="orb orb-a top-[14%] right-[8%] size-64 bg-[#f4b8b0]/35 sm:size-[26rem]" />
+          <span className="orb orb-b bottom-[14%] left-[6%] size-56 bg-[#fbcf9f]/35 sm:size-[24rem]" />
+        </div>
         <PaperSpeckles className="-z-10 opacity-80" />
         <RibbonCorner corner="top-left" priority className="-z-10 w-[42vw] max-w-[460px] lg:w-[26vw] lg:max-w-none" />
         <RibbonCorner corner="bottom-right" priority className="-z-10 w-[30vw] max-w-[460px] sm:w-[42vw] lg:w-[26vw] lg:max-w-none" />
@@ -136,10 +138,10 @@ export default async function HomePage({ params }: LocaleParams) {
           </ButtonLink>
         </div>
       </Section>
-      <RibbonBand id="home-a" className="-mt-px bg-linear-to-b from-[#fbf1ea] to-[#fbf9f3]" />
+      <RibbonBand id="home-a" className="-mt-px" />
 
       {/* why */}
-      <Section tone="jade" labelledBy="why-title">
+      <Section tone="rose" labelledBy="why-title">
         <SectionHeading id="why-title" eyebrow={t("why.eyebrow")} title={t("why.title")} />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {why.map((w) => (
@@ -223,7 +225,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* final CTA */}
-      <section className="bg-wash-dusk relative isolate overflow-hidden px-5 py-16 text-center text-cream sm:py-24">
+      <section className="bg-wash-dusk wave-top relative isolate overflow-hidden px-5 pt-28 pb-16 text-center text-cream sm:pt-32 sm:pb-24">
         <span aria-hidden="true" className="orb orb-a -z-10 top-0 right-[10%] size-72 bg-[#f9494f]/30" />
         <RibbonCorner corner="top-left" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
         <RibbonCorner corner="bottom-right" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />

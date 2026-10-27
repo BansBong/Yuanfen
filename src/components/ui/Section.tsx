@@ -1,15 +1,14 @@
 import type { ReactNode } from "react";
 import { PaperSpeckles } from "@/components/PaperSpeckles";
 
-type Tone = "cream" | "paper" | "peach" | "blush" | "jade" | "sky";
+type Tone = "cream" | "paper" | "peach" | "blush" | "rose" | "sky";
 
-const TONES: Record<Tone, string> = {
-  cream: "bg-cream",
-  paper: "bg-cream-center",
-  peach: "bg-wash-peach",
-  blush: "bg-wash-blush",
-  jade: "bg-wash-jade",
-  sky: "bg-wash-sky",
+/** Which glow (if any) sits behind a section. Sections themselves are transparent. */
+const GLOW: Partial<Record<Tone, string>> = {
+  peach: "wash-peach",
+  blush: "wash-blush",
+  rose: "wash-rose",
+  sky: "wash-sky",
 };
 
 /** Page section. "paper" is the slightly brighter, speckled background used on the poster. */
@@ -32,8 +31,9 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={`relative isolate scroll-mt-24 overflow-hidden px-5 py-16 sm:py-24 ${TONES[tone]} ${className}`}
+      className={`relative isolate scroll-mt-24 overflow-hidden px-5 py-16 sm:py-24 ${className}`}
     >
+      {GLOW[tone] && <div aria-hidden="true" className={`edge-fade absolute inset-0 -z-10 ${GLOW[tone]}`} />}
       {tone !== "cream" && <PaperSpeckles className="-z-10 opacity-60" />}
       <div className={`mx-auto ${innerClassName}`}>{children}</div>
     </section>

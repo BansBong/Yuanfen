@@ -62,7 +62,7 @@ export default async function MedicalPage({ params }: LocaleParams) {
         intro={t("requestIntro")}
       />
 
-      <Section tone="jade" labelledBy="medical-what" innerClassName="max-w-3xl">
+      <Section tone="rose" labelledBy="medical-what" innerClassName="max-w-3xl">
         <SectionHeading id="medical-what" title={t("whatTitle")} />
         <ul className="mt-8 space-y-3 text-base text-maroon sm:text-lg">
           {what.map((item) => (

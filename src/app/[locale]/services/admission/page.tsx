@@ -40,7 +40,7 @@ export default async function AdmissionPage({ params }: LocaleParams) {
         </ButtonLink>
       </PageHero>
 
-      <Section tone="jade" labelledBy="adm-who">
+      <Section tone="rose" labelledBy="adm-who">
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading id="adm-who" align="left" title={t("whoTitle")} />

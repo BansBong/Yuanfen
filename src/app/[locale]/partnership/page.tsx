@@ -30,7 +30,7 @@ export default async function PartnershipPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")} />
-      <Section tone="jade">
+      <Section tone="rose">
         <ul className="grid gap-6 sm:grid-cols-2">
           {GROUPS.map((g) => (
             <li key={g.key} className="reveal flex gap-4 rounded-3xl card-surface p-6">

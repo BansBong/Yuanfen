@@ -15,9 +15,11 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-hero-wash px-5 pt-14 pb-14 sm:pt-20 sm:pb-20">
-      <span aria-hidden="true" className="orb orb-a -z-10 top-[-10%] left-[8%] size-56 bg-[#f4b8b0]/40 sm:size-96" />
-      <span aria-hidden="true" className="orb orb-b -z-10 right-[10%] bottom-[-20%] size-56 bg-[#fbcf9f]/45 sm:size-96" />
+    <section className="relative isolate overflow-hidden px-5 pt-14 pb-14 sm:pt-20 sm:pb-20">
+      <div aria-hidden="true" className="edge-fade wash-hero absolute inset-0 -z-10">
+        <span className="orb orb-a top-[10%] left-[8%] size-48 bg-[#f4b8b0]/35 sm:size-80" />
+        <span className="orb orb-b right-[10%] bottom-[10%] size-48 bg-[#fbcf9f]/35 sm:size-80" />
+      </div>
       <PaperSpeckles className="-z-10 opacity-80" />
       <RibbonCorner corner="top-right" className="-z-10 hidden w-[18vw] opacity-90 lg:block" />
       <RibbonCorner corner="bottom-left" className="-z-10 hidden w-[16vw] opacity-90 lg:block" />
