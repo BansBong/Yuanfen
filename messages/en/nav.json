@@ -7,7 +7,7 @@
   "menu": "Menu",
   "close": "Close menu",
   "login": "Login",
-  "contactButton": "Contact",
+  "contactButton": "Get a quote",
   "language": "Language",
   "mainNav": "Main navigation",
   "items": {
@@ -21,6 +21,7 @@
     "becomeGuide": "Become a Guide",
     "howItWorks": "How It Works",
     "about": "About & FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "inquiry": "Get a quote"
   }
 }

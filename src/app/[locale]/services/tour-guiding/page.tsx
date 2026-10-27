@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { InquiryCta } from "@/components/site/InquiryCta";
 import { TourPlanner } from "@/components/site/TourPlanner";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FaqAccordion, type FaqItem } from "@/components/ui/FaqAccordion";
@@ -49,7 +50,7 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")}>
-        <ButtonLink href="#request" icon="send">
+        <ButtonLink href="/inquiry?service=tour" icon="send">
           {c("requestQuote")}
         </ButtonLink>
         <ButtonLink href={whatsappUrl(c("whatsappMessage"))} external variant="secondary" icon="message">
@@ -93,18 +94,11 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
                 <p className="mt-2 text-base leading-relaxed text-maroon">{t("hkmoText")}</p>
               </aside>
             }
-            formHeading={
-              <header className="mx-auto mb-8 max-w-2xl text-center">
-                <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{s("requestEyebrow")}</p>
-                <h2 className="mt-3 font-display text-2xl text-ink-red sm:text-3xl">{t("requestTitle")}</h2>
-                <p className="mt-4 text-base text-maroon">{t("requestIntro")}</p>
-                <p className="mt-4 rounded-2xl bg-cream px-4 py-3 text-base font-medium text-ink-red">{c("noPrices")}</p>
-                <p className="mt-2 text-base font-medium text-crimson">{c("freeQuote")}</p>
-              </header>
-            }
           />
         </div>
       </Section>
+
+      <InquiryCta locale={locale} service="tour" />
 
       <Section labelledBy="tour-faq-title" innerClassName="max-w-3xl">
         <SectionHeading id="tour-faq-title" title={s("faqTitle")} />

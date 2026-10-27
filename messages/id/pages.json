@@ -8,10 +8,22 @@
     "h1": "Dari pesan pertama sampai perjalanan yang terurus",
     "intro": "Empat langkah. Anda pilih layanannya, sisanya kami yang urus.",
     "steps": [
-      { "title": "Ceritakan kebutuhan Anda", "text": "Isi formulir singkat untuk layanan yang Anda pilih atau chat kami lewat WhatsApp. Sampaikan apa yang Anda mau dan kapan." },
-      { "title": "Kami cocokkan dengan pemandu atau mitra lokal", "text": "Kami cari orang yang tepat di Tiongkok untuk rencana Anda dan memastikan detailnya bersama Anda." },
-      { "title": "Kami bantu Anda", "text": "Anda menerima penawaran yang jelas. Setelah Anda setuju, kami siapkan semuanya dan tetap berkomunikasi sebelum dan selama perjalanan." },
-      { "title": "Anda tenang", "text": "Nikmati perjalanan atau prosesnya. Kalau rencana berubah, kami hanya sepesan jauhnya." }
+      {
+        "title": "Ceritakan kebutuhan Anda",
+        "text": "Isi formulir singkat untuk layanan yang Anda pilih atau chat kami lewat WhatsApp. Sampaikan apa yang Anda mau dan kapan."
+      },
+      {
+        "title": "Kami cocokkan dengan pemandu atau mitra lokal",
+        "text": "Kami cari orang yang tepat di Tiongkok untuk rencana Anda dan memastikan detailnya bersama Anda."
+      },
+      {
+        "title": "Kami bantu Anda",
+        "text": "Anda menerima penawaran yang jelas. Setelah Anda setuju, kami siapkan semuanya dan tetap berkomunikasi sebelum dan selama perjalanan."
+      },
+      {
+        "title": "Anda tenang",
+        "text": "Nikmati perjalanan atau prosesnya. Kalau rencana berubah, kami hanya sepesan jauhnya."
+      }
     ],
     "noPricesTitle": "Soal harga",
     "noPricesText": "Kami tidak mencantumkan harga tetap karena setiap permintaan berbeda. Isi formulir dan kami kirimkan penawaran. Meminta penawaran gratis dan tanpa kewajiban.",
@@ -36,10 +48,22 @@
     "h1": "Bekerja sama dengan kami",
     "intro": "Kami membangun jaringan mitra tepercaya di Tiongkok dan luar negeri. Jika perusahaan Anda ingin bekerja sama, ceritakan kepada kami.",
     "groups": {
-      "agency": { "title": "Biro perjalanan", "text": "Arahkan klien Anda ke pemandu lokal tepercaya, atau tambahkan layanan darat di Tiongkok ke paket Anda." },
-      "hospital": { "title": "Rumah sakit & klinik", "text": "Jangkau pasien internasional dengan jadwal yang didampingi penerjemah." },
-      "university": { "title": "Universitas & agen pendidikan", "text": "Terhubung dengan pelajar yang mencari tempat belajar di Tiongkok." },
-      "supplier": { "title": "Pemasok & pedagang", "text": "Pasok barang dan jasa untuk klien belanja dan perjalanan kami." }
+      "agency": {
+        "title": "Biro perjalanan",
+        "text": "Arahkan klien Anda ke pemandu lokal tepercaya, atau tambahkan layanan darat di Tiongkok ke paket Anda."
+      },
+      "hospital": {
+        "title": "Rumah sakit & klinik",
+        "text": "Jangkau pasien internasional dengan jadwal yang didampingi penerjemah."
+      },
+      "university": {
+        "title": "Universitas & agen pendidikan",
+        "text": "Terhubung dengan pelajar yang mencari tempat belajar di Tiongkok."
+      },
+      "supplier": {
+        "title": "Pemasok & pedagang",
+        "text": "Pasok barang dan jasa untuk klien belanja dan perjalanan kami."
+      }
     },
     "formTitle": "Pertanyaan kemitraan",
     "formIntro": "Bagikan beberapa detail dan tim kami akan menghubungi Anda."
@@ -110,14 +134,38 @@
     "updatedLabel": "Terakhir diperbarui",
     "updated": "PLACEHOLDER tanggal",
     "sections": [
-      { "title": "Siapa kami", "text": "Yuanfen (\"kami\") menjalankan situs ini dan menghubungkan klien dengan pemandu dan mitra lokal di Tiongkok." },
-      { "title": "Data yang kami kumpulkan", "text": "Saat Anda mengirim formulir, kami mengumpulkan data yang Anda ketik: nama, cara menghubungi Anda, dan kebutuhan Anda. Kami tidak meminta nomor paspor, data pembayaran, atau rekam medis lewat situs ini, dan Anda sebaiknya tidak mengirimkannya." },
-      { "title": "Untuk apa kami memakainya", "text": "Kami memakai data Anda untuk membalas permintaan, menyiapkan penawaran, mencocokkan Anda dengan pemandu atau mitra, dan meningkatkan layanan kami." },
-      { "title": "Siapa yang melihatnya", "text": "Tim kami, serta pemandu atau mitra yang perlu dilibatkan untuk memenuhi permintaan Anda. Penyedia situs dan basis data kami memproses data atas nama kami. Kami tidak menjual data Anda." },
-      { "title": "Berapa lama kami menyimpannya", "text": "PLACEHOLDER: jangka waktu penyimpanan akan dikonfirmasi pemilik." },
-      { "title": "Hak Anda", "text": "Anda dapat meminta untuk melihat, memperbaiki, atau menghapus data Anda dengan menghubungi kami." },
-      { "title": "Cookie", "text": "Kami memakai cookie untuk mengingat pilihan bahasa Anda. Kami tidak memakai cookie iklan." },
-      { "title": "Kontak", "text": "Ada pertanyaan tentang kebijakan ini? Gunakan halaman kontak." }
+      {
+        "title": "Siapa kami",
+        "text": "Yuanfen (\"kami\") menjalankan situs ini dan menghubungkan klien dengan pemandu dan mitra lokal di Tiongkok."
+      },
+      {
+        "title": "Data yang kami kumpulkan",
+        "text": "Saat Anda mengirim formulir, kami mengumpulkan data yang Anda ketik: nama, cara menghubungi Anda, dan kebutuhan Anda. Kami tidak meminta nomor paspor, data pembayaran, atau rekam medis lewat situs ini, dan Anda sebaiknya tidak mengirimkannya."
+      },
+      {
+        "title": "Untuk apa kami memakainya",
+        "text": "Kami memakai data Anda untuk membalas permintaan, menyiapkan penawaran, mencocokkan Anda dengan pemandu atau mitra, dan meningkatkan layanan kami."
+      },
+      {
+        "title": "Siapa yang melihatnya",
+        "text": "Tim kami, serta pemandu atau mitra yang perlu dilibatkan untuk memenuhi permintaan Anda. Penyedia situs dan basis data kami memproses data atas nama kami. Kami tidak menjual data Anda."
+      },
+      {
+        "title": "Berapa lama kami menyimpannya",
+        "text": "PLACEHOLDER: jangka waktu penyimpanan akan dikonfirmasi pemilik."
+      },
+      {
+        "title": "Hak Anda",
+        "text": "Anda dapat meminta untuk melihat, memperbaiki, atau menghapus data Anda dengan menghubungi kami."
+      },
+      {
+        "title": "Cookie",
+        "text": "Kami memakai cookie untuk mengingat pilihan bahasa Anda. Kami tidak memakai cookie iklan."
+      },
+      {
+        "title": "Kontak",
+        "text": "Ada pertanyaan tentang kebijakan ini? Gunakan halaman kontak."
+      }
     ]
   },
   "confirmation": {
@@ -133,5 +181,18 @@
     "whatsappMessage": "Halo Yuanfen, kode referensi saya {ref}.",
     "noRef": "Kami tidak menemukan kode referensi. Jika Anda baru saja mengirim permintaan, silakan hubungi kami lewat WhatsApp.",
     "home": "Kembali ke beranda"
+  },
+  "inquiry": {
+    "meta": {
+      "title": "Formulir Permintaan Layanan",
+      "description": "Ceritakan kebutuhan Anda di Tiongkok: pemandu, transportasi, bantuan bisnis dan medis, penerjemah, belanja, atau kunjungan sekolah. Penawaran gratis, tanpa kewajiban."
+    },
+    "eyebrow": "Permintaan layanan",
+    "h1": "Ceritakan kebutuhan Anda di Tiongkok",
+    "greeting": "Halo! Terima kasih sudah menghubungi Yuanfen.",
+    "intro": "Agar kami memahami kebutuhan Anda dan bisa memberi penawaran yang akurat, mohon isi data di bawah ini. Sekitar lima menit saja.",
+    "note": "Catatan: penawaran akhir bergantung pada tujuan, tanggal, jumlah orang, dan layanan spesifik yang Anda butuhkan.",
+    "afterSubmit": "Setelah menerima data Anda, tim kami akan meninjau permintaan dan mengirimkan penawaran yang sesuai.",
+    "closing": "Terima kasih telah memilih Yuanfen. Menghubungkan Indonesia × Tiongkok."
   }
 }

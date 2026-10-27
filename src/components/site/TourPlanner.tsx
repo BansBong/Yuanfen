@@ -1,30 +1,28 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { RequestForm } from "@/components/forms/RequestForm";
 import { buttonClass } from "@/components/ui/ButtonLink";
 import { DESTINATIONS } from "@/data/destinations";
+import { Link } from "@/i18n/navigation";
 import { DestinationPicker, type PickerGroup, type PickerLabels } from "./DestinationPicker";
 
 /**
- * Destination picker + the tour request form.
- * Visitors can tick several places, and/or write any place in China in the
- * form itself. Ticked places are added to the form's destinations field.
+ * Destination picker. Visitors tick one or more places, then continue to the
+ * inquiry form, which opens with those places already filled in (they can still
+ * add any other place in China there).
  */
 export function TourPlanner({
   groups,
   labels,
   summary,
   between,
-  formHeading,
 }: {
   groups: PickerGroup[];
   labels: PickerLabels;
   summary: { selected: string; continue: string };
-  /** Static content (e.g. the Hong Kong / Macau note) rendered between picker and form. */
+  /** Static content (e.g. the Hong Kong / Macau note) rendered after the picker. */
   between?: ReactNode;
-  formHeading: ReactNode;
 }) {
   const [selected, setSelected] = useState<string[]>([]);
 
@@ -49,18 +47,17 @@ export function TourPlanner({
             <span className="font-semibold">{summary.selected}: </span>
             {names.join(", ")}
           </p>
-          <a href="#request" className={buttonClass("primary", "shrink-0 !min-h-11 !px-5 !py-2")}>
+          <Link
+            href={`/inquiry?service=tour&destinations=${encodeURIComponent(names.join(", "))}`}
+            className={buttonClass("primary", "shrink-0 !min-h-11 !px-5 !py-2")}
+          >
             {summary.continue}
-            <ArrowDown aria-hidden="true" className="size-5" />
-          </a>
+            <ArrowRight aria-hidden="true" className="size-5" />
+          </Link>
         </div>
       )}
 
       {between}
-      <div id="request" className="mt-16 scroll-mt-24">
-        {formHeading}
-        <RequestForm formId="tour" pickedPlaces={names} />
-      </div>
     </>
   );
 }

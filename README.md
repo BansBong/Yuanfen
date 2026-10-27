@@ -100,6 +100,20 @@ How it is secured: Row Level Security is on for every table. Visitors can only *
 
 Inbox with filters (type, status, assigned to, search by name/contact/reference code), request detail (status, assign to a teammate, internal notes), a **Places** page counting requests per place (for market research), and a profile page (name, photo, password). It works on a phone. Every change records who made it.
 
+**Responses** (`/admin/insights`) is the Google-Forms-style view of the service inquiry questionnaire:
+
+| Tab | What it shows |
+| --- | --- |
+| Summary | Charts for every question (bars and donuts), responses over time, status and language split, top destinations, group sizes, arrival months, and the latest free-text answers |
+| Individual | One response at a time with Newer / Older buttons, every question in order, and links to update the status or message the person on WhatsApp |
+| Table | A spreadsheet-style table of all answers (scrolls sideways, 50 per page) |
+
+A date-range filter and a **Download CSV** button (opens in Excel / Google Sheets) sit above all three tabs.
+
+### The service inquiry form (`/inquiry`)
+
+One dedicated page with five sections (personal information, travel, type of assistance, additional requirements, budget). Every "Request a quote" button on the site opens it, with the service, trip or places the visitor picked already filled in (for example `/inquiry?service=tour&destinations=Guangzhou,Lijiang`). The questions live in `src/data/forms.ts` under `inquiry`. **If your database already exists, run the updated `supabase/schema.sql` again**: it adds the `inquiry` request type and updates the places view.
+
 ## 6. Deploying to Vercel
 
 1. Push this repo to GitHub (`main`).

@@ -11,14 +11,10 @@
  *  - `name` and `contact` are stored in dedicated columns; everything else goes
  *    into the `details` JSON column of the request.
  */
-import { TRIPS } from "./trips";
 import type { Localized } from "./types";
 
 export type FormId =
-  | "tour"
-  | "jastip"
-  | "medical"
-  | "admission"
+  | "inquiry"
   | "destination_request"
   | "partnership"
   | "guide_application"
@@ -51,8 +47,12 @@ export type Field = {
   /** Min/max for number fields. */
   min?: number;
   maxValue?: number;
-  /** Special validation: an email address or a phone / WhatsApp number. */
-  kind?: "contact";
+  /** Special validation: "contact" = email OR phone; "phone" = phone / WhatsApp number only. */
+  kind?: "contact" | "phone";
+  /** Two short fields can sit side by side on wide screens. */
+  width?: "half";
+  /** Only show this field while another field has the given value selected. */
+  showWhen?: { field: string; includes: string };
   autoComplete?: string;
 };
 
@@ -71,8 +71,6 @@ const LANGUAGE_OPTIONS: Option[] = [
   opt("id", "Bahasa Indonesia", "Bahasa Indonesia"),
   opt("other", "Other", "Lainnya"),
 ];
-
-const TRIP_OPTIONS: Option[] = TRIPS.map((t) => ({ value: t.slug, label: t.name }));
 
 // Shared fields -------------------------------------------------------------
 
@@ -106,29 +104,58 @@ const PREFERRED_LANGUAGE: Field = {
   options: LANGUAGE_OPTIONS,
 };
 
-const NOTES: Field = {
-  name: "notes",
-  type: "textarea",
-  max: 1500,
-  label: { en: "Anything else we should know?", id: "Ada hal lain yang perlu kami ketahui?" },
-};
-
-const ABOUT_YOU: Step = {
-  id: "about-you",
-  title: { en: "About you", id: "Tentang Anda" },
-  fields: [NAME, CONTACT, PREFERRED_LANGUAGE],
-};
-
 // Forms ---------------------------------------------------------------------
 
 export const FORMS: Record<FormId, FormDef> = {
-  tour: {
-    id: "tour",
+  // The main questionnaire: one dedicated page (/inquiry) with 5 sections. Every service
+  // (tour guiding, shopping, medical, admission...) is requested through this form.
+  inquiry: {
+    id: "inquiry",
     steps: [
-      ABOUT_YOU,
       {
-        id: "trip",
-        title: { en: "Your trip", id: "Perjalanan Anda" },
+        id: "personal",
+        title: { en: "Personal information", id: "Informasi pribadi" },
+        fields: [
+          {
+            name: "name",
+            type: "text",
+            required: true,
+            max: 100,
+            autoComplete: "name",
+            label: { en: "Full name", id: "Nama lengkap" },
+          },
+          {
+            name: "contact",
+            type: "text",
+            kind: "phone",
+            required: true,
+            max: 40,
+            autoComplete: "tel",
+            label: { en: "WhatsApp number", id: "Nomor WhatsApp" },
+            help: {
+              en: "Include the country code, e.g. +62 812 ...",
+              id: "Sertakan kode negara, mis. +62 812 ...",
+            },
+          },
+          {
+            name: "nationality",
+            type: "text",
+            max: 80,
+            width: "half",
+            label: { en: "Nationality", id: "Kewarganegaraan" },
+          },
+          {
+            name: "location",
+            type: "text",
+            max: 120,
+            width: "half",
+            label: { en: "Current city / country", id: "Kota / negara saat ini" },
+          },
+        ],
+      },
+      {
+        id: "travel",
+        title: { en: "Travel information", id: "Informasi perjalanan" },
         fields: [
           {
             name: "destinations",
@@ -136,233 +163,136 @@ export const FORMS: Record<FormId, FormDef> = {
             required: true,
             max: 400,
             rows: 3,
-            label: { en: "Where do you want to go?", id: "Anda ingin ke mana?" },
+            label: { en: "Destination in China", id: "Tujuan di Tiongkok" },
             placeholder: { en: "e.g. Guangzhou, Lijiang, Harbin", id: "mis. Guangzhou, Lijiang, Harbin" },
             help: {
-              en: "Write one place or several, in any order. Any place in China is welcome, not only the ones on our list.",
-              id: "Tulis satu tempat atau beberapa, urutan bebas. Tempat mana pun di Tiongkok boleh, tidak hanya yang ada di daftar kami.",
+              en: "Write one place or several. Any place in China is welcome.",
+              id: "Tulis satu tempat atau beberapa. Tempat mana pun di Tiongkok boleh.",
             },
           },
           {
-            name: "trip",
-            type: "select",
-            label: { en: "A ready-made trip? (optional)", id: "Trip siap pakai? (opsional)" },
-            options: TRIP_OPTIONS,
+            name: "arrivalDate",
+            type: "date",
+            width: "half",
+            label: { en: "Arrival date", id: "Tanggal kedatangan" },
           },
           {
-            name: "services",
-            type: "chips-multi",
-            label: { en: "What do you need?", id: "Anda butuh apa?" },
-            options: [
-              opt("city", "City tour", "City tour"),
-              opt("business", "Business trip", "Perjalanan bisnis"),
-              opt("muslim", "Muslim-friendly travel", "Wisata ramah Muslim"),
-              opt("airport", "Airport pickup", "Jemput bandara"),
-              opt("photography", "Photography", "Fotografi"),
-            ],
+            name: "departureDate",
+            type: "date",
+            width: "half",
+            label: { en: "Departure date", id: "Tanggal kepulangan" },
           },
           {
-            name: "travelDates",
-            type: "text",
-            required: true,
-            max: 120,
-            label: { en: "When are you travelling?", id: "Kapan Anda bepergian?" },
-            placeholder: { en: "Dates or month, e.g. 12-20 March", id: "Tanggal atau bulan, mis. 12-20 Maret" },
-          },
-          {
-            name: "people",
+            name: "pax",
             type: "number",
             min: 1,
-            maxValue: 50,
-            label: { en: "How many people?", id: "Berapa orang?" },
-          },
-        ],
-      },
-      {
-        id: "details",
-        title: { en: "A few details", id: "Beberapa detail" },
-        fields: [
-          {
-            name: "interests",
-            type: "textarea",
-            max: 1000,
-            label: { en: "What do you enjoy? (food, history, shopping, nature...)", id: "Apa yang Anda sukai? (kuliner, sejarah, belanja, alam...)" },
-          },
-          NOTES,
-        ],
-      },
-    ],
-  },
-
-  jastip: {
-    id: "jastip",
-    steps: [
-      ABOUT_YOU,
-      {
-        id: "items",
-        title: { en: "What to buy", id: "Barang yang dicari" },
-        fields: [
-          {
-            name: "items",
-            type: "textarea",
-            required: true,
-            max: 2000,
-            label: { en: "What would you like us to buy?", id: "Barang apa yang ingin dibelikan?" },
-            help: {
-              en: "Names, quantities and links if you have them. No payment details, please.",
-              id: "Nama barang, jumlah, dan tautan jika ada. Jangan sertakan data pembayaran.",
-            },
+            maxValue: 200,
+            width: "half",
+            label: { en: "Number of pax", id: "Jumlah orang" },
           },
           {
-            name: "city",
-            type: "text",
-            max: 100,
-            label: { en: "Which city or market? (optional)", id: "Kota atau pasar mana? (opsional)" },
-          },
-          {
-            name: "neededBy",
-            type: "date",
-            label: { en: "Needed by (optional)", id: "Dibutuhkan sebelum (opsional)" },
-          },
-        ],
-      },
-      {
-        id: "delivery",
-        title: { en: "Delivery", id: "Pengiriman" },
-        fields: [
-          {
-            name: "delivery",
-            type: "chips",
-            label: { en: "How will you receive it?", id: "Bagaimana Anda menerimanya?" },
-            options: [
-              opt("ship", "Ship to me", "Dikirim ke saya"),
-              opt("pickup", "I will collect it", "Saya ambil sendiri"),
-              opt("unsure", "Not sure yet", "Belum tahu"),
-            ],
-          },
-          NOTES,
-        ],
-      },
-    ],
-  },
-
-  medical: {
-    id: "medical",
-    steps: [
-      ABOUT_YOU,
-      {
-        id: "need",
-        title: { en: "What you need", id: "Yang Anda butuhkan" },
-        fields: [
-          {
-            name: "needs",
-            type: "chips-multi",
-            required: true,
-            label: { en: "How can we help?", id: "Bagaimana kami bisa membantu?" },
-            options: [
-              opt("hospital", "Find a hospital or clinic", "Mencari rumah sakit atau klinik"),
-              opt("appointment", "Book a consultation", "Mengatur jadwal konsultasi"),
-              opt("interpreter", "An interpreter", "Penerjemah"),
-              opt("logistics", "Transport and logistics", "Transportasi dan logistik"),
-            ],
-          },
-          {
-            name: "city",
+            name: "preferredDateTime",
             type: "text",
             max: 150,
-            label: { en: "Which city or cities? (optional)", id: "Kota mana saja? (opsional)" },
-          },
-          {
-            name: "when",
-            type: "text",
-            max: 120,
-            label: { en: "When? (optional)", id: "Kapan? (opsional)" },
+            width: "half",
+            label: { en: "Preferred date & time of service", id: "Tanggal & jam layanan yang diinginkan" },
+            placeholder: { en: "e.g. 12 March, 09:00", id: "mis. 12 Maret, 09.00" },
           },
         ],
       },
       {
-        id: "details",
-        title: { en: "Last step", id: "Langkah terakhir" },
+        id: "assistance",
+        title: { en: "Type of assistance required", id: "Jenis bantuan yang dibutuhkan" },
         fields: [
           {
-            name: "notes",
-            type: "textarea",
-            max: 1000,
-            label: { en: "Anything else we should know?", id: "Ada hal lain yang perlu kami ketahui?" },
-            help: {
-              en: "Please do NOT include medical records, diagnoses or ID numbers.",
-              id: "Mohon JANGAN sertakan rekam medis, diagnosis, atau nomor identitas.",
-            },
-          },
-          {
-            name: "ack",
-            type: "checkbox",
+            name: "assistance",
+            type: "chips-multi",
             required: true,
-            label: {
-              en: "I understand Yuanfen connects me with hospitals and interpreters and does not give medical advice.",
-              id: "Saya mengerti bahwa Yuanfen menghubungkan saya dengan rumah sakit dan penerjemah, dan tidak memberi nasihat medis.",
-            },
-          },
-        ],
-      },
-    ],
-  },
-
-  admission: {
-    id: "admission",
-    steps: [
-      ABOUT_YOU,
-      {
-        id: "study",
-        title: { en: "Your study plan", id: "Rencana studi" },
-        fields: [
-          {
-            name: "applicant",
-            type: "chips",
-            label: { en: "Who is applying?", id: "Siapa yang mendaftar?" },
+            label: { en: "Please select all that apply", id: "Pilih semua yang sesuai" },
             options: [
-              opt("me", "Me", "Saya"),
-              opt("child", "My child", "Anak saya"),
-              opt("other", "Someone else", "Orang lain"),
+              opt("airport", "Airport pickup / drop-off", "Jemput / antar bandara"),
+              opt("transport", "Private transportation", "Transportasi pribadi"),
+              opt("guide", "Tour guide / local assistance", "Pemandu wisata / bantuan lokal"),
+              opt("business_trip", "Business trip assistance", "Pendampingan perjalanan bisnis"),
+              opt("business_meeting", "Business meeting / factory visit", "Meeting bisnis / kunjungan pabrik"),
+              opt("medical_appointment", "Medical appointment assistance", "Pendampingan janji temu medis"),
+              opt("hospital_visit", "Hospital visit / medical check-up", "Kunjungan rumah sakit / medical check-up"),
+              opt("translation", "Translation / interpretation", "Penerjemahan / interpreter"),
+              opt("shopping", "Shopping assistance", "Bantuan belanja (jasa titip)"),
+              opt("education", "Education / school visit", "Pendidikan / kunjungan sekolah"),
+              opt("other", "Other", "Lainnya"),
             ],
+            help: {
+              en: "For medical help we connect you with hospitals and interpreters. We do not give medical advice. Please do not include medical records here.",
+              id: "Untuk bantuan medis, kami menghubungkan Anda dengan rumah sakit dan penerjemah. Kami tidak memberi nasihat medis. Mohon jangan sertakan rekam medis di sini.",
+            },
           },
           {
-            name: "level",
-            type: "select",
-            required: true,
-            label: { en: "What level?", id: "Jenjang apa?" },
+            name: "assistanceOther",
+            type: "text",
+            max: 200,
+            showWhen: { field: "assistance", includes: "other" },
+            label: { en: "Other: please tell us", id: "Lainnya: mohon jelaskan" },
+          },
+        ],
+      },
+      {
+        id: "requirements",
+        title: { en: "Additional requirements", id: "Kebutuhan tambahan" },
+        fields: [
+          {
+            name: "languages",
+            type: "chips-multi",
+            label: { en: "Preferred language", id: "Bahasa yang diinginkan" },
             options: [
-              opt("language", "Language course", "Kursus bahasa"),
-              opt("school", "School", "Sekolah"),
-              opt("bachelor", "Bachelor", "Sarjana (S1)"),
-              opt("master", "Master", "Magister (S2)"),
-              opt("phd", "PhD", "Doktor (S3)"),
+              opt("en", "English"),
+              opt("zh", "Mandarin", "Mandarin"),
+              opt("id", "Indonesian", "Indonesia"),
               opt("other", "Other", "Lainnya"),
             ],
           },
           {
-            name: "subject",
+            name: "languageOther",
             type: "text",
-            max: 150,
-            label: { en: "Subject or major (optional)", id: "Jurusan (opsional)" },
+            max: 80,
+            showWhen: { field: "languages", includes: "other" },
+            label: { en: "Other language", id: "Bahasa lainnya" },
           },
           {
-            name: "city",
+            name: "hotel",
             type: "text",
-            max: 100,
-            label: { en: "Preferred city (optional)", id: "Kota yang diinginkan (opsional)" },
+            max: 200,
+            label: { en: "Hotel / pickup location (if available)", id: "Hotel / lokasi penjemputan (jika ada)" },
           },
           {
-            name: "startWhen",
-            type: "text",
-            required: true,
-            max: 100,
-            label: { en: "When do you want to start?", id: "Kapan ingin mulai?" },
-            placeholder: { en: "e.g. September 2027", id: "mis. September 2027" },
+            name: "requests",
+            type: "textarea",
+            max: 1500,
+            rows: 4,
+            label: { en: "Special requests or requirements", id: "Permintaan atau kebutuhan khusus" },
           },
         ],
       },
-      { id: "details", title: { en: "Last step", id: "Langkah terakhir" }, fields: [NOTES] },
+      {
+        id: "budget",
+        title: { en: "Budget & preferences (optional)", id: "Anggaran & preferensi (opsional)" },
+        fields: [
+          {
+            name: "budget",
+            type: "text",
+            max: 100,
+            width: "half",
+            label: { en: "Estimated budget", id: "Perkiraan anggaran" },
+          },
+          {
+            name: "serviceLevel",
+            type: "chips",
+            width: "half",
+            label: { en: "Preferred service level", id: "Tingkat layanan yang diinginkan" },
+            options: [opt("standard", "Standard", "Standar"), opt("premium", "Premium"), opt("vip", "VIP")],
+          },
+        ],
+      },
     ],
   },
 

@@ -56,6 +56,7 @@ export const ALL_PATHS = [
   "/services/medical",
   "/services/admission",
   "/trips",
+  "/inquiry",
   "/request-destination",
   "/how-it-works",
   "/partnership",

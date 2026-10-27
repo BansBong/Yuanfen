@@ -54,8 +54,8 @@ export default async function PlacesPage() {
           rows={rows.filter((r) => r.source === "destination_request")}
         />
         <Table
-          title="Tour requests by destination"
-          note="Places picked in the Tour Guiding form."
+          title="Places in service inquiries"
+          note="Destinations written in the inquiry questionnaire (and older tour requests)."
           rows={rows.filter((r) => r.source === "tour")}
         />
       </div>

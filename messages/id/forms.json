@@ -20,6 +20,15 @@
     "consent": "Mohon setujui untuk melanjutkan.",
     "submitFailed": "Terjadi kesalahan. Coba lagi, atau chat kami lewat WhatsApp.",
     "rateLimited": "Terlalu banyak permintaan. Tunggu beberapa menit lalu coba lagi.",
-    "notConfigured": "Formulir sedang tidak tersedia. Silakan chat kami lewat WhatsApp."
+    "notConfigured": "Formulir sedang tidak tersedia. Silakan chat kami lewat WhatsApp.",
+    "invalidPhone": "Masukkan nomor WhatsApp yang valid dengan kode negara, mis. +62 812 3456 7890.",
+    "invalidDates": "Tanggal kepulangan harus sama dengan atau setelah tanggal kedatangan."
+  },
+  "questionnaire": {
+    "sectionOf": "Bagian {n} dari {total}",
+    "jump": "Lompat ke bagian",
+    "requiredNote": "Kolom wajib harus diisi. Selebihnya opsional.",
+    "errorsSummary": "Mohon periksa {count} jawaban yang ditandai merah.",
+    "selectedCount": "{count} dipilih"
   }
 }

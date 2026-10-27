@@ -20,6 +20,15 @@
     "consent": "Please agree to continue.",
     "submitFailed": "Something went wrong. Please try again, or message us on WhatsApp.",
     "rateLimited": "Too many requests. Please wait a few minutes and try again.",
-    "notConfigured": "The form is not available right now. Please message us on WhatsApp."
+    "notConfigured": "The form is not available right now. Please message us on WhatsApp.",
+    "invalidPhone": "Enter a valid WhatsApp number with country code, e.g. +62 812 3456 7890.",
+    "invalidDates": "Departure must be on or after the arrival date."
+  },
+  "questionnaire": {
+    "sectionOf": "Section {n} of {total}",
+    "jump": "Jump to section",
+    "requiredNote": "Fields marked required must be filled in. Everything else is optional.",
+    "errorsSummary": "Please check {count, plural, one {# answer} other {# answers}} marked in red.",
+    "selectedCount": "{count} selected"
   }
 }

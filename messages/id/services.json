@@ -2,7 +2,10 @@
   "common": {
     "requestEyebrow": "Minta penawaran",
     "faqTitle": "Pertanyaan umum",
-    "whatsappNote": "Lebih suka ngobrol? Chat kami lewat WhatsApp."
+    "whatsappNote": "Lebih suka ngobrol? Chat kami lewat WhatsApp.",
+    "ctaTitle": "Siap? Ceritakan kebutuhan Anda",
+    "ctaText": "Isi formulir permintaan singkat. Sekitar lima menit, penawaran gratis dan tanpa kewajiban.",
+    "ctaButton": "Buka formulir permintaan"
   },
   "tour": {
     "meta": {
@@ -14,11 +17,26 @@
     "intro": "Ceritakan ke mana Anda ingin pergi. Kami carikan pemandu lokal yang berbahasa Indonesia atau Inggris dan paham tempatnya.",
     "typesTitle": "Bantuan seperti apa yang Anda perlukan?",
     "types": {
-      "city": { "title": "City Tour", "text": "Tempat wisata, kuliner, dan kawasan kota, sesuai ritme Anda." },
-      "business": { "title": "Perjalanan Bisnis", "text": "Pemandu atau penerjemah, kunjungan pabrik dan pameran dagang." },
-      "muslim": { "title": "Wisata Ramah Muslim", "text": "Makanan halal, tempat salat, dan waktu salat sudah diatur." },
-      "airport": { "title": "Jemput Bandara", "text": "Ada yang menjemput saat tiba dan mengantar ke hotel." },
-      "photo": { "title": "Fotografi", "text": "Fotografer untuk perjalanan Anda, tambahan atau layanan terpisah." }
+      "city": {
+        "title": "City Tour",
+        "text": "Tempat wisata, kuliner, dan kawasan kota, sesuai ritme Anda."
+      },
+      "business": {
+        "title": "Perjalanan Bisnis",
+        "text": "Pemandu atau penerjemah, kunjungan pabrik dan pameran dagang."
+      },
+      "muslim": {
+        "title": "Wisata Ramah Muslim",
+        "text": "Makanan halal, tempat salat, dan waktu salat sudah diatur."
+      },
+      "airport": {
+        "title": "Jemput Bandara",
+        "text": "Ada yang menjemput saat tiba dan mengantar ke hotel."
+      },
+      "photo": {
+        "title": "Fotografi",
+        "text": "Fotografer untuk perjalanan Anda, tambahan atau layanan terpisah."
+      }
     },
     "destTitle": "Anda ingin ke mana?",
     "destIntro": "Ketuk satu atau beberapa tempat, atau tulis sendiri di formulir di bawah. Tempat mana pun di Tiongkok boleh. \"Atas permintaan\" artinya kami pastikan pemandunya dulu.",
@@ -45,10 +63,22 @@
     "intro": "Ceritakan barang yang Anda cari. Mitra lokal kami mencarinya, membelinya, dan mengabari Anda.",
     "howTitle": "Cara kerjanya",
     "steps": [
-      { "title": "Kirim permintaan", "text": "Sebutkan barang yang diinginkan, lengkap dengan foto atau tautan kalau ada." },
-      { "title": "Kami pastikan detailnya", "text": "Kami cek ketersediaan dan sepakati detail bersama Anda." },
-      { "title": "Kami belikan", "text": "Mitra kami membeli barangnya dan mengirim bukti ke Anda." },
-      { "title": "Pesanan sampai ke Anda", "text": "Kami atur pengirimannya sesuai kesepakatan." }
+      {
+        "title": "Kirim permintaan",
+        "text": "Sebutkan barang yang diinginkan, lengkap dengan foto atau tautan kalau ada."
+      },
+      {
+        "title": "Kami pastikan detailnya",
+        "text": "Kami cek ketersediaan dan sepakati detail bersama Anda."
+      },
+      {
+        "title": "Kami belikan",
+        "text": "Mitra kami membeli barangnya dan mengirim bukti ke Anda."
+      },
+      {
+        "title": "Pesanan sampai ke Anda",
+        "text": "Kami atur pengirimannya sesuai kesepakatan."
+      }
     ],
     "paymentTitle": "Pembayaran dan nota",
     "paymentText": "Proses pembayaran dan nota kami dijelaskan di sini.",
@@ -101,9 +131,18 @@
     ],
     "howTitle": "Cara kerjanya",
     "steps": [
-      { "title": "Ceritakan tujuan Anda", "text": "Jurusan, jenjang, kota, dan kapan ingin mulai." },
-      { "title": "Kami usulkan pilihan", "text": "Daftar singkat sekolah atau program yang cocok." },
-      { "title": "Kami dampingi pendaftaran", "text": "Bantuan dengan proses dan berkas." }
+      {
+        "title": "Ceritakan tujuan Anda",
+        "text": "Jurusan, jenjang, kota, dan kapan ingin mulai."
+      },
+      {
+        "title": "Kami usulkan pilihan",
+        "text": "Daftar singkat sekolah atau program yang cocok."
+      },
+      {
+        "title": "Kami dampingi pendaftaran",
+        "text": "Bantuan dengan proses dan berkas."
+      }
     ],
     "needTitle": "Yang akan kami tanyakan",
     "need": [

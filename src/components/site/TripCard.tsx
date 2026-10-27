@@ -50,7 +50,7 @@ export async function TripCard({ trip, locale, compact = false }: { trip: Trip; 
 
       <div className="mt-auto pt-6">
         <Link
-          href={`/services/tour-guiding?trip=${trip.slug}#request`}
+          href={`/inquiry?service=tour&trip=${trip.slug}`}
           className={buttonClass("primary", "w-full")}
         >
           {t("requestQuote")}

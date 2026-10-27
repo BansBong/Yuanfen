@@ -29,7 +29,7 @@ These feed the header/footer links, the sticky WhatsApp button, the Contact page
 | --- | --- | --- |
 | `src/data/trips.ts` | All five trips: day counts, highlights, "who it is for" | Write the real itineraries. Set `status` to `"available"` / `"on-request"` |
 | `src/data/destinations.ts` | One-line hooks (draft copy), photos, and availability | Review hooks. Set `status: "available"` for places you can really serve. Add `image` paths under `public/destinations/` |
-| `src/data/forms.ts` | Every form's question list (all 8 forms) | Send me your real question lists, or edit here. Only this file changes. Never ask for passport numbers, payment details or medical records |
+| `src/data/forms.ts` | The service inquiry questionnaire (your supplied questions) plus the contact, partnership, guide and destination forms | Send me your real question lists, or edit here. Only this file changes. Never ask for passport numbers, payment details or medical records |
 | `src/data/people.ts` + `src/data/flags.ts` | Guides and testimonials are **empty and hidden** | Add REAL entries only, then set `SHOW_GUIDES` / `SHOW_TESTIMONIALS` to `true` |
 
 ## 3. Copy in the language files (`messages/en/*.json`, `messages/id/*.json`)

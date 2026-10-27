@@ -15,6 +15,11 @@ export function isValidContact(value: string): boolean {
   return /^\+?\d{7,15}$/.test(digits);
 }
 
+export function isValidPhone(value: string): boolean {
+  const digits = value.trim().replace(/[\s\-().]/g, "");
+  return /^\+?\d{7,15}$/.test(digits);
+}
+
 function fieldSchema(f: Field): z.ZodType<unknown> {
   const req = !!f.required;
 
@@ -24,6 +29,9 @@ function fieldSchema(f: Field): z.ZodType<unknown> {
       const max = f.max ?? (f.type === "textarea" ? 2000 : 200);
       let s = z.string().trim().max(max, { message: "tooLong" });
       if (req) s = s.min(1, { message: "required" });
+      if (f.kind === "phone") {
+        return s.refine((v) => (v === "" ? !req : isValidPhone(v)), { message: "invalidPhone" });
+      }
       if (f.kind === "contact") {
         return s.refine((v) => (v === "" ? !req : isValidContact(v)), { message: "invalidContact" });
       }
@@ -78,7 +86,13 @@ export function formSchema(formId: FormId) {
   for (const step of FORMS[formId].steps) {
     for (const f of step.fields) shape[f.name] = fieldSchema(f);
   }
-  return z.object(shape);
+  return z.object(shape).superRefine((val, ctx) => {
+    // Inquiry form: the trip cannot end before it starts.
+    const v = val as Record<string, unknown>;
+    if (formId === "inquiry" && v.arrivalDate && v.departureDate && String(v.departureDate) < String(v.arrivalDate)) {
+      ctx.addIssue({ code: "custom", path: ["departureDate"], message: "invalidDates" });
+    }
+  });
 }
 
 export type FormValues = Record<string, string | string[] | boolean>;

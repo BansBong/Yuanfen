@@ -1,4 +1,5 @@
 import { FORMS, isFormId } from "@/data/forms";
+import { displayValue } from "./answers";
 
 /** Turn a request's `details` JSON into readable label/value rows using the form definition. */
 export function formatDetails(type: string, details: Record<string, unknown>): { label: string; value: string }[] {
@@ -9,16 +10,7 @@ export function formatDetails(type: string, details: Record<string, unknown>): {
     .filter(([key]) => key !== "consent")
     .map(([key, raw]) => {
       const field = fields.find((f) => f.name === key);
-      const label = field?.label.en ?? key;
-      const optionLabel = (v: string) => field?.options?.find((o) => o.value === v)?.label.en ?? v;
-      const value = Array.isArray(raw)
-        ? raw.map((v) => optionLabel(String(v))).join(", ")
-        : typeof raw === "boolean"
-          ? raw
-            ? "Yes"
-            : "No"
-          : optionLabel(String(raw));
-      return { label, value };
+      return { label: field?.label.en ?? key, value: displayValue(field, raw) };
     });
 }
 

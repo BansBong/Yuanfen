@@ -5,6 +5,7 @@ import type { AdminProfile } from "@/lib/admin/session";
 
 const NAV = [
   { href: "/admin", label: "Inbox" },
+  { href: "/admin/insights", label: "Responses" },
   { href: "/admin/places", label: "Places" },
   { href: "/admin/profile", label: "My profile" },
   { href: "/admin/security", label: "Security" },

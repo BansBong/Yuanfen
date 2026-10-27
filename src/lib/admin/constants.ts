@@ -1,4 +1,5 @@
 export const REQUEST_TYPES = [
+  "inquiry",
   "tour",
   "jastip",
   "medical",
@@ -14,6 +15,7 @@ export const REQUEST_STATUSES = ["new", "contacted", "quoted", "won", "closed"] 
 export type RequestStatus = (typeof REQUEST_STATUSES)[number];
 
 export const TYPE_LABELS: Record<RequestType, string> = {
+  inquiry: "Service inquiry",
   tour: "Tour Guiding",
   jastip: "Shopping (Jasa Titip)",
   medical: "Medical",

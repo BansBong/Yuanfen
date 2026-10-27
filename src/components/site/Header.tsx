@@ -63,7 +63,7 @@ export function Header() {
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <span className="hidden lg:block">
-            <Link href="/contact" className={buttonClass("primary", "!min-h-11 !px-5 !py-2")}>
+            <Link href="/inquiry" className={buttonClass("primary", "!min-h-11 !px-5 !py-2")}>
               {t("contactButton")}
             </Link>
           </span>
@@ -138,7 +138,7 @@ export function Header() {
               ))}
             </ul>
             <div className="mt-auto grid gap-3">
-              <Link href="/contact" className={buttonClass("primary", "w-full")}>
+              <Link href="/inquiry" className={buttonClass("primary", "w-full")}>
                 <Icon name="message" className="size-6" />
                 {t("contactButton")}
               </Link>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { RequestSection } from "@/components/site/RequestSection";
+import { InquiryCta } from "@/components/site/InquiryCta";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { FaqAccordion, type FaqItem } from "@/components/ui/FaqAccordion";
 import { Icon } from "@/components/ui/icons";
@@ -32,7 +32,7 @@ export default async function JasaTitipPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")}>
-        <ButtonLink href="#request" icon="send">
+        <ButtonLink href="/inquiry?service=jastip" icon="send">
           {c("requestQuote")}
         </ButtonLink>
         <ButtonLink href={whatsappUrl(c("whatsappMessage"))} external variant="secondary" icon="message">
@@ -89,7 +89,7 @@ export default async function JasaTitipPage({ params }: LocaleParams) {
         </div>
       </Section>
 
-      <RequestSection locale={locale} formId="jastip" eyebrow={s("requestEyebrow")} title={t("requestTitle")} intro={t("requestIntro")} />
+      <InquiryCta locale={locale} service="jastip" />
 
       <Section labelledBy="jastip-faq" innerClassName="max-w-3xl">
         <SectionHeading id="jastip-faq" title={s("faqTitle")} />

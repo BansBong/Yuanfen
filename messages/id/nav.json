@@ -7,7 +7,7 @@
   "menu": "Menu",
   "close": "Tutup menu",
   "login": "Masuk",
-  "contactButton": "Hubungi kami",
+  "contactButton": "Minta penawaran",
   "language": "Bahasa",
   "mainNav": "Navigasi utama",
   "items": {
@@ -21,6 +21,7 @@
     "becomeGuide": "Jadi Pemandu",
     "howItWorks": "Cara Kerja",
     "about": "Tentang & FAQ",
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "inquiry": "Minta penawaran"
   }
 }

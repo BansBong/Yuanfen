@@ -2,7 +2,10 @@
   "common": {
     "requestEyebrow": "Request a quote",
     "faqTitle": "Common questions",
-    "whatsappNote": "Prefer to talk? Message us on WhatsApp."
+    "whatsappNote": "Prefer to talk? Message us on WhatsApp.",
+    "ctaTitle": "Ready? Tell us what you need",
+    "ctaText": "Fill in the short inquiry form. It takes about five minutes, a quotation is free and there is no obligation.",
+    "ctaButton": "Open the inquiry form"
   },
   "tour": {
     "meta": {
@@ -14,11 +17,26 @@
     "intro": "Tell us where you want to go. We match you with a local guide who speaks your language and knows the place.",
     "typesTitle": "What kind of help do you need?",
     "types": {
-      "city": { "title": "City Tour", "text": "Sights, food and neighborhoods, at your pace." },
-      "business": { "title": "Business Trip", "text": "A guide or interpreter, factory visits and trade-fair visits." },
-      "muslim": { "title": "Muslim-Friendly Travel", "text": "Halal food, prayer places and prayer times planned in." },
-      "airport": { "title": "Airport Pickup", "text": "Someone to meet you on arrival and get you to your hotel." },
-      "photo": { "title": "Photography", "text": "A photographer for your trip, as an add-on or on its own." }
+      "city": {
+        "title": "City Tour",
+        "text": "Sights, food and neighborhoods, at your pace."
+      },
+      "business": {
+        "title": "Business Trip",
+        "text": "A guide or interpreter, factory visits and trade-fair visits."
+      },
+      "muslim": {
+        "title": "Muslim-Friendly Travel",
+        "text": "Halal food, prayer places and prayer times planned in."
+      },
+      "airport": {
+        "title": "Airport Pickup",
+        "text": "Someone to meet you on arrival and get you to your hotel."
+      },
+      "photo": {
+        "title": "Photography",
+        "text": "A photographer for your trip, as an add-on or on its own."
+      }
     },
     "destTitle": "Where do you want to go?",
     "destIntro": "Tap one or more places, or write your own in the form below. Any place in China is welcome. \"On request\" means we confirm a guide for you first.",
@@ -45,10 +63,22 @@
     "intro": "Tell us what you are looking for. Our local partner finds it, buys it and keeps you updated.",
     "howTitle": "How it works",
     "steps": [
-      { "title": "Send your request", "text": "Tell us what you want, with photos or links if you have them." },
-      { "title": "We confirm the details", "text": "We check availability and agree the details with you." },
-      { "title": "We buy for you", "text": "Our partner purchases the items and sends you proof." },
-      { "title": "You receive your order", "text": "We arrange delivery as agreed." }
+      {
+        "title": "Send your request",
+        "text": "Tell us what you want, with photos or links if you have them."
+      },
+      {
+        "title": "We confirm the details",
+        "text": "We check availability and agree the details with you."
+      },
+      {
+        "title": "We buy for you",
+        "text": "Our partner purchases the items and sends you proof."
+      },
+      {
+        "title": "You receive your order",
+        "text": "We arrange delivery as agreed."
+      }
     ],
     "paymentTitle": "Payment and receipts",
     "paymentText": "Our payment and receipt process is explained here.",
@@ -101,9 +131,18 @@
     ],
     "howTitle": "How it works",
     "steps": [
-      { "title": "Tell us your goal", "text": "Subject, level, city and when you want to start." },
-      { "title": "We suggest options", "text": "A short list of schools or programs that fit." },
-      { "title": "We support the application", "text": "Help with the process and paperwork." }
+      {
+        "title": "Tell us your goal",
+        "text": "Subject, level, city and when you want to start."
+      },
+      {
+        "title": "We suggest options",
+        "text": "A short list of schools or programs that fit."
+      },
+      {
+        "title": "We support the application",
+        "text": "Help with the process and paperwork."
+      }
     ],
     "needTitle": "What we will ask you",
     "need": [

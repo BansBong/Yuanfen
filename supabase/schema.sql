@@ -24,10 +24,14 @@ exception when duplicate_object then null; end $$;
 
 do $$ begin
   create type public.request_type as enum (
-    'tour', 'jastip', 'medical', 'admission',
+    'inquiry', 'tour', 'jastip', 'medical', 'admission',
     'destination_request', 'partnership', 'guide_application', 'contact'
   );
 exception when duplicate_object then null; end $$;
+
+-- Added later: the single-page service inquiry questionnaire (/inquiry).
+-- Safe to run on a database that already exists.
+alter type public.request_type add value if not exists 'inquiry';
 
 do $$ begin
   create type public.request_status as enum ('new', 'contacted', 'quoted', 'won', 'closed');
@@ -215,7 +219,8 @@ as $$
          lower(coalesce(r.details ->> 'destinations', r.details ->> 'destination', '')),
          '\s*[,;\n]\s*'
        ) as p
-  where r.type = 'tour' and trim(p) <> ''
+  -- compared as text so this script also runs in one go on a database where the enum value was just added
+  where r.type::text in ('tour', 'inquiry') and trim(p) <> ''
   group by 2
   order by 3 desc;
 $$;

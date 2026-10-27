@@ -8,10 +8,22 @@
     "h1": "From your first message to a trip well taken care of",
     "intro": "Four steps. You choose the service, we handle the rest.",
     "steps": [
-      { "title": "Tell us what you need", "text": "Fill in the short form for your service or message us on WhatsApp. Tell us what you want and when." },
-      { "title": "We match you with a local guide or partner", "text": "We look for the right person in China for your plan and check the details with you." },
-      { "title": "We assist you", "text": "You get a clear quote. Once you are happy, we prepare everything and stay in touch before and during your trip." },
-      { "title": "You're taken care of", "text": "Enjoy your trip or process. If plans change, we are a message away." }
+      {
+        "title": "Tell us what you need",
+        "text": "Fill in the short form for your service or message us on WhatsApp. Tell us what you want and when."
+      },
+      {
+        "title": "We match you with a local guide or partner",
+        "text": "We look for the right person in China for your plan and check the details with you."
+      },
+      {
+        "title": "We assist you",
+        "text": "You get a clear quote. Once you are happy, we prepare everything and stay in touch before and during your trip."
+      },
+      {
+        "title": "You're taken care of",
+        "text": "Enjoy your trip or process. If plans change, we are a message away."
+      }
     ],
     "noPricesTitle": "About prices",
     "noPricesText": "We do not list fixed prices because every request is different. Fill in the form and we will send you a quote. Requesting a quote is free and carries no obligation.",
@@ -36,10 +48,22 @@
     "h1": "Work with us",
     "intro": "We build a network of trusted partners in China and abroad. If your company would like to work with us, tell us about it.",
     "groups": {
-      "agency": { "title": "Travel agencies", "text": "Send your clients to trusted local guides, or add China ground support to your packages." },
-      "hospital": { "title": "Hospitals & clinics", "text": "Reach international patients with interpreter-supported appointments." },
-      "university": { "title": "Universities & education agents", "text": "Connect with students who are looking for a place to study in China." },
-      "supplier": { "title": "Suppliers & merchants", "text": "Supply goods and services to our shopping and travel clients." }
+      "agency": {
+        "title": "Travel agencies",
+        "text": "Send your clients to trusted local guides, or add China ground support to your packages."
+      },
+      "hospital": {
+        "title": "Hospitals & clinics",
+        "text": "Reach international patients with interpreter-supported appointments."
+      },
+      "university": {
+        "title": "Universities & education agents",
+        "text": "Connect with students who are looking for a place to study in China."
+      },
+      "supplier": {
+        "title": "Suppliers & merchants",
+        "text": "Supply goods and services to our shopping and travel clients."
+      }
     },
     "formTitle": "Partnership inquiry",
     "formIntro": "Share a few details and our team will get back to you."
@@ -110,14 +134,38 @@
     "updatedLabel": "Last updated",
     "updated": "PLACEHOLDER date",
     "sections": [
-      { "title": "Who we are", "text": "Yuanfen (\"we\") runs this website and connects clients with local guides and partners in China." },
-      { "title": "What we collect", "text": "When you send a form, we collect the details you type in: your name, how to contact you, and what you need. We do not ask for passport numbers, payment details or medical records through this website, and you should not send them." },
-      { "title": "Why we use it", "text": "We use your details to reply to your request, prepare a quote, match you with a guide or partner, and improve our service." },
-      { "title": "Who sees it", "text": "Our team, and the guides or partners we need to involve to fulfil your request. Our website and database providers process data on our behalf. We do not sell your data." },
-      { "title": "How long we keep it", "text": "PLACEHOLDER: retention period to be confirmed by the owner." },
-      { "title": "Your rights", "text": "You can ask to see, correct or delete your information by contacting us." },
-      { "title": "Cookies", "text": "We use a cookie to remember your language choice. We do not use advertising cookies." },
-      { "title": "Contact", "text": "Questions about this policy? Use the contact page." }
+      {
+        "title": "Who we are",
+        "text": "Yuanfen (\"we\") runs this website and connects clients with local guides and partners in China."
+      },
+      {
+        "title": "What we collect",
+        "text": "When you send a form, we collect the details you type in: your name, how to contact you, and what you need. We do not ask for passport numbers, payment details or medical records through this website, and you should not send them."
+      },
+      {
+        "title": "Why we use it",
+        "text": "We use your details to reply to your request, prepare a quote, match you with a guide or partner, and improve our service."
+      },
+      {
+        "title": "Who sees it",
+        "text": "Our team, and the guides or partners we need to involve to fulfil your request. Our website and database providers process data on our behalf. We do not sell your data."
+      },
+      {
+        "title": "How long we keep it",
+        "text": "PLACEHOLDER: retention period to be confirmed by the owner."
+      },
+      {
+        "title": "Your rights",
+        "text": "You can ask to see, correct or delete your information by contacting us."
+      },
+      {
+        "title": "Cookies",
+        "text": "We use a cookie to remember your language choice. We do not use advertising cookies."
+      },
+      {
+        "title": "Contact",
+        "text": "Questions about this policy? Use the contact page."
+      }
     ]
   },
   "confirmation": {
@@ -133,5 +181,18 @@
     "whatsappMessage": "Hello Yuanfen, my reference code is {ref}.",
     "noRef": "We could not find a reference code. If you just sent a request, please contact us on WhatsApp.",
     "home": "Back to home"
+  },
+  "inquiry": {
+    "meta": {
+      "title": "Service Inquiry Form",
+      "description": "Tell us what you need in China: guides, transport, business and medical assistance, translation, shopping or school visits. Free quotation, no obligation."
+    },
+    "eyebrow": "Service inquiry",
+    "h1": "Tell us what you need in China",
+    "greeting": "Hi! Thank you for contacting Yuanfen.",
+    "intro": "To help us understand your needs and give you an accurate quotation, please fill in the details below. It takes about five minutes.",
+    "note": "Please note: the final quotation will depend on your destination, dates, number of people and the specific services you need.",
+    "afterSubmit": "Once we receive your details, our team will review your request and send you a suitable quotation.",
+    "closing": "Thank you for choosing Yuanfen. Connecting Indonesia × China."
   }
 }
