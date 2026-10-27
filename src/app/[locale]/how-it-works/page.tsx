@@ -23,10 +23,10 @@ export default async function HowItWorksPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")} />
-      <Section innerClassName="max-w-3xl">
+      <Section tone="peach" innerClassName="max-w-3xl">
         <ol className="space-y-6">
           {steps.map((s, i) => (
-            <li key={s.title} className="reveal flex items-start gap-5 rounded-3xl border border-ink-red/15 bg-white/70 p-6">
+            <li key={s.title} className="reveal flex items-start gap-5 rounded-3xl card-surface p-6">
               <StarMarker n={i + 1} />
               <div>
                 <h2 className="font-display text-xl text-ink-red">{s.title}</h2>

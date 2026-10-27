@@ -23,7 +23,7 @@ export default async function TripsPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")} />
-      <Section>
+      <Section tone="peach">
         <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {TRIPS.map((trip) => (
             <li key={trip.slug}>

@@ -8,6 +8,11 @@
   --crimson-bright: #f9494f;
   --maroon: #7a0f12;
   --ink-red: #8b1a1a;
+  /* Soft watercolour washes taken from the poster illustrations */
+  --blush: #f7dcd6;
+  --peach: #fbe6d2;
+  --jade: #e2eedf;
+  --sky: #dfeaf2;
 }
 
 @theme inline {
@@ -17,6 +22,10 @@
   --color-crimson-bright: var(--crimson-bright);
   --color-maroon: var(--maroon);
   --color-ink-red: var(--ink-red);
+  --color-blush: var(--blush);
+  --color-peach: var(--peach);
+  --color-jade: var(--jade);
+  --color-sky: var(--sky);
   --font-display: var(--font-marcellus), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
   --font-wordmark: var(--font-belleza), var(--font-marcellus), Georgia, serif;
@@ -67,4 +76,83 @@ body {
   .anim-fade-up,
   .reveal { animation: none; opacity: 1; transform: none; }
   * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+/* ===========================================================================
+   Full-site colour: warm watercolour gradients (not used on Coming Soon)
+   ======================================================================== */
+.bg-hero-wash {
+  background:
+    radial-gradient(60% 55% at 88% 8%, rgba(246, 196, 190, 0.75), transparent 62%),
+    radial-gradient(55% 55% at 6% 92%, rgba(251, 216, 186, 0.85), transparent 62%),
+    radial-gradient(45% 40% at 52% 38%, rgba(255, 255, 255, 0.95), transparent 72%),
+    linear-gradient(180deg, #fdfaf4 0%, #f9ebe4 100%);
+}
+.bg-wash-peach {
+  background:
+    radial-gradient(70% 60% at 100% 0%, rgba(246, 196, 190, 0.45), transparent 60%),
+    linear-gradient(160deg, #fcebdc 0%, #fbf9f3 55%, #f8e2da 100%);
+}
+.bg-wash-blush {
+  background:
+    radial-gradient(60% 60% at 0% 100%, rgba(251, 216, 186, 0.6), transparent 60%),
+    linear-gradient(180deg, #fbf9f3 0%, #f7dcd6 55%, #fbf1ea 100%);
+}
+.bg-wash-jade {
+  background:
+    radial-gradient(55% 55% at 0% 0%, rgba(214, 232, 220, 0.9), transparent 62%),
+    radial-gradient(50% 50% at 100% 100%, rgba(246, 205, 198, 0.5), transparent 62%),
+    linear-gradient(180deg, #fbf9f3 0%, #e8f1e4 50%, #fbf9f3 100%);
+}
+.bg-wash-sky {
+  background:
+    radial-gradient(60% 55% at 100% 0%, rgba(207, 225, 238, 0.95), transparent 62%),
+    radial-gradient(45% 45% at 0% 100%, rgba(251, 216, 186, 0.55), transparent 62%),
+    linear-gradient(180deg, #fbf9f3 0%, #e6eef4 55%, #fbf9f3 100%);
+}
+.bg-wash-dusk {
+  background:
+    radial-gradient(55% 70% at 85% 0%, rgba(249, 73, 79, 0.55), transparent 62%),
+    radial-gradient(60% 60% at 5% 100%, rgba(214, 40, 40, 0.4), transparent 62%),
+    linear-gradient(135deg, #5d0b0e 0%, #7a0f12 45%, #a3181d 100%);
+}
+.bg-wash-footer {
+  background: linear-gradient(180deg, #fdfcf7 0%, #f6dfd8 100%);
+}
+
+/* Heading text with a satin-ribbon gradient */
+.text-gradient {
+  background-image: linear-gradient(100deg, #7a0f12 0%, #d62828 52%, #8b1a1a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+@media (forced-colors: active) {
+  .text-gradient { -webkit-text-fill-color: currentColor; color: currentColor; background: none; }
+}
+
+/* Glassy card surface (in the components layer so utilities such as hover:border-* still win) */
+@layer components {
+  .card-surface {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 244, 240, 0.78) 100%);
+    border: 1px solid rgba(139, 26, 26, 0.14);
+    backdrop-filter: blur(6px);
+  }
+}
+
+/* Drifting glow orbs behind hero content */
+@keyframes orb-a {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(4%, 6%, 0) scale(1.12); }
+}
+@keyframes orb-b {
+  from { transform: translate3d(0, 0, 0) scale(1.05); }
+  to { transform: translate3d(-5%, -4%, 0) scale(0.95); }
+}
+.orb { position: absolute; border-radius: 9999px; filter: blur(90px); pointer-events: none; }
+.orb-a { animation: orb-a 16s ease-in-out infinite alternate; }
+.orb-b { animation: orb-b 20s ease-in-out infinite alternate; }
+@media (prefers-reduced-motion: reduce) {
+  .orb-a, .orb-b { animation: none; }
 }

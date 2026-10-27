@@ -22,7 +22,7 @@ export async function RequestSection({
 }) {
   const c = await getTranslations({ locale, namespace: "common" });
   return (
-    <Section id="request" tone="paper" innerClassName="max-w-3xl">
+    <Section id="request" tone="blush" innerClassName="max-w-3xl">
       <header className="reveal mb-8 text-center">
         {eyebrow && <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{eyebrow}</p>}
         <h2 className="mt-3 font-display text-2xl text-ink-red sm:text-3xl">{title}</h2>

@@ -57,11 +57,11 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
         </ButtonLink>
       </PageHero>
 
-      <Section labelledBy="types-title">
+      <Section tone="peach" labelledBy="types-title">
         <SectionHeading id="types-title" title={t("typesTitle")} />
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {TYPES.map((ty) => (
-            <li key={ty.key} className="reveal flex gap-4 rounded-3xl border border-ink-red/15 bg-white/70 p-6">
+            <li key={ty.key} className="reveal flex gap-4 rounded-3xl card-surface p-6">
               <span className="grid size-14 shrink-0 place-items-center rounded-2xl bg-crimson/10 text-crimson">
                 <Icon name={ty.icon} className="size-8" />
               </span>
@@ -74,7 +74,7 @@ export default async function TourGuidingPage({ params }: LocaleParams) {
         </ul>
       </Section>
 
-      <Section tone="paper" labelledBy="dest-title" innerClassName="max-w-7xl">
+      <Section tone="sky" labelledBy="dest-title" innerClassName="max-w-7xl">
         <SectionHeading id="dest-title" title={t("destTitle")} text={t("destIntro")} />
         <div className="mt-12">
           <TourPlanner

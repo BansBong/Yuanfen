@@ -58,7 +58,9 @@ export default async function HomePage({ params }: LocaleParams) {
       <JsonLd data={organization} />
 
       {/* hero */}
-      <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden bg-cream-center lg:min-h-[calc(100dvh-5rem)]">
+      <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden bg-hero-wash lg:min-h-[calc(100dvh-5rem)]">
+        <span aria-hidden="true" className="orb orb-a -z-10 top-[8%] right-[6%] size-72 bg-[#f4b8b0]/40 sm:size-[28rem]" />
+        <span aria-hidden="true" className="orb orb-b -z-10 bottom-[4%] left-[4%] size-64 bg-[#fbcf9f]/35 sm:size-[26rem]" />
         <PaperSpeckles className="-z-10 opacity-80" />
         <RibbonCorner corner="top-left" priority className="-z-10 w-[42vw] max-w-[460px] lg:w-[26vw] lg:max-w-none" />
         <RibbonCorner corner="bottom-right" priority className="-z-10 w-[30vw] max-w-[460px] sm:w-[42vw] lg:w-[26vw] lg:max-w-none" />
@@ -75,7 +77,7 @@ export default async function HomePage({ params }: LocaleParams) {
           <p aria-hidden="true" className="-mt-1 pl-[0.45em] font-wordmark text-2xl tracking-[0.45em] sm:text-3xl">
             {BRAND.name.toUpperCase()}
           </p>
-          <h1 className="mt-4 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
+          <h1 className="text-gradient mt-4 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
           <p className="mt-5 text-lg leading-relaxed text-maroon">{t("hero.pitch")}</p>
           <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <ButtonLink href="#services" variant="primary" icon="compass">
@@ -97,7 +99,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </section>
 
       {/* services */}
-      <Section id="services" labelledBy="services-title">
+      <Section id="services" tone="peach" labelledBy="services-title">
         <SectionHeading id="services-title" eyebrow={t("services.eyebrow")} title={t("services.title")} text={t("services.text")} />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICE_LINKS.map((s) => (
@@ -115,7 +117,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* how it works */}
-      <Section tone="paper" labelledBy="how-title">
+      <Section tone="blush" labelledBy="how-title">
         <SectionHeading id="how-title" eyebrow={t("how.eyebrow")} title={t("how.title")} />
         <ol className="relative mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
@@ -134,14 +136,14 @@ export default async function HomePage({ params }: LocaleParams) {
           </ButtonLink>
         </div>
       </Section>
-      <RibbonBand id="home-a" className="-mt-px bg-cream-center" />
+      <RibbonBand id="home-a" className="-mt-px bg-linear-to-b from-[#fbf1ea] to-[#fbf9f3]" />
 
       {/* why */}
-      <Section labelledBy="why-title">
+      <Section tone="jade" labelledBy="why-title">
         <SectionHeading id="why-title" eyebrow={t("why.eyebrow")} title={t("why.title")} />
         <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {why.map((w) => (
-            <li key={w.title} className="reveal rounded-3xl border border-ink-red/15 bg-white/70 p-6">
+            <li key={w.title} className="reveal rounded-3xl card-surface p-6">
               <span className="grid size-14 place-items-center rounded-2xl bg-crimson/10 text-crimson">
                 <Icon name={w.icon} className="size-8" />
               </span>
@@ -153,7 +155,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* trips preview */}
-      <Section tone="paper" labelledBy="trips-title">
+      <Section tone="sky" labelledBy="trips-title">
         <SectionHeading id="trips-title" eyebrow={t("trips.eyebrow")} title={t("trips.title")} text={t("trips.text")} />
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {TRIPS.slice(0, 3).map((trip) => (
@@ -175,7 +177,7 @@ export default async function HomePage({ params }: LocaleParams) {
           <SectionHeading id="guides-title" eyebrow={t("guides.eyebrow")} title={t("guides.title")} />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {GUIDES.map((g) => (
-              <li key={g.name} className="rounded-3xl border border-ink-red/15 bg-white/70 p-6">
+              <li key={g.name} className="rounded-3xl card-surface p-6">
                 <h3 className="font-display text-lg text-ink-red">{g.name}</h3>
                 <p className="mt-1 text-maroon">
                   {g.city} · {g.languages.join(", ")}
@@ -189,11 +191,11 @@ export default async function HomePage({ params }: LocaleParams) {
 
       {/* testimonials: hidden until real ones exist */}
       {SHOW_TESTIMONIALS && TESTIMONIALS.length > 0 && (
-        <Section tone="paper" labelledBy="testimonials-title">
+        <Section tone="blush" labelledBy="testimonials-title">
           <SectionHeading id="testimonials-title" eyebrow={t("testimonials.eyebrow")} title={t("testimonials.title")} />
           <ul className="mt-12 grid gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((q) => (
-              <li key={q.name} className="rounded-3xl border border-ink-red/15 bg-white/70 p-6">
+              <li key={q.name} className="rounded-3xl card-surface p-6">
                 <blockquote className="text-base">“{q.quote[locale]}”</blockquote>
                 <p className="mt-3 font-semibold text-ink-red">
                   {q.name}, {q.origin}
@@ -205,7 +207,7 @@ export default async function HomePage({ params }: LocaleParams) {
       )}
 
       {/* FAQ preview */}
-      <Section labelledBy="faq-title" innerClassName="max-w-3xl">
+      <Section tone="peach" labelledBy="faq-title" innerClassName="max-w-3xl">
         <SectionHeading id="faq-title" eyebrow={t("faq.eyebrow")} title={t("faq.title")} />
         <div className="mt-4 text-center">
           <PlaceholderBadge what="FAQ answers" />
@@ -221,7 +223,8 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* final CTA */}
-      <section className="relative isolate overflow-hidden bg-ink-red px-5 py-16 text-center text-cream sm:py-24">
+      <section className="bg-wash-dusk relative isolate overflow-hidden px-5 py-16 text-center text-cream sm:py-24">
+        <span aria-hidden="true" className="orb orb-a -z-10 top-0 right-[10%] size-72 bg-[#f9494f]/30" />
         <RibbonCorner corner="top-left" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
         <RibbonCorner corner="bottom-right" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
         <div className="mx-auto max-w-2xl">
@@ -229,7 +232,7 @@ export default async function HomePage({ params }: LocaleParams) {
           <RibbonDivider className="mx-auto mt-5 w-48 brightness-150" />
           <p className="mt-5 text-lg leading-relaxed">{t("finalCta.text")}</p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <ButtonLink href="#services" variant="primary" icon="compass" className="!bg-cream !text-ink-red hover:!bg-white">
+            <ButtonLink href="#services" variant="primary" icon="compass" className="!bg-cream !bg-none !text-ink-red hover:!bg-white hover:!brightness-100">
               {c("chooseService")}
             </ButtonLink>
             <ButtonLink href={whatsappUrl(c("whatsappMessage"))} external variant="secondary" icon="message" className="!border-cream !bg-transparent !text-cream hover:!bg-cream hover:!text-ink-red">

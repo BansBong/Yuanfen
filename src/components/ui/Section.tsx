@@ -1,7 +1,16 @@
 import type { ReactNode } from "react";
 import { PaperSpeckles } from "@/components/PaperSpeckles";
 
-type Tone = "cream" | "paper";
+type Tone = "cream" | "paper" | "peach" | "blush" | "jade" | "sky";
+
+const TONES: Record<Tone, string> = {
+  cream: "bg-cream",
+  paper: "bg-cream-center",
+  peach: "bg-wash-peach",
+  blush: "bg-wash-blush",
+  jade: "bg-wash-jade",
+  sky: "bg-wash-sky",
+};
 
 /** Page section. "paper" is the slightly brighter, speckled background used on the poster. */
 export function Section({
@@ -23,11 +32,9 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={`relative isolate scroll-mt-24 overflow-hidden px-5 py-16 sm:py-24 ${
-        tone === "paper" ? "bg-cream-center" : "bg-cream"
-      } ${className}`}
+      className={`relative isolate scroll-mt-24 overflow-hidden px-5 py-16 sm:py-24 ${TONES[tone]} ${className}`}
     >
-      {tone === "paper" && <PaperSpeckles className="-z-10 opacity-70" />}
+      {tone !== "cream" && <PaperSpeckles className="-z-10 opacity-60" />}
       <div className={`mx-auto ${innerClassName}`}>{children}</div>
     </section>
   );
@@ -54,7 +61,7 @@ export function SectionHeading({
       {eyebrow && <p className="text-sm font-semibold tracking-[0.3em] text-crimson uppercase">{eyebrow}</p>}
       <Tag
         id={id}
-        className={`mt-3 font-display leading-snug text-ink-red ${
+        className={`text-gradient mt-3 font-display leading-snug ${
           Tag === "h1" ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"
         }`}
       >

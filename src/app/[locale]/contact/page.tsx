@@ -47,7 +47,7 @@ export default async function ContactPage({ params }: LocaleParams) {
   return (
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("intro")} />
-      <Section>
+      <Section tone="peach">
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {channels.map((ch) => {
             const inner = (
@@ -63,7 +63,7 @@ export default async function ContactPage({ params }: LocaleParams) {
               </>
             );
             const cls =
-              "flex min-h-24 items-center gap-4 rounded-3xl border border-ink-red/15 bg-white/70 p-5 transition hover:border-ink-red/40";
+              "flex min-h-24 items-center gap-4 rounded-3xl card-surface p-5 transition hover:border-ink-red/40";
             return (
               <li key={ch.key}>
                 {ch.href ? (

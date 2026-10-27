@@ -39,7 +39,7 @@ export default async function MedicalPage({ params }: LocaleParams) {
       </PageHero>
 
       {/* The disclaimer comes first and cannot be missed. */}
-      <Section className="!py-10 sm:!py-12" innerClassName="max-w-3xl">
+      <Section tone="peach" className="!py-10 sm:!py-12" innerClassName="max-w-3xl">
         <aside
           role="note"
           aria-labelledby="medical-disclaimer"
@@ -62,11 +62,11 @@ export default async function MedicalPage({ params }: LocaleParams) {
         intro={t("requestIntro")}
       />
 
-      <Section labelledBy="medical-what" innerClassName="max-w-3xl">
+      <Section tone="jade" labelledBy="medical-what" innerClassName="max-w-3xl">
         <SectionHeading id="medical-what" title={t("whatTitle")} />
         <ul className="mt-8 space-y-3 text-base text-maroon sm:text-lg">
           {what.map((item) => (
-            <li key={item} className="flex gap-3 rounded-2xl border border-ink-red/15 bg-white/70 p-4">
+            <li key={item} className="flex gap-3 rounded-2xl card-surface p-4">
               <span aria-hidden="true" className="mt-3 size-2.5 shrink-0 rotate-45 bg-crimson" />
               {item}
             </li>
@@ -74,7 +74,7 @@ export default async function MedicalPage({ params }: LocaleParams) {
         </ul>
       </Section>
 
-      <Section tone="paper" labelledBy="medical-faq" innerClassName="max-w-3xl">
+      <Section tone="blush" labelledBy="medical-faq" innerClassName="max-w-3xl">
         <SectionHeading id="medical-faq" title={s("faqTitle")} />
         <div className="mt-8">
           <FaqAccordion items={faq} />

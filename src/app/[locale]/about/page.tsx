@@ -27,7 +27,7 @@ export default async function AboutPage({ params }: LocaleParams) {
     <main>
       <PageHero eyebrow={t("eyebrow")} title={t("h1")} intro={t("lead")} />
 
-      <Section labelledBy="meaning-title">
+      <Section tone="peach" labelledBy="meaning-title">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className="reveal text-center">
             <p lang="zh" aria-hidden="true" className="text-[min(34vw,10rem)] leading-none text-ink-red" style={{ fontFamily: CJK }}>
@@ -46,7 +46,7 @@ export default async function AboutPage({ params }: LocaleParams) {
         </div>
       </Section>
 
-      <Section tone="paper" labelledBy="story-title" innerClassName="max-w-3xl">
+      <Section tone="blush" labelledBy="story-title" innerClassName="max-w-3xl">
         <div className="text-center">
           <h2 id="story-title" className="font-display text-2xl text-ink-red sm:text-3xl">
             {t("storyTitle")}

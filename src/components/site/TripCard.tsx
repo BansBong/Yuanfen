@@ -11,7 +11,7 @@ import type { Locale } from "@/i18n/routing";
 export async function TripCard({ trip, locale, compact = false }: { trip: Trip; locale: Locale; compact?: boolean }) {
   const t = await getTranslations({ locale, namespace: "trips" });
   return (
-    <article className="flex h-full flex-col rounded-3xl border border-ink-red/15 bg-white/70 p-6 shadow-[0_18px_40px_-28px_rgba(122,15,18,0.5)]">
+    <article className="flex h-full flex-col rounded-3xl card-surface p-6 shadow-[0_18px_40px_-28px_rgba(122,15,18,0.5)]">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <StatusBadge
           status={trip.status}
