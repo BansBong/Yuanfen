@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yuanfen launch poster, v2 (new look, now open)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #fcf3e6; --blush: #f1d9cf; --red: #a3201f; --maroon: #5a0d10; --deep: #3f080b; --gold: #e2b866; }
+  html, body { margin: 0; background: #222; }
+  .poster {
+    position: relative; width: 1080px; height: 1350px; overflow: hidden; color: var(--cream);
+    background: radial-gradient(120% 80% at 50% 28%, #7d1519 0%, var(--maroon) 55%, var(--deep) 100%);
+    font-family: "Jost", sans-serif;
+  }
+  .glyph { position: absolute; right: -60px; top: 330px; font: 700 880px/1 "Noto Serif SC", serif; color: rgba(255,255,255,.045); }
+  svg.ribbons, svg.skyline { position: absolute; left: 0; width: 1080px; }
+  svg.ribbons { top: 0; height: 1350px; }
+  svg.skyline { bottom: 0; height: 330px; }
+
+  .top { position: absolute; top: 56px; left: 64px; right: 64px; display: flex; justify-content: space-between;
+         font-size: 17px; letter-spacing: .38em; font-weight: 500; }
+  .top span:last-child { letter-spacing: .22em; font-weight: 400; color: var(--gold); }
+
+  .medal { position: absolute; left: 50%; top: 150px; width: 400px; height: 400px; margin-left: -200px; border-radius: 50%;
+           background: radial-gradient(circle at 50% 35%, #8e1519, #6c0c10 70%); box-shadow: 0 30px 80px -20px rgba(0,0,0,.55);
+           display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .medal::after { content: ""; position: absolute; inset: 14px; border-radius: 50%; border: 1px solid rgba(252,243,230,.35); }
+  .medal img { width: 270px; filter: brightness(0) invert(1); margin-top: -10px; }
+  .medal .word { margin-top: 2px; font-size: 30px; letter-spacing: .5em; padding-left: .5em; font-weight: 400; }
+
+  h1 { position: absolute; left: 0; right: 0; top: 575px; margin: 0; text-align: center;
+       font: 700 128px/.95 "Playfair Display", serif; letter-spacing: -.01em; }
+  .tag { position: absolute; left: 0; right: 0; top: 845px; text-align: center; font-size: 28px; font-weight: 300; letter-spacing: .02em; }
+  .tag em { display: block; margin-top: 10px; font: italic 500 28px "Playfair Display", serif; color: var(--gold); }
+  .pills { position: absolute; left: 0; right: 0; top: 945px; display: flex; justify-content: center; gap: 12px; }
+  .pills span { border: 1px solid rgba(252,243,230,.65); border-radius: 999px; padding: 9px 20px; font-size: 15px; letter-spacing: .2em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="glyph">缘</div>
+
+  <svg class="ribbons" viewBox="0 0 1080 1350" fill="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="soft" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".02"/><stop offset=".5" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity=".03"/></linearGradient>
+      <linearGradient id="goldband" x1="0" x2="1"><stop offset="0" stop-color="#c9953f"/><stop offset=".5" stop-color="#fbe9bd"/><stop offset="1" stop-color="#d9a955"/></linearGradient>
+    </defs>
+    <path d="M-60 330 C 220 120, 420 560, 720 330 S 1010 120, 1160 250 L 1160 330 C 1010 230, 840 520, 640 470 S 200 260, -60 430 Z" fill="url(#soft)"/>
+    <path d="M-60 900 C 200 720, 420 1100, 700 900 S 980 760, 1160 860 L 1160 930 C 980 840, 800 1130, 560 1060 S 160 830, -60 990 Z" fill="url(#soft)" opacity=".8"/>
+    <g transform="translate(0,38)"><path d="M-40 1030 C 220 960, 380 1060, 600 1020 S 900 940, 1120 1005 L 1120 1040 C 900 985, 760 1080, 560 1062 S 200 1000, -40 1070 Z" fill="url(#goldband)"/>
+    <path d="M-40 1070 C 220 1000, 380 1100, 600 1062 S 900 982, 1120 1040 L 1120 1054 C 900 1000, 760 1100, 560 1078 S 200 1030, -40 1086 Z" fill="#a3201f"/></g>
+  </svg>
+
+  <svg class="skyline" id="sky" viewBox="0 0 1080 330" preserveAspectRatio="none" aria-hidden="true"></svg>
+
+  <div class="top"><span>YUANFEN</span><span>YUANFENBRIDGE.COM</span></div>
+
+  <div class="medal">
+    <img src="../../public/brand/logo.png" alt="">
+    <div class="word">YUANFEN</div>
+  </div>
+
+  <h1>now<br>open</h1>
+  <div class="tag">Your bridge to China, guided by fate.<em>Kini hadir &middot; 缘分</em></div>
+  <div class="pills"><span>Tours</span><span>Jasa Titip</span><span>Medical</span><span>University</span></div>
+</div>
+
+<script>
+  // Deterministic skyline: three layers of buildings, a pagoda and a slender tower.
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const svg = document.getElementById("sky");
+  const layer = (base, minH, maxH, fill, step) => {
+    let x = -10, out = "";
+    while (x < 1090) {
+      const w = step + rnd() * step, h = minH + rnd() * (maxH - minH);
+      out += `<rect x="${x.toFixed(0)}" y="${(330 - base - h).toFixed(0)}" width="${w.toFixed(0)}" height="${(h + base).toFixed(0)}" fill="${fill}"/>`;
+      x += w + 2;
+    }
+    return out;
+  };
+  const pagoda = (cx, y, s, fill) => {
+    let d = "";
+    for (let i = 0; i < 5; i++) {
+      const w = (70 - i * 10) * s, top = y - i * 26 * s;
+      d += `<path d="M${cx - w} ${top} L${cx - w * .55} ${top - 14 * s} H${cx + w * .55} L${cx + w} ${top} Z" fill="${fill}"/><rect x="${cx - w * .42}" y="${top}" width="${w * .84}" height="${12 * s}" fill="${fill}"/>`;
+    }
+    return d + `<rect x="${cx - 2}" y="${y - 150 * s}" width="4" height="${40 * s}" fill="${fill}"/>`;
+  };
+  const tower = (cx, fill) => `<path d="M${cx - 6} 330 L${cx - 3} 70 H${cx + 3} L${cx + 6} 330 Z" fill="${fill}"/><circle cx="${cx}" cy="150" r="13" fill="${fill}"/><circle cx="${cx}" cy="80" r="7" fill="${fill}"/>`;
+  svg.innerHTML =
+    layer(0, 60, 150, "#7a1519", 26) + tower(180, "#7a1519") + pagoda(880, 235, 1, "#7a1519") +
+    layer(0, 30, 100, "#4e0b0e", 30) + tower(180, "#4e0b0e").replace("70", "120") +
+    layer(0, 8, 50, "#2e0508", 34);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Yuanfen launch poster, v1 (current design, spelling corrected)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #fcf6ec; }
+  .poster { position: relative; width: 1080px; height: 1350px; overflow: hidden; }
+  .poster img { position: absolute; inset: 0; width: 1080px; height: 1350px; display: block; }
+  /* The original artwork has the old double-n spelling baked in. Cover it (and the old "Coming soon" words) with clean paper
+     taken from lower on the same poster, then set the correct name on top. */
+  .patch {
+    position: absolute; left: 372px; top: 706px; width: 330px; height: 62px;
+    background: url("coming soon poster.png") no-repeat;
+    background-size: 1080px 1350px;
+    background-position: -372px -811px;
+  }
+  .name {
+    position: absolute; left: 372px; top: 706px; width: 330px; height: 62px;
+    display: flex; align-items: center; justify-content: center;
+    font: 34px/1 "Marcellus", serif; letter-spacing: 0.5em; padding-left: 0.5em; color: #8a1c1c;
+  }
+  .big { position: absolute; display: flex; align-items: center; justify-content: center;
+         font: 46px/1 "Marcellus", serif; letter-spacing: 0.14em; padding-left: 0.14em; color: #8a1c1c; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <img src="coming soon poster.png" alt="">
+  <div class="patch"></div>
+  <div class="name">YUANFEN</div>
+  <div class="patch" style="left:81px;top:580px;width:256px;height:68px;background-position:-81px -520px"></div>
+  <div class="patch" style="left:776px;top:580px;width:165px;height:68px;background-position:-776px -520px"></div>
+  <div class="big" style="left:81px;top:580px;width:256px;height:68px">NOW</div>
+  <div class="big" style="left:776px;top:580px;width:165px;height:68px">OPEN</div>
+</div>
+</body>
+</html>
