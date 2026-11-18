@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { RibbonDivider } from "@/components/RibbonDivider";
+import { Skyline } from "@/components/ui/Decor";
 import { PlaceholderBadge } from "@/components/ui/PlaceholderBadge";
 import { ABOUT_LINKS, PARTNER_LINKS, SERVICE_LINKS, TRIP_LINKS } from "@/data/nav";
 import { CONTACT_EMAIL } from "@/data/placeholders";
@@ -16,12 +16,14 @@ export async function Footer() {
   const company = [...ABOUT_LINKS, ...TRIP_LINKS, ...PARTNER_LINKS];
 
   return (
-    <footer className="px-5 pt-12 pb-28 lg:pb-10">
+    <footer className="tone-dark bg-deep relative mt-0 overflow-hidden px-5 pt-0 pb-28 lg:pb-10">
+      <Skyline className="-mb-px h-24 sm:h-36" />
+      <div className="pt-10" />
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
         <div>
           <p className="font-display text-xl tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</p>
           <p className="mt-3 text-base text-maroon">{t("footer.tagline")}</p>
-          <RibbonDivider className="mt-5 w-40" />
+          <span aria-hidden="true" className="mt-5 block h-1 w-24 rounded-full bg-gradient-to-r from-[#c9953f] via-[#fbe9bd] to-[#d9a955]" />
         </div>
         <div>
           <p className="text-sm font-semibold tracking-[0.25em] text-crimson uppercase">{t("footer.servicesTitle")}</p>

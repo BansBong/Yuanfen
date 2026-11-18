@@ -43,7 +43,7 @@ export function Header() {
   const mobileSecondary = [TRIP_LINKS[0], TRIP_LINKS[1], ABOUT_LINKS[0], PARTNER_LINKS[0], PARTNER_LINKS[1], ABOUT_LINKS[1]];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-red/10 bg-cream/95 backdrop-blur">
+    <header className="tone-dark sticky top-0 z-40 border-b border-ink-red/10 bg-[#4a0c0f]/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-20">
         <Link
           href="/"
@@ -118,7 +118,7 @@ export function Header() {
                   <li key={i.href}>
                     <Link
                       href={i.href}
-                      className="flex min-h-16 items-center gap-4 rounded-2xl border border-ink-red/20 bg-white/60 px-4 text-lg font-medium text-ink-red"
+                      className="flex min-h-16 items-center gap-4 rounded-2xl border border-ink-red/20 bg-ink-red/5 px-4 text-lg font-medium text-ink-red"
                     >
                       <Icon name={i.icon} className="size-8 shrink-0 text-crimson" />
                       {i.label}

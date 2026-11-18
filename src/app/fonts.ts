@@ -1,4 +1,4 @@
-import { Belleza, Jost, Marcellus } from "next/font/google";
+import { Belleza, Jost, Marcellus, Playfair_Display } from "next/font/google";
 
 // Poster lettering: display headings are a refined serif; body + labels a light sans.
 export const marcellus = Marcellus({
@@ -24,5 +24,14 @@ export const belleza = Belleza({
   display: "swap",
 });
 
+// Full-site redesign: a modern high-contrast serif for headings (the Coming Soon page keeps Marcellus).
+export const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
 export const fontVariables = `${marcellus.variable} ${jost.variable}`;
-export const fullSiteFontVariables = `${fontVariables} ${belleza.variable}`;
+export const fullSiteFontVariables = `${fontVariables} ${belleza.variable} ${playfair.variable}`;

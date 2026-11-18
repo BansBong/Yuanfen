@@ -2,13 +2,10 @@ import { Check } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import { PaperSpeckles } from "@/components/PaperSpeckles";
-import { RibbonBand } from "@/components/RibbonBand";
-import { RibbonCorner } from "@/components/RibbonCorner";
-import { RibbonDivider } from "@/components/RibbonDivider";
 import { ServiceCard } from "@/components/site/ServiceCard";
 import { TripCard } from "@/components/site/TripCard";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { Glyph, Skyline } from "@/components/ui/Decor";
 import { FaqAccordion, type FaqItem } from "@/components/ui/FaqAccordion";
 import { Icon } from "@/components/ui/icons";
 import { JsonLd } from "@/components/ui/JsonLd";
@@ -58,28 +55,27 @@ export default async function HomePage({ params }: LocaleParams) {
       <JsonLd data={organization} />
 
       {/* hero */}
-      <section className="relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-5rem)]">
-        <div aria-hidden="true" className="edge-fade wash-hero absolute inset-0 -z-10">
-          <span className="orb orb-a top-[14%] right-[8%] size-64 bg-[#f4b8b0]/35 sm:size-[26rem]" />
-          <span className="orb orb-b bottom-[14%] left-[6%] size-56 bg-[#fbcf9f]/35 sm:size-[24rem]" />
-        </div>
-        <PaperSpeckles className="-z-10 opacity-80" />
-        <RibbonCorner corner="top-left" priority className="-z-10 w-[42vw] max-w-[460px] lg:w-[26vw] lg:max-w-none" />
-        <RibbonCorner corner="bottom-right" priority className="-z-10 w-[30vw] max-w-[460px] sm:w-[42vw] lg:w-[26vw] lg:max-w-none" />
-        <div className="anim-fade-up mx-auto flex max-w-2xl flex-col items-center px-5 py-16 text-center text-ink-red">
-          <Image
-            src="/brand/logo.png"
-            alt={t("hero.logoAlt")}
-            width={904}
-            height={528}
-            priority
-            sizes="(min-width: 640px) 380px, 70vw"
-            className="h-auto w-[min(70vw,380px)] select-none"
-          />
-          <p aria-hidden="true" className="-mt-1 pl-[0.45em] font-wordmark text-2xl tracking-[0.45em] sm:text-3xl">
-            {BRAND.name.toUpperCase()}
-          </p>
-          <h1 className="text-gradient mt-4 font-display text-2xl leading-snug sm:text-4xl">{BRAND.tagline}</h1>
+      <section className="tone-dark bg-deep relative isolate flex min-h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden lg:min-h-[calc(100dvh-5rem)]">
+        <Glyph className="top-[6%] -right-[8%] -z-10 text-[30rem] sm:text-[46rem]" />
+        <span aria-hidden="true" className="absolute top-[10%] left-[6%] -z-10 size-72 rounded-full bg-[#b3262a]/25 blur-[100px] sm:size-[30rem]" />
+        <div className="anim-fade-up mx-auto flex max-w-2xl flex-col items-center px-5 pt-12 pb-44 text-center sm:pb-56">
+          <div className="grid size-56 place-items-center rounded-full border border-ink-red/30 bg-[radial-gradient(circle_at_50%_35%,#8e1519,#6c0c10_70%)] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] sm:size-72">
+            <div className="flex flex-col items-center">
+              <Image
+                src="/brand/logo.png"
+                alt={t("hero.logoAlt")}
+                width={904}
+                height={528}
+                priority
+                sizes="(min-width: 640px) 200px, 150px"
+                className="h-auto w-[150px] [filter:brightness(0)_invert(1)] select-none sm:w-[200px]"
+              />
+              <p aria-hidden="true" className="mt-1 pl-[0.5em] font-sans text-base font-normal tracking-[0.5em] text-ink-red sm:text-xl">
+                {BRAND.name.toUpperCase()}
+              </p>
+            </div>
+          </div>
+          <h1 className="mt-10 font-display text-4xl leading-[1.08] text-ink-red sm:text-6xl">{BRAND.tagline}</h1>
           <p className="mt-5 text-lg leading-relaxed text-maroon">{t("hero.pitch")}</p>
           <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
             <ButtonLink href="#services" variant="primary" icon="compass">
@@ -97,6 +93,10 @@ export default async function HomePage({ params }: LocaleParams) {
               </li>
             ))}
           </ul>
+        </div>
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10">
+          <span className="block h-2 w-full bg-gradient-to-r from-[#c9953f] via-[#fbe9bd] to-[#d9a955]" />
+          <Skyline className="h-32 sm:h-52" />
         </div>
       </section>
 
@@ -119,7 +119,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* how it works */}
-      <Section tone="blush" labelledBy="how-title">
+      <Section tone="dark" labelledBy="how-title" above="#f7e7da" below="#fcf3e6">
         <SectionHeading id="how-title" eyebrow={t("how.eyebrow")} title={t("how.title")} />
         <ol className="relative mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
@@ -138,7 +138,6 @@ export default async function HomePage({ params }: LocaleParams) {
           </ButtonLink>
         </div>
       </Section>
-      <RibbonBand id="home-a" className="-mt-px" />
 
       {/* why */}
       <Section tone="rose" labelledBy="why-title">
@@ -157,7 +156,7 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* trips preview */}
-      <Section tone="sky" labelledBy="trips-title">
+      <Section tone="peach" labelledBy="trips-title">
         <SectionHeading id="trips-title" eyebrow={t("trips.eyebrow")} title={t("trips.title")} text={t("trips.text")} />
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {TRIPS.slice(0, 3).map((trip) => (
@@ -193,7 +192,7 @@ export default async function HomePage({ params }: LocaleParams) {
 
       {/* testimonials: hidden until real ones exist */}
       {SHOW_TESTIMONIALS && TESTIMONIALS.length > 0 && (
-        <Section tone="blush" labelledBy="testimonials-title">
+        <Section tone="peach" labelledBy="testimonials-title">
           <SectionHeading id="testimonials-title" eyebrow={t("testimonials.eyebrow")} title={t("testimonials.title")} />
           <ul className="mt-12 grid gap-6 md:grid-cols-3">
             {TESTIMONIALS.map((q) => (
@@ -209,7 +208,7 @@ export default async function HomePage({ params }: LocaleParams) {
       )}
 
       {/* FAQ preview */}
-      <Section tone="peach" labelledBy="faq-title" innerClassName="max-w-3xl">
+      <Section labelledBy="faq-title" innerClassName="max-w-3xl">
         <SectionHeading id="faq-title" eyebrow={t("faq.eyebrow")} title={t("faq.title")} />
         <div className="mt-4 text-center">
           <PlaceholderBadge what="FAQ answers" />
@@ -225,24 +224,20 @@ export default async function HomePage({ params }: LocaleParams) {
       </Section>
 
       {/* final CTA */}
-      <section className="bg-wash-dusk wave-top relative isolate overflow-hidden px-5 pt-28 pb-16 text-center text-cream sm:pt-32 sm:pb-24">
-        <span aria-hidden="true" className="orb orb-a -z-10 top-0 right-[10%] size-72 bg-[#f9494f]/30" />
-        <RibbonCorner corner="top-left" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
-        <RibbonCorner corner="bottom-right" className="-z-10 hidden w-[22vw] opacity-60 lg:block" />
-        <div className="mx-auto max-w-2xl">
-          <h2 className="font-display text-2xl sm:text-3xl">{t("finalCta.title")}</h2>
-          <RibbonDivider className="mx-auto mt-5 w-48 brightness-150" />
-          <p className="mt-5 text-lg leading-relaxed">{t("finalCta.text")}</p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <ButtonLink href="#services" variant="primary" icon="compass" className="!bg-cream !bg-none !text-ink-red hover:!bg-white hover:!brightness-100">
-              {c("chooseService")}
-            </ButtonLink>
-            <ButtonLink href={whatsappUrl(c("whatsappMessage"))} external variant="secondary" icon="message" className="!border-cream !bg-transparent !text-cream hover:!bg-cream hover:!text-ink-red">
-              {c("whatsapp")}
-            </ButtonLink>
-          </div>
+      <Section tone="dark" labelledBy="cta-title" below="#4a0c0f" innerClassName="max-w-2xl text-center">
+        <h2 id="cta-title" className="font-display text-4xl leading-tight text-ink-red sm:text-5xl">
+          {t("finalCta.title")}
+        </h2>
+        <p className="mt-5 text-lg leading-relaxed text-maroon">{t("finalCta.text")}</p>
+        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <ButtonLink href="#services" variant="primary" icon="compass">
+            {c("chooseService")}
+          </ButtonLink>
+          <ButtonLink href={whatsappUrl(c("whatsappMessage"))} external variant="secondary" icon="message">
+            {c("whatsapp")}
+          </ButtonLink>
         </div>
-      </section>
+      </Section>
     </main>
   );
 }

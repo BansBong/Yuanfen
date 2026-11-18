@@ -9,8 +9,8 @@ const BASE =
   "inline-flex min-h-14 items-center justify-center gap-3 rounded-full px-7 py-3.5 text-base font-medium tracking-wide transition-colors";
 const VARIANTS: Record<Variant, string> = {
   primary:
-    "bg-linear-to-r from-crimson to-[#a9181d] text-white shadow-[0_10px_26px_-8px_rgba(122,15,18,0.65)] hover:brightness-90 hover:shadow-[0_12px_30px_-8px_rgba(122,15,18,0.8)]",
-  secondary: "border-2 border-ink-red/70 bg-cream/80 text-ink-red hover:bg-ink-red hover:text-cream",
+    "btn-primary bg-linear-to-r from-crimson to-[#a9181d] text-white shadow-[0_10px_26px_-8px_rgba(122,15,18,0.65)] hover:brightness-90 hover:shadow-[0_12px_30px_-8px_rgba(122,15,18,0.8)]",
+  secondary: "btn-secondary border-2 border-ink-red/70 bg-cream/80 text-ink-red hover:bg-ink-red hover:text-cream",
   dark: "bg-ink-red text-cream hover:bg-maroon",
 };
 

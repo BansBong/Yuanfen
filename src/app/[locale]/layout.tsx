@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
 }
 
 export const viewport: Viewport = {
-  themeColor: "#fbf9f3",
+  themeColor: "#4a0c0f",
   width: "device-width",
   initialScale: 1,
 };
@@ -45,7 +45,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
 
   return (
     <html lang={locale} className={fullSiteFontVariables}>
-      <body className="bg-site-flow min-h-dvh text-base leading-relaxed text-maroon">
+      <body className="site-v2 min-h-dvh text-base leading-relaxed text-maroon">
         <NextIntlClientProvider locale={locale} messages={pickMessages(messages, ["common", "nav", "forms"])}>
           <a
             href="#main"
