@@ -68,7 +68,7 @@ export default async function HomePage({ params }: LocaleParams) {
                 height={528}
                 priority
                 sizes="(min-width: 640px) 200px, 150px"
-                className="h-auto w-[150px] [filter:brightness(0)_invert(1)] select-none sm:w-[200px]"
+                className="h-auto w-[150px] translate-x-[1.2%] [filter:brightness(0)_invert(1)] select-none sm:w-[200px]"
               />
               <p aria-hidden="true" className="mt-1 pl-[0.5em] font-sans text-base font-normal tracking-[0.5em] text-ink-red sm:text-xl">
                 {BRAND.name.toUpperCase()}
