@@ -6,7 +6,7 @@ export const BRAND = {
   name: "Yuanfen",
   chineseName: "缘分",
   domain: "yuanfenbridge.com",
-  url: "https://yuanfenbridge.com",
+  url: "https://www.yuanfenbridge.com", // Vercel serves the site on www; the bare domain redirects here
   tagline: "Your bridge to China, guided by fate.",
   madeIn: "Made in Guangzhou",
   year: 2026,
