@@ -43,7 +43,8 @@ export function Header() {
   const mobileSecondary = [TRIP_LINKS[0], TRIP_LINKS[1], ABOUT_LINKS[0], PARTNER_LINKS[0], PARTNER_LINKS[1], ABOUT_LINKS[1]];
 
   return (
-    <header className="tone-dark sticky top-0 z-40 border-b border-ink-red/10 bg-[#4a0c0f]/95 backdrop-blur">
+    <>
+      <header className="tone-dark sticky top-0 z-40 border-b border-ink-red/10 bg-[#4a0c0f]/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:h-20">
         <Link
           href="/"
@@ -88,14 +89,16 @@ export function Header() {
         </div>
       </div>
 
-      {/* mobile menu */}
+      </header>
+
+      {/* mobile menu: outside the header, because its backdrop-blur would otherwise trap this fixed panel inside the 64px bar */}
       {open && (
         <div
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
           aria-label={t("menu")}
-          className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-cream lg:hidden"
+          className="tone-dark bg-deep fixed inset-0 z-50 flex flex-col overflow-y-auto lg:hidden"
         >
           <div className="flex h-16 shrink-0 items-center justify-between border-b border-ink-red/10 px-4">
             <span className="font-display text-base tracking-[0.3em] text-ink-red uppercase">{BRAND.name}</span>
@@ -150,6 +153,6 @@ export function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
