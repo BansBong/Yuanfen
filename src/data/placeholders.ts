@@ -8,8 +8,8 @@
  * Replace these before the site goes live. Nothing here is a real contact.
  */
 
-/** PLACEHOLDER: real WhatsApp number, digits only, with country code (no "+" or spaces). */
-export const WHATSAPP_NUMBER = "000000000000";
+/** WhatsApp number, digits only, with country code (no "+" or spaces): +62 851 5686 3511. */
+export const WHATSAPP_NUMBER = "6285156863511";
 
 /** Instagram username without the "@". */
 export const INSTAGRAM_HANDLE = "yuanfen.bridge";

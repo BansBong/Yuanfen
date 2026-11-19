@@ -14,7 +14,7 @@ When you replace a value, delete the word `PLACEHOLDER` from it (and from the `_
 
 | Value | Currently | Replace with |
 | --- | --- | --- |
-| `WHATSAPP_NUMBER` | `000000000000` | Real number, digits only, with country code (no `+` or spaces), e.g. `62812xxxxxxx` |
+| `WHATSAPP_NUMBER` | `6285156863511` (done) | |
 | `INSTAGRAM_HANDLE` | `yuanfen.bridge` (done) | |
 | `CONTACT_EMAIL` | `norikakhosiwa238@gmail.com` (done) | |
 | `WECHAT_ID` | `Norika8989` (done) | |
