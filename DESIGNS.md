@@ -4,17 +4,21 @@ Both designs share the same pages, copy, forms, database and admin. Only the loo
 
 | | Git ref | Look |
 | --- | --- | --- |
-| **v1 "classic"** | tag `design-v1-classic` (also `main`) | Cream and watercolour gradients, red ribbons, Marcellus headings |
-| **v2 "modern maroon"** | branch `redesign-v2` | Deep maroon bands, gold-and-red ribbon waves, city skyline, Playfair Display headings, gold buttons on dark, 缘 watermark |
+| **v1 "classic"** | tag `design-v1-classic` | Cream and watercolour gradients, red ribbons, Marcellus headings |
+| **v2 "modern maroon"** | branch `main` (also `redesign-v2`) | Deep maroon bands, gold-and-red ribbon waves, city skyline, Playfair Display headings, gold buttons on dark, 缘 watermark |
 
 The Coming Soon page, `/login` and `/admin` look the same in both.
 
-## Deploy one of them
+## Which one is deployed
 
-- **v1:** deploy branch `main` as Production (nothing to do).
-- **v2:** either set Vercel's Production Branch to `redesign-v2`, or merge it: `git checkout main && git merge redesign-v2`.
-- **Compare first:** every branch gets its own Vercel preview URL (a full-site preview, noindex). Open both previews side by side.
-- **Switch back later:** `git checkout main && git reset --hard design-v1-classic` (or change Production Branch back).
+`main` is v2 (chosen on 19 Nov 2026). To go back to v1:
+
+```bash
+git checkout -b classic design-v1-classic
+git push -u origin classic        # then set Vercel's Production Branch to "classic"
+```
+
+Every branch also gets its own Vercel preview URL (a full-site preview, noindex), so both can be compared side by side.
 
 ## How v2 is built (so it is easy to tweak)
 
