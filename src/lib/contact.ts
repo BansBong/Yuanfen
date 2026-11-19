@@ -1,7 +1,7 @@
 import {
   CONTACT_EMAIL,
   INSTAGRAM_HANDLE,
-  TELEGRAM_HANDLE,
+  THREADS_HANDLE,
   WECHAT_ID,
   WHATSAPP_NUMBER,
   isPlaceholder,
@@ -22,6 +22,10 @@ export function instagramUrl(): string {
     : `https://www.instagram.com/${INSTAGRAM_HANDLE}/`;
 }
 
+export function threadsUrl(): string {
+  return `https://www.threads.com/@${THREADS_HANDLE}`;
+}
+
 /** null while the email is still a placeholder. */
 export function mailtoUrl(): string | null {
   return isPlaceholder(CONTACT_EMAIL) ? null : `mailto:${CONTACT_EMAIL}`;
@@ -32,5 +36,5 @@ export const hasRealContact = {
   instagram: !isPlaceholder(INSTAGRAM_HANDLE),
   email: !isPlaceholder(CONTACT_EMAIL),
   wechat: !isPlaceholder(WECHAT_ID),
-  telegram: !isPlaceholder(TELEGRAM_HANDLE),
+  threads: !isPlaceholder(THREADS_HANDLE),
 };

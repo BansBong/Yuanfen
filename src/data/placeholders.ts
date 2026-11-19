@@ -11,15 +11,15 @@
 /** PLACEHOLDER: real WhatsApp number, digits only, with country code (no "+" or spaces). */
 export const WHATSAPP_NUMBER = "000000000000";
 
-/** PLACEHOLDER: Instagram username without the "@". */
-export const INSTAGRAM_HANDLE = "PLACEHOLDER_instagram";
+/** Instagram username without the "@". */
+export const INSTAGRAM_HANDLE = "yuanfen.bridge";
 
-/** PLACEHOLDER: public contact email. */
-export const CONTACT_EMAIL = "PLACEHOLDER@example.com";
+/** Public contact email. */
+export const CONTACT_EMAIL = "norikakhosiwa238@gmail.com";
 
-/** PLACEHOLDER: other contact channels. Hidden in the UI until replaced. */
-export const WECHAT_ID = "PLACEHOLDER_wechat";
-export const TELEGRAM_HANDLE = "PLACEHOLDER_telegram";
+/** Other contact channels. Hidden in the UI while a value is a placeholder. */
+export const WECHAT_ID = "Norika8989";
+export const THREADS_HANDLE = "yuanfen.bridge";
 
 /** PLACEHOLDER: how fast the team replies; shown on the confirmation page. */
 export const RESPONSE_TIME = {

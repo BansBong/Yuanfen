@@ -6,10 +6,10 @@ import { PageHero } from "@/components/ui/PageHero";
 import { PlaceholderBadge } from "@/components/ui/PlaceholderBadge";
 import { Section } from "@/components/ui/Section";
 import type { IconName } from "@/data/nav";
-import { CONTACT_EMAIL, INSTAGRAM_HANDLE, TELEGRAM_HANDLE, WECHAT_ID } from "@/data/placeholders";
+import { CONTACT_EMAIL, INSTAGRAM_HANDLE, THREADS_HANDLE, WECHAT_ID } from "@/data/placeholders";
 import { initPage, type LocaleParams } from "@/i18n/page";
 import { isLocale } from "@/i18n/routing";
-import { hasRealContact, instagramUrl, mailtoUrl, whatsappUrl } from "@/lib/contact";
+import { hasRealContact, instagramUrl, mailtoUrl, threadsUrl, whatsappUrl } from "@/lib/contact";
 import { pageMetadata } from "@/lib/seo";
 import { SHOW_PLACEHOLDER_BADGES } from "@/lib/site-mode";
 
@@ -40,7 +40,7 @@ export default async function ContactPage({ params }: LocaleParams) {
     { key: "email", icon: "send", title: t("emailTitle"), value: CONTACT_EMAIL, href: mailtoUrl() ?? undefined, real: hasRealContact.email },
     { key: "instagram", icon: "camera", title: t("instagramTitle"), value: `@${INSTAGRAM_HANDLE}`, href: instagramUrl(), real: hasRealContact.instagram },
     { key: "wechat", icon: "message", title: t("wechatTitle"), value: WECHAT_ID, real: hasRealContact.wechat },
-    { key: "telegram", icon: "send", title: t("telegramTitle"), value: TELEGRAM_HANDLE, real: hasRealContact.telegram },
+    { key: "threads", icon: "message", title: t("threadsTitle"), value: `@${THREADS_HANDLE}`, href: threadsUrl(), real: hasRealContact.threads },
   ];
   const channels = all.filter((ch) => ch.real || SHOW_PLACEHOLDER_BADGES);
 

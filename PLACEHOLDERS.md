@@ -15,10 +15,10 @@ When you replace a value, delete the word `PLACEHOLDER` from it (and from the `_
 | Value | Currently | Replace with |
 | --- | --- | --- |
 | `WHATSAPP_NUMBER` | `000000000000` | Real number, digits only, with country code (no `+` or spaces), e.g. `62812xxxxxxx` |
-| `INSTAGRAM_HANDLE` | `PLACEHOLDER_instagram` | Instagram username without `@` |
-| `CONTACT_EMAIL` | `PLACEHOLDER@example.com` | Public contact email |
-| `WECHAT_ID` | `PLACEHOLDER_wechat` | WeChat ID (the Contact page hides WeChat until this is real) |
-| `TELEGRAM_HANDLE` | `PLACEHOLDER_telegram` | Telegram username (hidden until real) |
+| `INSTAGRAM_HANDLE` | `yuanfen.bridge` (done) | |
+| `CONTACT_EMAIL` | `norikakhosiwa238@gmail.com` (done) | |
+| `WECHAT_ID` | `Norika8989` (done) | |
+| `THREADS_HANDLE` | `yuanfen.bridge` (done) | |
 | `RESPONSE_TIME` | `PLACEHOLDER response time ...` | How fast you reply, in English and Indonesian, e.g. `24 hours` / `24 jam`. Shown on the confirmation page |
 
 These feed the header/footer links, the sticky WhatsApp button, the Contact page, the Coming Soon buttons, and the WhatsApp message on the confirmation page.
