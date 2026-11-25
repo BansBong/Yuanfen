@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "title": "Real Stories from China",
+    "description": "Videos and photos of real trips, shopping runs, hospital visits and campus tours with Yuanfen in China."
+  },
+  "eyebrow": "Real stories",
+  "h1": "See how it works on the ground",
+  "intro": "Short videos and photos from real trips, shopping runs, hospital visits and campus tours in China.",
+  "soonBadge": "Coming soon",
+  "soonTitle": "Our first stories are on the way",
+  "soonText": "We are collecting videos and photos from real clients and trips. Follow us on Instagram and Threads to see them first, or ask us anything on WhatsApp.",
+  "soonCta": "Ask us on WhatsApp",
+  "play": "Play video",
+  "openOn": "Watch on",
+  "services": {
+    "tour": "Tour Guiding",
+    "jastip": "Jasa Titip",
+    "medical": "Medical",
+    "admission": "Admission"
+  },
+  "ctaTitle": "Want a trip like this?",
+  "ctaText": "Tell us what you need and we will reply with a plan and a quote.",
+  "ctaButton": "Get a quote"
+}

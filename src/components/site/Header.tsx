@@ -40,7 +40,7 @@ export function Header() {
     };
   }, [open]);
 
-  const mobileSecondary = [TRIP_LINKS[0], TRIP_LINKS[1], ABOUT_LINKS[0], PARTNER_LINKS[0], PARTNER_LINKS[1], ABOUT_LINKS[1]];
+  const mobileSecondary = [TRIP_LINKS[0], TRIP_LINKS[1], TRIP_LINKS[2], ABOUT_LINKS[0], PARTNER_LINKS[0], PARTNER_LINKS[1], ABOUT_LINKS[1]];
 
   return (
     <>

@@ -35,6 +35,7 @@ export const SERVICE_LINKS = [
 export const TRIP_LINKS = [
   { key: "trips", href: "/trips", icon: "route" },
   { key: "requestDestination", href: "/request-destination", icon: "map-pin" },
+  { key: "stories", href: "/stories", icon: "camera" },
 ] as const satisfies readonly { key: string; href: string; icon: IconName }[];
 
 export const PARTNER_LINKS = [
@@ -56,6 +57,7 @@ export const ALL_PATHS = [
   "/services/medical",
   "/services/admission",
   "/trips",
+  "/stories",
   "/inquiry",
   "/request-destination",
   "/how-it-works",

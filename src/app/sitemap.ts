@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { ALL_PATHS } from "@/data/nav";
+import { STORIES } from "@/data/stories";
 import { BRAND } from "@/data/site";
 import { routing } from "@/i18n/routing";
 import { SITE_MODE } from "@/lib/site-mode";
@@ -10,7 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   if (SITE_MODE !== "live") {
     return [{ url: BRAND.url, changeFrequency: "weekly", priority: 1 }];
   }
-  return ALL_PATHS.flatMap((path) =>
+  // /stories stays out of the sitemap until it has real content.
+  return ALL_PATHS.filter((p) => p !== "/stories" || STORIES.length > 0).flatMap((path) =>
     routing.locales.map((locale) => ({
       url: `${BRAND.url}/${locale}${path}`,
       changeFrequency: "monthly" as const,
